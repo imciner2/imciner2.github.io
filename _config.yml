@@ -6,22 +6,24 @@ logo: # filename of a logo image that has been placed into your images directory
 
 # Enter the following platform usernames if you would like for them to appear on your site.
 owner:
-  name: Your Name
-  avatar: bio-photo.jpg
+  name: Ian McInerney
+  avatar: headshot.jpg
   bio: "A brief description of yourself."
-  email: #emailaddress
+  email: Ian.S.McInerney@ieee.org
   # Do not include the @ symbol in your Twitter username
   twitter: #username
   linkedin: #username
-  github: #username
-  orcid: # ID Number (ex. 0000-0000-0000-0000)
+  github: imciner2
+  gitlab: imcinerney
+  orcid: 0000-0003-2616-9771
+  arxiv: mcinerney_i_1
   researchgate: #username
   mendeley: #username
   google:
     plus: #username
     analytics:
     verify:
-    scholar: #id
+    scholar: FhYROr4AAAAJ
   facebook: #username
   instagram: #username
   bing-verify:
@@ -42,8 +44,8 @@ owner:
 
 # The following adjust the accents for your site. If you would like to further edit colors, fonts, font sizes, etc.
 # you may do so in _sass/variables.scss
-highlight-color: '#CC0000'
-lowlight-color: '#000'
+highlight-color: '#003E74'
+lowlight-color: '#00ACD7'
 
   # NOTE: If you would like your site to be licensed under a creative commons license, uncomment the 'yes' next to the type of license you wish to use.
 creative-commons:
@@ -69,6 +71,10 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   enable_coderay: false
+
+assets:
+  sources:
+    - _assets/webfonts
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
