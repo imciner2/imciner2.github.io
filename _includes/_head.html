@@ -16,7 +16,7 @@
 
 {% capture canonical %}{{ site.github.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
 <link rel="canonical" href="{{ canonical }}">
-<link href="{{ site.github.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+<link href="{{ '/feed.xml' | relative_url }}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
 <!-- https://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -24,31 +24,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css">
-
+<link rel="stylesheet" href="{{ '/assets/css/academicons/css/academicons.css' | relative_url }}"/>
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url  }}">
 
 <meta http-equiv="cleartype" content="on">
 
 
 <!-- Modernizr -->
-<script src="{{ site.github.url }}/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+<script src="{{ 'assets/js/vendor/modernizr-2.7.1.custom.min.js' | relative_url  }}"></script>
 
 
 <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ site.github.url }}/assets/css/academicons/css/academicons.css"/>
 <!-- Icons -->
 <!-- 16x16 -->
-<link rel="shortcut icon" href="{{ site.github.url }}/favicon.ico">
+<link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}">
 <!-- 32x32 -->
-<link rel="shortcut icon" href="{{ site.github.url }}/favicon.png">
+<link rel="shortcut icon" href="{{ 'favicon.png' | relative_url }}">
 <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="{{ site.github.url }}/images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="{{ '/images/apple-touch-icon-precomposed.png' | relative_url }}">
 <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.github.url }}/images/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ '/images/apple-touch-icon-72x72-precomposed.png' | relative_url }}">
 <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.github.url }}/images/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ '/images/apple-touch-icon-114x114-precomposed.png' | relative_url }}">
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.github.url }}/images/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ '/images/apple-touch-icon-144x144-precomposed.png' | relative_url }}">
+
+<script
+  type="text/javascript"
+  src="https://use.fontawesome.com/releases/v5.15.1/js/conflict-detection.js">
+</script>
 
 <!--Jekyll-seo plugin-->
 {% seo %}
