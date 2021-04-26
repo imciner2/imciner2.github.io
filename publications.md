@@ -17,6 +17,12 @@ layout: publications
 {% bibliography --file Papers-Conference --style ./content/bibliographies/display_style.csl %}
 
 
+## Working Papers
+------------------------
+
+{% bibliography --file Papers-Working --style ./content/bibliographies/display_style.csl %}
+
+
 ## Thesis
 ------------------------
 
