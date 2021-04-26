@@ -34,6 +34,7 @@ $lowlightcolor: {{ site.lowlight-color }};
 //@import "vendor/google/fonts";
 @import "print";
 
+
 //
 // <details> tag
 //
@@ -91,4 +92,15 @@ ol.bibliography li:before {
   padding-left: 0.5em;
   padding-right: 0.5em;
   white-space: nowrap;
+}
+
+
+p.list_header {
+    margin-block-end: 0em;
+}
+
+ul.list_header {
+  list-style-type: disc;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }

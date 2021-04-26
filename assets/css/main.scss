@@ -32,3 +32,78 @@ $lowlightcolor: {{ site.lowlight-color }};
 @import "vendor/magnific-popup/magnific-popup";
 //@import "vendor/google/fonts";
 @import "print";
+
+//
+// <details> tag
+//
+details {
+    border-radius: 10px;
+    padding: 0px 8px;
+    margin-bottom: 15px;
+}
+
+details[open] {
+    background: lighten($basecolor, 75%);
+    padding: 0px 8px 8px 8px;
+}
+
+summary {
+  //margin: 0px 0px 8px 0px;
+  outline:none;
+  padding: 2px 6px;
+  width: 10em;
+  background: lighten($basecolor, 75%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+details summary {
+    color: #2a7ae2;
+}
+
+
+/* Bibliography */
+
+ol.bibliography {
+  counter-reset: item
+}
+
+ol.bibliography li {
+  list-style-type: none;
+  margin: 30px 0;
+}
+
+ol.bibliography li:before {
+  content: "[" counter(item) "] ";
+  counter-increment: item;
+  position: absolute;
+  text-align: right;
+  width: 4em;
+  margin-left: -4.4em;
+}
+
+
+
+/* Special formatting for the elements on publications page */
+.pub_icons {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  white-space: nowrap;
+}
+
+
+p.list_header {
+    margin-block-end: 0em;
+}
+
+ul.list_header {
+  list-style-type: disc;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+ul.list_header li {
+  margin: 0 0;
+}
+
