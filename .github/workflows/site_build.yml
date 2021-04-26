@@ -3,7 +3,7 @@ name: Build
 on:
   push:
     branches:
-    - source
+    - master
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
       with:
-        ref: source
+        ref: master
 
     - name: Set up Ruby
       uses: actions/setup-ruby@v1
