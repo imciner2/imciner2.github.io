@@ -72,6 +72,24 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
 
+scholar:
+  style: ieee-with-url
+  source: ./content/bibliographies
+  bibliography: '**/*.bib'
+  bibliography_template: bib
+  sort_by:
+    - year
+    - month
+  order: descending
+  bibtex_skip_fields:
+    - abstract
+    - month_numeric
+    - file
+    - note
+  bibtex_filters:
+    - markdown
+    - latex
+
 assets:
   sources:
     - _assets/webfonts
