@@ -1,0 +1,52 @@
+---
+---
+
+<!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div>
+{{ reference | replace_first: 'I. McInerney', '<strong>I. McInerney</strong>'
+             | replace_first: 'I. S. McInerney', '<strong>I. S. McInerney</strong>'
+             | replace: '<i>', '<em>'
+             | replace: '</i>', '</em>'
+             | replace: '<b>', '<strong>'
+             | replace: '</b>', '</strong>' }}
+
+<p>
+
+{% if entry.doi %}
+<a href="https://dx.doi.org/{{ entry.doi }}" target="_blank"><i class="ai ai-fw ai-doi"></i>{{ entry.doi }}</a>
+{% endif %}
+
+{% if entry.arxiv %}
+<a href="https://arxiv.com/abs/{{ entry.arxiv }}" target="_blank"><i class="ai ai-fw ai-arxiv"></i>arXiv: {{ entry.arxiv }}</a>
+{% endif %}
+
+{% if entry.file %}
+<a href="{{ domain }}/content/papers/{{ entry.file }}" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a>
+{% endif %}
+
+{% if entry.abstract %}
+{% capture details %}
+{{ entry.abstract }}
+{% endcapture %}
+{% capture summary %}
+Abstract
+{% endcapture %}
+{% include _details.html %}
+{% endif %}
+
+{% capture details %}
+<pre>
+{{ entry.bibtex }}
+</pre>
+{% endcapture %}
+{% capture summary %}
+Bibtex
+{% endcapture %}
+{% include _details.html %}
+</p>
+
+</div>
