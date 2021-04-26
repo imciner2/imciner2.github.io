@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title: Site Title
+title: Ian McInerney
 locale: en_US
 logo: # filename of a logo image that has been placed into your images directory
 
@@ -8,7 +8,7 @@ logo: # filename of a logo image that has been placed into your images directory
 owner:
   name: Ian McInerney
   avatar: headshot.jpg
-  bio: "A brief description of yourself."
+  bio: "PhD student at Imperial College London"
   email: Ian.S.McInerney@ieee.org
   # Do not include the @ symbol in your Twitter username
   twitter: #username

@@ -1,4 +1,5 @@
 ---
+title: Homepage
 layout: page
 excerpt: "About Me..."
 ---
