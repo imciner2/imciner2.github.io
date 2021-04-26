@@ -33,3 +33,53 @@ $lowlightcolor: {{ site.lowlight-color }};
 @import "vendor/magnific-popup/magnific-popup";
 //@import "vendor/google/fonts";
 @import "print";
+
+//
+// <details> tag
+//
+details {
+    border-radius: 10px;
+    padding: 0px 8px;
+    margin-bottom: 15px;
+}
+
+details[open] {
+    background: lighten($basecolor, 75%);
+    padding: 0px 8px 8px 8px;
+}
+
+summary {
+  //margin: 0px 0px 8px 0px;
+  outline:none;
+  padding: 2px 6px;
+  width: 10em;
+  background: lighten($basecolor, 75%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+details summary {
+    color: #2a7ae2;
+}
+
+
+/* Bibliography */
+
+ol.bibliography {
+  counter-reset: item
+}
+
+ol.bibliography li {
+  list-style-type: none;
+  margin: 30px 0;
+}
+
+ol.bibliography li:before {
+  content: "[" counter(item) "] ";
+  counter-increment: item;
+  position: absolute;
+  text-align: right;
+  width: 4em;
+  margin-left: -4.4em;
+}
