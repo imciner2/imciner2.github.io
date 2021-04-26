@@ -86,6 +86,9 @@ scholar:
     - month_numeric
     - file
     - note
+    - slides
+    - poster
+    - extendedabstract
   bibtex_filters:
     - markdown
     - latex

@@ -4,6 +4,11 @@ layout: publications
 
 # Publications
 
+## Preprints
+------------------------
+
+{% bibliography --file Papers-Preprints --style ./content/bibliographies/display_style.csl %}
+
 
 ## Journal Papers
 ------------------------

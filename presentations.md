@@ -1,5 +1,9 @@
 ---
-layout: presentation-post-index
-title: Presentations
-excerpt: "Recent Presentations"
+layout: publications
 ---
+
+# Presentations
+
+
+{% bibliography --file Presentations-Conference --style ./content/bibliographies/display_style.csl %}
+
