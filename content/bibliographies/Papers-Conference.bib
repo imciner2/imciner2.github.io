@@ -1,0 +1,55 @@
+@inproceedings{McInerney2017_cdc,
+    abstract = {This paper presents a distributed method to locate a target object using multi-agent systems with only knowledge of the agent position and distance between them and the target. The problem is formulated as a non-convex quadratically constrained program, which is then solved using an optimization dynamics approach. The method presented can be applied to an arbitrary undirected network, and only requires agents communicating their estimate of the target's position and their calculated dual variables. The proposed method is derived from the Range-Based Least-Squares method, and becomes the Maximum Likelihood Estimator for this problem under Gaussian noise. We present the convergence results and also numerical simulations of this method.},
+    address = {Melbourne, Australia},
+    author = {McInerney, Ian and Ma, Xu and Elia, Nicola},
+    booktitle = {56th IEEE Conference on Decision and Control (CDC)},
+    pages = {2216--2221},
+    publisher = {IEEE},
+    title = {Cooperative Localization from Imprecise Range-Only Measurements: A Non-Convex Distributed Approach},
+    year = {2017},
+    doi = {10.1109/CDC.2017.8263973},
+    file = {2017_CDC_DistributedTrilateration.pdf}
+}
+
+@inproceedings{McInerney2018_NMPC,
+    abstract = {Over the past 20 years, great strides have been made in the real-time implementation of linear MPC on FPGA devices. Starting from initial work, which demonstrated the benefits of embedding linear MPC onto FPGAs, recent work has shown sampling rates of more than 1 MHz are possible with FPGA-based implementations. This work surveys FPGA implementations of linear MPC, with a focus on the computational architecture. This includes the choice of number representation, the parallelizations exploited and the memory architecture. We discuss the transferability of those design choices to the FPGA implementation of nonlinear MPC, and provide some future research directions related to the implementation of MPC on FPGAs.},
+    address = {Madison, Wisconsin, US},
+    author = {McInerney, Ian and Constantinides, George A. and Kerrigan, Eric C.},
+    booktitle = {6th IFAC Conference on Nonlinear Model Predictive Control},
+    doi = {10.1016/j.ifacol.2018.11.063},
+    pages = {381--387},
+    publisher = {IFAC},
+    title = {A Survey of the Implementation of Linear Model Predictive Control on {FPGA}s},
+    year = {2018},
+    file = {2018_NMPC_ReviewOfLinearMPConFPGA.pdf},
+    poster = {2018_NMPC_ReviewOfLinearMPC.pdf}
+}
+
+@inproceedings{McInerney2018_UKACC,
+    abstract = {Written assessments, such as book problems and exams, have customarily been used in control courses to measure student progress, but usually only gauge their knowledge of the theoretical concepts. More complicated control methods, such as predictive control, benefit from gauging student progress through implementation projects. We present a set of automatically marked project-based assessments that test student knowledge on concepts ranging from the derivation of physics models to the creation of a closed-loop predictive controller. We present a simulation framework that allows for the students to utilize any predictive control concepts that they decide to use in their implementation. The framework then automatically tests the student solutions against multiple constraint sets and conditions to provide quantitative data for marking the assessment.},
+    address = {Sheffield, UK},
+    author = {McInerney, Ian and Kerrigan, Eric C.},
+    booktitle = {2018 UKACC 12th International Conference on Control (CONTROL)},
+    doi = {10.1109/CONTROL.2018.8516728},
+    pages = {443},
+    title = {Automated Project-based Assessment in a Predictive Control Course},
+    publisher = {IEEE},
+    month = {8},
+    year = {2018},
+    file = {2018_UKACC-Control_PredictiveControlAssessment.pdf}
+}
+
+@inproceedings{McInerney2019_cdc,
+	abstract = {We present a method for determining the smallest precision required to have algorithmic stability of an implementation of the Fast Gradient Method (FGM) when solving a linear Model Predictive Control (MPC) problem in fixed-point arithmetic. We derive two models for the round-off error present in fixed-point arithmetic. The first is a generic model with no assumptions on the predicted system or weight matrices. The second is a parametric model that exploits the Toeplitz structure of the MPC problem for a Schur-stable system. We also propose a metric for measuring the amount of round-off error the FGM iteration can tolerate before becoming unstable. This metric is combined with the round-off error models to compute the minimum number of fractional bits needed for the fixed-point data type. Using these models, we show that exploiting the MPC problem structure nearly halves the number of fractional bits needed to implement an example problem. We show that this results in significant decreases in resource usage, computational energy and execution time for an implementation on a Field Programmable Gate Array.},
+	address = {Nice, France},
+	author = {McInerney, Ian and Kerrigan, Eric C. and Constantinides, George A.},
+	booktitle = {58th IEEE Conference on Decision and Control (CDC)},
+	pages = {4331--4336},
+	publisher = {IEEE},
+	title = {Modeling Round-off Error in the Fast Gradient Method for Predictive Control},
+	year = {2019},
+	doi = {10.1109/CDC40024.2019.9029910},
+    file = {2019_CDC_ModelingRoundoffErrorInPredictiveControl.pdf},
+    slides = {2019-12-12_CDC_ModelingRoundoffError.pdf},
+    poster = {2019_CDC_ModelingRoundoffError.pdf}
+}
