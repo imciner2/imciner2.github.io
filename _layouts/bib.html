@@ -28,6 +28,10 @@
 <a href="{{ domain }}/content/papers/{{ entry.file }}" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a>
 {% endif %}
 
+{% if entry.zenodo %}
+<a href="https://dx.doi.org/{{ entry.zenodo }}" target="_blank"><i class="ai ai-fw ai-zenodo"></i>{{ entry.zenodo }}</a>
+{% endif %}
+
 {% if entry.abstract %}
 {% capture details %}
 {{ entry.abstract }}
