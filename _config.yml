@@ -4,6 +4,8 @@ title: Ian McInerney
 locale: en_US
 logo: # filename of a logo image that has been placed into your images directory
 
+url: "https://ism.engineer"
+
 # Enter the following platform usernames if you would like for them to appear on your site.
 owner:
   name: Ian McInerney
@@ -92,6 +94,25 @@ scholar:
   bibtex_filters:
     - markdown
     - latex
+
+# Hide portions of the site from search engines
+defaults:
+  - scope:
+      path: assets/*
+    values:
+      sitemap: false
+  - scope:
+      path: reveal.js/*
+    values:
+      sitemap: false
+  - scope:
+      path: presentation/*
+    values:
+      sitemap: false
+  - scope:
+      path: blog/*
+    values:
+      sitemap: false
 
 assets:
   sources:
