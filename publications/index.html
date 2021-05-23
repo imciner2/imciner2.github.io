@@ -230,7 +230,7 @@ Bibtex
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
 -->
 <div>
-<span id="McInerney2021_energyConverterMPC">J.-M. Rodriguez-Bernuz, <strong>I. McInerney</strong>, A. Junyent-Ferré, and E. C. Kerrigan, “Design of a Linear Time-Varying Model Predictive Control Energy Regulator for Grid-Tied VSCs,” <em>IEEE Transactions on Energy Conversion</em>, 2021, (<em>In Press</em>).</span>
+<span id="McInerney2021_energyConverterMPC">J.-M. Rodriguez-Bernuz, <strong>I. McInerney</strong>, A. Junyent-Ferré, and E. C. Kerrigan, “Design of a Linear Time-Varying Model Predictive Control Energy Regulator for Grid-Tied VSCs,” <em>IEEE Transactions on Energy Conversion</em>, vol. 36, no. 2, pp. 1425–1434, 2021.</span>
 
 <p>
 
@@ -240,6 +240,8 @@ Bibtex
 
 
 
+
+<span class="pub_icons"><a href="/content/papers/2021_IEEE-TEC_LTV-MPC-EnergyRegulator.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
 
 
 
@@ -262,7 +264,6 @@ Abstract
     
 <p>This paper presents an energy regulator based on a Model Predictive Control (MPC) algorithm for a Voltage Source Converter (VSC). The MPC is formulated to optimise the converter performance according to the weights defined in an objective function that trades off additional features, such as current harmonic distortion, reactive power tracking and DC bus voltage oscillation. Differently from most approaches found in the research literature, the MPC proposed here considers the coupling dynamics between the AC and DC sides of the VSC. This study is focused on the example case of a single-phase VSC, which presents a nonlinear relationship between its AC and DC sides and a sustained double-line frequency power disturbance in its DC bus. To reduce the burden of the MPC, the controller is formulated to benefit from the slow energy dynamics of the system. Thus, the cascaded structure typically used in the control of VSCs is kept and the MPC is set as an energy regulator at a reduced sampling frequency while the current control relies on a fast inner controller. The computational burden of the algorithm is further reduced by using a linear time-varying approximation. The controller is presented in detail and experimental validation showing the performance of the algorithm is provided.</p>
 
-
 </details>
 
 
@@ -276,11 +277,14 @@ Bibtex
     
 <pre>
 @article{McInerney2021_energyConverterMPC,
-  author = {Rodriguez-Bernuz, Joan-Marc and McInerney, Ian and Junyent-Ferr\'e, Adri\`a and Kerrigan, Eric C.},
+  title = {Design of a {{Linear Time}}-{{Varying Model Predictive Control Energy Regulator}} for {{Grid}}-{{Tied VSCs}}},
+  author = {{Rodriguez-Bernuz}, Joan-Marc and McInerney, Ian and {Junyent-Ferr{\'e}}, Adri{\`a} and Kerrigan, Eric C.},
   journal = {IEEE Transactions on Energy Conversion},
   publisher = {IEEE},
-  title = {Design of a Linear Time-Varying Model Predictive Control Energy Regulator for Grid-Tied {VSCs}},
   year = {2021},
+  volume = {36},
+  number = {2},
+  pages = {1425--1434},
   doi = {10.1109/TEC.2021.3060319}
 }
 
