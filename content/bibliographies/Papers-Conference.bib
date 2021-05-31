@@ -53,3 +53,15 @@
     slides = {2019-12-12_CDC_ModelingRoundoffError.pdf},
     poster = {2019_CDC_ModelingRoundoffError.pdf}
 }
+
+@inproceedings{McInerney2021_NMPC,
+    abstract={The use of derivative-based solvers to compute solutions to optimal control problems with non-differentiable cost or dynamics often requires reformulations or relaxations that complicate the implementation or increase computational complexity. We present an initial framework for using the derivative-free Mesh Adaptive Direct Search (MADS) algorithm to solve Nonlinear Model Predictive Control problems with non-differentiable features without the need for reformulation. The MADS algorithm performs a structured search of the input space by simulating selected system trajectories and computing the subsequent cost value. We propose handling the path constraints and the Lagrange cost term by augmenting the system dynamics with additional states to compute the violation and cost value alongside the state trajectories, eliminating the need for reconstructing the state trajectories in a separate phase. We demonstrate the practicality of this framework by solving a robust rocket control problem, where the objective is to reach a target altitude as close as possible, given a system with uncertain parameters. This example uses a non-differentiable cost function and simulates two different system trajectories simultaneously, with each system having its own free final time.},
+    address = {Bratislava, Slovakia},
+    author = {McInerney, Ian and Nita, Lucian and Nie, Yuanbo and Oliveri, Alberto and Kerrigan, Eric C.},
+    booktitle = {7th IFAC Conference on Nonlinear Predictive Control},
+    title = {Towards a Framework for Nonlinear Predictive Control Using Derivative-Free Optimization},
+    publisher = {IFAC},
+    year = {2021},
+    file = {2021_NMPC_TowardsADerivativeFreeFramework.pdf},
+    note = {Accepted}
+}

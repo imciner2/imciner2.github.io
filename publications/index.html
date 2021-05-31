@@ -221,7 +221,7 @@ Bibtex
 </div>
 </li></ol>
 
-<h2 id="journal-papers">Journal Papers</h2>
+<h2 id="peer-reviewed-journal-papers">Peer-reviewed Journal Papers</h2>
 <hr />
 
 <ol class="bibliography"><li><!--
@@ -372,10 +372,77 @@ Bibtex
 </div>
 </li></ol>
 
-<h2 id="conference-proceedings">Conference Proceedings</h2>
+<h2 id="peer-reviewed-conference-proceedings">Peer-reviewed Conference Proceedings</h2>
 <hr />
 
 <ol class="bibliography"><li><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div>
+<span id="McInerney2021_NMPC"><strong>I. McInerney</strong>, L. Nita, Y. Nie, A. Oliveri, and E. C. Kerrigan, “Towards a Framework for Nonlinear Predictive Control Using Derivative-Free Optimization,” in <em>7th IFAC Conference on Nonlinear Predictive Control</em>, Bratislava, Slovakia, 2021, (<em>Accepted</em>).</span>
+
+<p>
+
+
+
+
+
+
+<span class="pub_icons"><a href="/content/papers/2021_NMPC_TowardsADerivativeFreeFramework.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<details>
+    <summary>
+Abstract
+</summary>
+    
+<p>The use of derivative-based solvers to compute solutions to optimal control problems with non-differentiable cost or dynamics often requires reformulations or relaxations that complicate the implementation or increase computational complexity. We present an initial framework for using the derivative-free Mesh Adaptive Direct Search (MADS) algorithm to solve Nonlinear Model Predictive Control problems with non-differentiable features without the need for reformulation. The MADS algorithm performs a structured search of the input space by simulating selected system trajectories and computing the subsequent cost value. We propose handling the path constraints and the Lagrange cost term by augmenting the system dynamics with additional states to compute the violation and cost value alongside the state trajectories, eliminating the need for reconstructing the state trajectories in a separate phase. We demonstrate the practicality of this framework by solving a robust rocket control problem, where the objective is to reach a target altitude as close as possible, given a system with uncertain parameters. This example uses a non-differentiable cost function and simulates two different system trajectories simultaneously, with each system having its own free final time.</p>
+
+</details>
+
+
+
+
+
+<details>
+    <summary>
+Bibtex
+</summary>
+    
+<pre>
+@inproceedings{McInerney2021_NMPC,
+  address = {Bratislava, Slovakia},
+  author = {McInerney, Ian and Nita, Lucian and Nie, Yuanbo and Oliveri, Alberto and Kerrigan, Eric C.},
+  booktitle = {7th IFAC Conference on Nonlinear Predictive Control},
+  title = {Towards a Framework for Nonlinear Predictive Control Using Derivative-Free Optimization},
+  publisher = {IFAC},
+  year = {2021}
+}
+
+</pre>
+
+</details>
+
+</p>
+
+</div>
+</li>
+<li><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
