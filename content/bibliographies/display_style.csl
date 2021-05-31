@@ -171,7 +171,7 @@
       <if type="paper-conference speech" match="any">
         <choose>
           <!-- Published Conference Paper -->
-          <if variable="collection-editor editor editorial-director issue page volume" match="any">
+          <if variable="collection-editor editor editorial-director issue page volume note" match="any">
             <group delimiter=", ">
               <group delimiter=" ">
                 <text term="in"/>
@@ -185,7 +185,7 @@
             <group delimiter=", ">
               <group delimiter=" ">
                 <text term="presented at"/>
-                <text variable="event"/>
+                <text variable="event" font-style="italic"/>
               </group>
               <text variable="event-place"/>
             </group>

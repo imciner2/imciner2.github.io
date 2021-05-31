@@ -11,13 +11,13 @@ layout: publications
 {% bibliography --file Papers-Preprints --style ./content/bibliographies/display_style.csl %}
 
 
-## Journal Papers
+## Peer-reviewed Journal Papers
 ------------------------
 
 {% bibliography --file Papers-Journals --style ./content/bibliographies/display_style.csl %}
 
 
-## Conference Proceedings
+## Peer-reviewed Conference Proceedings
 ------------------------
 
 {% bibliography --file Papers-Conference --style ./content/bibliographies/display_style.csl %}
