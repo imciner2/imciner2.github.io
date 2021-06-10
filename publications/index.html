@@ -230,6 +230,84 @@ Bibtex
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
 -->
 <div>
+<span id="McInerney2020_digitElision">H. Li, <strong>I. McInerney</strong>, J. Davis, and G. Constantinides, “Digit Stability Inference for Iterative Methods Using Redundant Number Representation,” <em>IEEE Transactions on Computers</em>, vol. 70, no. 7, pp. 1074–1080, 2021.</span>
+
+<p>
+
+
+<span class="pub_icons"><a href="https://dx.doi.org/10.1109/TC.2020.3003529" target="_blank"><i class="ai ai-fw ai-doi"></i>10.1109/TC.2020.3003529</a></span>
+
+
+
+<span class="pub_icons"><a href="https://arxiv.com/abs/2006.09427" target="_blank"><i class="ai ai-fw ai-arxiv"></i>arXiv: 2006.09427</a></span>
+
+
+
+<span class="pub_icons"><a href="/content/papers/2020_IEEE-TC_DigitStabilityInference.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
+
+
+
+
+
+
+
+
+
+
+
+<span class="pub_icons"><a href="https://dx.doi.org/10.5281/zenodo.3564472" target="_blank"><i class="ai ai-fw ai-zenodo"></i> 10.5281/zenodo.3564472</a></span>
+
+
+
+
+
+<details>
+    <summary>
+Abstract
+</summary>
+    
+<p>In our recent work on iterative computation in hardware, we showed that arbitrary-precision solvers can perform more favourably than their traditional arithmetic equivalents when the latter’s precisions are either under- or over-budgeted for the solution of the problem at hand. Significant proportions of these performance improvements stem from the ability to infer the existence of identical most-significant digits between iterations.This technique uses properties of algorithms operating on redundantly represented numbers to allow the generation of those digits to be skipped, increasing efficiency. It is unable, however, to guarantee that digits will stabilise, i.e. never change in any future iteration. In this article, we address this shortcoming, using interval and forward error analyses to prove that digits of high significance will become stable when computing the approximants of systems of linear equations using stationary iterative methods. We formalise the relationship between matrix conditioning and the rate of growth in most-significant digit stability, using this information to converge to our desired results more quickly. Versus our previous work, an exemplary hardware implementation of this new technique achieves an up-to 2.2x speedup in the solution of a set of variously conditioned systems using the Jacobi method.</p>
+
+</details>
+
+
+
+
+
+<details>
+    <summary>
+Bibtex
+</summary>
+    
+<pre>
+@article{McInerney2020_digitElision,
+  author = {Li, He and McInerney, Ian and Davis, James and Constantinides, George},
+  journal = {IEEE Transactions on Computers},
+  publisher = {IEEE},
+  title = {Digit Stability Inference for Iterative Methods Using Redundant Number Representation},
+  year = {2021},
+  volume = {70},
+  number = {7},
+  pages = {1074--1080},
+  doi = {10.1109/TC.2020.3003529},
+  arxiv = {2006.09427},
+  zenodo = {10.5281/zenodo.3564472}
+}
+
+</pre>
+
+</details>
+
+</p>
+
+</div>
+</li>
+<li><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div>
 <span id="McInerney2021_energyConverterMPC">J.-M. Rodriguez-Bernuz, <strong>I. McInerney</strong>, A. Junyent-Ferré, and E. C. Kerrigan, “Design of a Linear Time-Varying Model Predictive Control Energy Regulator for Grid-Tied VSCs,” <em>IEEE Transactions on Energy Conversion</em>, vol. 36, no. 2, pp. 1425–1434, 2021.</span>
 
 <p>
@@ -286,84 +364,6 @@ Bibtex
   number = {2},
   pages = {1425--1434},
   doi = {10.1109/TEC.2021.3060319}
-}
-
-</pre>
-
-</details>
-
-</p>
-
-</div>
-</li>
-<li><!--
-    * Bold my name when it appears in the author's list
-    * Replace all uses of italics with the <em> tag so it actually shows up as italics
-    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
--->
-<div>
-<span id="McInerney2020_digitElision">H. Li, <strong>I. McInerney</strong>, J. Davis, and G. Constantinides, “Digit Stability Inference for Iterative Methods Using Redundant Number Representation,” <em>IEEE Transactions on Computers</em>, vol. 70, no. 7, pp. 1074–1080, 2020.</span>
-
-<p>
-
-
-<span class="pub_icons"><a href="https://dx.doi.org/10.1109/TC.2020.3003529" target="_blank"><i class="ai ai-fw ai-doi"></i>10.1109/TC.2020.3003529</a></span>
-
-
-
-<span class="pub_icons"><a href="https://arxiv.com/abs/2006.09427" target="_blank"><i class="ai ai-fw ai-arxiv"></i>arXiv: 2006.09427</a></span>
-
-
-
-<span class="pub_icons"><a href="/content/papers/2020_IEEE-TC_DigitStabilityInference.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
-
-
-
-
-
-
-
-
-
-
-
-<span class="pub_icons"><a href="https://dx.doi.org/10.5281/zenodo.3564472" target="_blank"><i class="ai ai-fw ai-zenodo"></i> 10.5281/zenodo.3564472</a></span>
-
-
-
-
-
-<details>
-    <summary>
-Abstract
-</summary>
-    
-<p>In our recent work on iterative computation in hardware, we showed that arbitrary-precision solvers can perform more favourably than their traditional arithmetic equivalents when the latter’s precisions are either under- or over-budgeted for the solution of the problem at hand. Significant proportions of these performance improvements stem from the ability to infer the existence of identical most-significant digits between iterations.This technique uses properties of algorithms operating on redundantly represented numbers to allow the generation of those digits to be skipped, increasing efficiency. It is unable, however, to guarantee that digits will stabilise, i.e. never change in any future iteration. In this article, we address this shortcoming, using interval and forward error analyses to prove that digits of high significance will become stable when computing the approximants of systems of linear equations using stationary iterative methods. We formalise the relationship between matrix conditioning and the rate of growth in most-significant digit stability, using this information to converge to our desired results more quickly. Versus our previous work, an exemplary hardware implementation of this new technique achieves an up-to 2.2x speedup in the solution of a set of variously conditioned systems using the Jacobi method.</p>
-
-</details>
-
-
-
-
-
-<details>
-    <summary>
-Bibtex
-</summary>
-    
-<pre>
-@article{McInerney2020_digitElision,
-  author = {Li, He and McInerney, Ian and Davis, James and Constantinides, George},
-  journal = {IEEE Transactions on Computers},
-  publisher = {IEEE},
-  title = {Digit Stability Inference for Iterative Methods Using Redundant Number Representation},
-  year = {2020},
-  volume = {70},
-  number = {7},
-  pages = {1074--1080},
-  doi = {10.1109/TC.2020.3003529},
-  arxiv = {2006.09427},
-  zenodo = {10.5281/zenodo.3564472}
 }
 
 </pre>
