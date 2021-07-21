@@ -91,6 +91,7 @@ scholar:
     - slides
     - poster
     - extendedabstract
+    - video
   bibtex_filters:
     - markdown
     - latex

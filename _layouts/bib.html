@@ -48,6 +48,10 @@
 <span class=pub_icons><a href="https://dx.doi.org/{{ entry.zenodo }}" target="_blank"><i class="ai ai-fw ai-zenodo"></i> {{ entry.zenodo }}</a></span>
 {% endif %}
 
+{% if entry.video %}
+<span class=pub_icons><a href="https://{{ entry.video }}" target="_blank"><i class="fas fa-video"></i> Video</a></span>
+{% endif %}
+
 {% if entry.abstract %}
 {% capture details %}
 {{ entry.abstract }}
