@@ -185,43 +185,35 @@
 
 
 
+<br />
+
+<button class="button button-abs" onclick="toggleAbstract('absMcInerney2021_closedFormPreconditioner')">Abstract</button>
+
+<button class="button button-bib" onclick="toggleBibtex('bibMcInerney2021_closedFormPreconditioner')">Bibtex</button>
+
+<br />
+
+<div id="absMcInerney2021_closedFormPreconditioner" class="summary" style="display: none;">
+<div><p>First-order optimization solvers, such as the Fast Gradient Method, are increasingly being used to solve Model Predictive Control problems in resource-constrained environments. Unfortunately, the convergence rate of these solvers is significantly affected by the conditioning of the problem data, with ill-conditioned problems requiring a large number of iterations. To reduce the number of iterations required, we present a simple method for computing a horizon-independent preconditioning matrix for the Hessian of the condensed problem. The preconditioner is based on the block Toeplitz structure of the Hessian. Horizon-independence allows one to use only the predicted system and cost matrices to compute the preconditioner, instead of the full Hessian. The proposed preconditioner has equivalent performance to an optimal preconditioner in numerical examples, producing speedups between 2x and 9x for the Fast Gradient Method. Additionally, we derive horizon-independent spectral bounds for the Hessian in terms of the transfer function of the predicted system, and show how these can be used to compute a novel horizon-independent bound on the condition number for the preconditioned Hessian.</p>
+</div>
+</div>
 
 
-
-<details>
-    <summary>
-Abstract
-</summary>
-    
-<p>First-order optimization solvers, such as the Fast Gradient Method, are increasingly being used to solve Model Predictive Control problems in resource-constrained environments. Unfortunately, the convergence rate of these solvers is significantly affected by the conditioning of the problem data, with ill-conditioned problems requiring a large number of iterations. To reduce the number of iterations required, we present a simple method for computing a horizon-independent preconditioning matrix for the Hessian of the condensed problem. The preconditioner is based on the block Toeplitz structure of the Hessian. Horizon-independence allows one to use only the predicted system and cost matrices to compute the preconditioner, instead of the full Hessian. The proposed preconditioner has equivalent performance to an optimal preconditioner in numerical examples, producing speedups between 2x and 9x for the Fast Gradient Method. Additionally, we derive horizon-independent spectral bounds for the Hessian in terms of the transfer function of the predicted system, and show how these can be used to compute a novel horizon-independent bound on the condition number for the preconditioned Hessian.</p>
-
-</details>
-
-
-
-
-
-<details>
-    <summary>
-Bibtex
-</summary>
-    
-<pre>
-@article{McInerney2021_closedFormPreconditioner,
+<div id="bibMcInerney2021_closedFormPreconditioner" class="summary" style="display: none;">
+<pre>@article{McInerney2021_closedFormPreconditioner,
   author = {McInerney, Ian and Kerrigan, Eric C. and Constantinides, George A.},
   title = {Horizon-independent Preconditioner Design for Linear Predictive Control},
   arxiv = {2010.08572},
   year = {2021}
 }
-
 </pre>
-
-</details>
+</div>
 
 </p>
 
 </div>
 </li></ol>
+<p><br /></p>
 
 <h2 id="peer-reviewed-journal-papers">Peer-reviewed Journal Papers</h2>
 <hr />
@@ -262,29 +254,22 @@ Bibtex
 
 
 
+<br />
+
+<button class="button button-abs" onclick="toggleAbstract('absMcInerney2020_digitElision')">Abstract</button>
+
+<button class="button button-bib" onclick="toggleBibtex('bibMcInerney2020_digitElision')">Bibtex</button>
+
+<br />
+
+<div id="absMcInerney2020_digitElision" class="summary" style="display: none;">
+<div><p>In our recent work on iterative computation in hardware, we showed that arbitrary-precision solvers can perform more favourably than their traditional arithmetic equivalents when the latter’s precisions are either under- or over-budgeted for the solution of the problem at hand. Significant proportions of these performance improvements stem from the ability to infer the existence of identical most-significant digits between iterations.This technique uses properties of algorithms operating on redundantly represented numbers to allow the generation of those digits to be skipped, increasing efficiency. It is unable, however, to guarantee that digits will stabilise, i.e. never change in any future iteration. In this article, we address this shortcoming, using interval and forward error analyses to prove that digits of high significance will become stable when computing the approximants of systems of linear equations using stationary iterative methods. We formalise the relationship between matrix conditioning and the rate of growth in most-significant digit stability, using this information to converge to our desired results more quickly. Versus our previous work, an exemplary hardware implementation of this new technique achieves an up-to 2.2x speedup in the solution of a set of variously conditioned systems using the Jacobi method.</p>
+</div>
+</div>
 
 
-
-<details>
-    <summary>
-Abstract
-</summary>
-    
-<p>In our recent work on iterative computation in hardware, we showed that arbitrary-precision solvers can perform more favourably than their traditional arithmetic equivalents when the latter’s precisions are either under- or over-budgeted for the solution of the problem at hand. Significant proportions of these performance improvements stem from the ability to infer the existence of identical most-significant digits between iterations.This technique uses properties of algorithms operating on redundantly represented numbers to allow the generation of those digits to be skipped, increasing efficiency. It is unable, however, to guarantee that digits will stabilise, i.e. never change in any future iteration. In this article, we address this shortcoming, using interval and forward error analyses to prove that digits of high significance will become stable when computing the approximants of systems of linear equations using stationary iterative methods. We formalise the relationship between matrix conditioning and the rate of growth in most-significant digit stability, using this information to converge to our desired results more quickly. Versus our previous work, an exemplary hardware implementation of this new technique achieves an up-to 2.2x speedup in the solution of a set of variously conditioned systems using the Jacobi method.</p>
-
-</details>
-
-
-
-
-
-<details>
-    <summary>
-Bibtex
-</summary>
-    
-<pre>
-@article{McInerney2020_digitElision,
+<div id="bibMcInerney2020_digitElision" class="summary" style="display: none;">
+<pre>@article{McInerney2020_digitElision,
   author = {Li, He and McInerney, Ian and Davis, James and Constantinides, George A.},
   journal = {IEEE Transactions on Computers},
   publisher = {IEEE},
@@ -297,10 +282,8 @@ Bibtex
   arxiv = {2006.09427},
   zenodo = {10.5281/zenodo.3564472}
 }
-
 </pre>
-
-</details>
+</div>
 
 </p>
 
@@ -338,29 +321,22 @@ Bibtex
 
 
 
+<br />
+
+<button class="button button-abs" onclick="toggleAbstract('absMcInerney2021_energyConverterMPC')">Abstract</button>
+
+<button class="button button-bib" onclick="toggleBibtex('bibMcInerney2021_energyConverterMPC')">Bibtex</button>
+
+<br />
+
+<div id="absMcInerney2021_energyConverterMPC" class="summary" style="display: none;">
+<div><p>This paper presents an energy regulator based on a Model Predictive Control (MPC) algorithm for a Voltage Source Converter (VSC). The MPC is formulated to optimise the converter performance according to the weights defined in an objective function that trades off additional features, such as current harmonic distortion, reactive power tracking and DC bus voltage oscillation. Differently from most approaches found in the research literature, the MPC proposed here considers the coupling dynamics between the AC and DC sides of the VSC. This study is focused on the example case of a single-phase VSC, which presents a nonlinear relationship between its AC and DC sides and a sustained double-line frequency power disturbance in its DC bus. To reduce the burden of the MPC, the controller is formulated to benefit from the slow energy dynamics of the system. Thus, the cascaded structure typically used in the control of VSCs is kept and the MPC is set as an energy regulator at a reduced sampling frequency while the current control relies on a fast inner controller. The computational burden of the algorithm is further reduced by using a linear time-varying approximation. The controller is presented in detail and experimental validation showing the performance of the algorithm is provided.</p>
+</div>
+</div>
 
 
-
-<details>
-    <summary>
-Abstract
-</summary>
-    
-<p>This paper presents an energy regulator based on a Model Predictive Control (MPC) algorithm for a Voltage Source Converter (VSC). The MPC is formulated to optimise the converter performance according to the weights defined in an objective function that trades off additional features, such as current harmonic distortion, reactive power tracking and DC bus voltage oscillation. Differently from most approaches found in the research literature, the MPC proposed here considers the coupling dynamics between the AC and DC sides of the VSC. This study is focused on the example case of a single-phase VSC, which presents a nonlinear relationship between its AC and DC sides and a sustained double-line frequency power disturbance in its DC bus. To reduce the burden of the MPC, the controller is formulated to benefit from the slow energy dynamics of the system. Thus, the cascaded structure typically used in the control of VSCs is kept and the MPC is set as an energy regulator at a reduced sampling frequency while the current control relies on a fast inner controller. The computational burden of the algorithm is further reduced by using a linear time-varying approximation. The controller is presented in detail and experimental validation showing the performance of the algorithm is provided.</p>
-
-</details>
-
-
-
-
-
-<details>
-    <summary>
-Bibtex
-</summary>
-    
-<pre>
-@article{McInerney2021_energyConverterMPC,
+<div id="bibMcInerney2021_energyConverterMPC" class="summary" style="display: none;">
+<pre>@article{McInerney2021_energyConverterMPC,
   title = {Design of a {{Linear Time}}-{{Varying Model Predictive Control Energy Regulator}} for {{Grid}}-{{Tied VSCs}}},
   author = {{Rodriguez-Bernuz}, Joan-Marc and McInerney, Ian and {Junyent-Ferr{\'e}}, Adri{\`a} and Kerrigan, Eric C.},
   journal = {IEEE Transactions on Energy Conversion},
@@ -371,15 +347,14 @@ Bibtex
   pages = {1425--1434},
   doi = {10.1109/TEC.2021.3060319}
 }
-
 </pre>
-
-</details>
+</div>
 
 </p>
 
 </div>
 </li></ol>
+<p><br /></p>
 
 <h2 id="peer-reviewed-conference-proceedings">Peer-reviewed Conference Proceedings</h2>
 <hr />
@@ -420,29 +395,22 @@ Bibtex
 <span class="pub_icons"><a href="https://youtu.be/LE5CXyx6bCM" target="_blank"><i class="fas fa-video"></i> Video</a></span>
 
 
+<br />
+
+<button class="button button-abs" onclick="toggleAbstract('absMcInerney2021_NMPC')">Abstract</button>
+
+<button class="button button-bib" onclick="toggleBibtex('bibMcInerney2021_NMPC')">Bibtex</button>
+
+<br />
+
+<div id="absMcInerney2021_NMPC" class="summary" style="display: none;">
+<div><p>The use of derivative-based solvers to compute solutions to optimal control problems with non-differentiable cost or dynamics often requires reformulations or relaxations that complicate the implementation or increase computational complexity. We present an initial framework for using the derivative-free Mesh Adaptive Direct Search (MADS) algorithm to solve Nonlinear Model Predictive Control problems with non-differentiable features without the need for reformulation. The MADS algorithm performs a structured search of the input space by simulating selected system trajectories and computing the subsequent cost value. We propose handling the path constraints and the Lagrange cost term by augmenting the system dynamics with additional states to compute the violation and cost value alongside the state trajectories, eliminating the need for reconstructing the state trajectories in a separate phase. We demonstrate the practicality of this framework by solving a robust rocket control problem, where the objective is to reach a target altitude as close as possible, given a system with uncertain parameters. This example uses a non-differentiable cost function and simulates two different system trajectories simultaneously, with each system having its own free final time.</p>
+</div>
+</div>
 
 
-
-<details>
-    <summary>
-Abstract
-</summary>
-    
-<p>The use of derivative-based solvers to compute solutions to optimal control problems with non-differentiable cost or dynamics often requires reformulations or relaxations that complicate the implementation or increase computational complexity. We present an initial framework for using the derivative-free Mesh Adaptive Direct Search (MADS) algorithm to solve Nonlinear Model Predictive Control problems with non-differentiable features without the need for reformulation. The MADS algorithm performs a structured search of the input space by simulating selected system trajectories and computing the subsequent cost value. We propose handling the path constraints and the Lagrange cost term by augmenting the system dynamics with additional states to compute the violation and cost value alongside the state trajectories, eliminating the need for reconstructing the state trajectories in a separate phase. We demonstrate the practicality of this framework by solving a robust rocket control problem, where the objective is to reach a target altitude as close as possible, given a system with uncertain parameters. This example uses a non-differentiable cost function and simulates two different system trajectories simultaneously, with each system having its own free final time.</p>
-
-</details>
-
-
-
-
-
-<details>
-    <summary>
-Bibtex
-</summary>
-    
-<pre>
-@inproceedings{McInerney2021_NMPC,
+<div id="bibMcInerney2021_NMPC" class="summary" style="display: none;">
+<pre>@inproceedings{McInerney2021_NMPC,
   address = {Bratislava, Slovakia},
   author = {McInerney, Ian and Nita, Lucian and Nie, Yuanbo and Oliveri, Alberto and Kerrigan, Eric C.},
   booktitle = {7th IFAC Conference on Nonlinear Predictive Control},
@@ -453,10 +421,8 @@ Bibtex
   doi = {10.1016/j.ifacol.2021.08.558},
   arxiv = {2106.05025}
 }
-
 </pre>
-
-</details>
+</div>
 
 </p>
 
@@ -498,29 +464,22 @@ Bibtex
 
 
 
+<br />
+
+<button class="button button-abs" onclick="toggleAbstract('absMcInerney2019_cdc')">Abstract</button>
+
+<button class="button button-bib" onclick="toggleBibtex('bibMcInerney2019_cdc')">Bibtex</button>
+
+<br />
+
+<div id="absMcInerney2019_cdc" class="summary" style="display: none;">
+<div><p>We present a method for determining the smallest precision required to have algorithmic stability of an implementation of the Fast Gradient Method (FGM) when solving a linear Model Predictive Control (MPC) problem in fixed-point arithmetic. We derive two models for the round-off error present in fixed-point arithmetic. The first is a generic model with no assumptions on the predicted system or weight matrices. The second is a parametric model that exploits the Toeplitz structure of the MPC problem for a Schur-stable system. We also propose a metric for measuring the amount of round-off error the FGM iteration can tolerate before becoming unstable. This metric is combined with the round-off error models to compute the minimum number of fractional bits needed for the fixed-point data type. Using these models, we show that exploiting the MPC problem structure nearly halves the number of fractional bits needed to implement an example problem. We show that this results in significant decreases in resource usage, computational energy and execution time for an implementation on a Field Programmable Gate Array.</p>
+</div>
+</div>
 
 
-
-<details>
-    <summary>
-Abstract
-</summary>
-    
-<p>We present a method for determining the smallest precision required to have algorithmic stability of an implementation of the Fast Gradient Method (FGM) when solving a linear Model Predictive Control (MPC) problem in fixed-point arithmetic. We derive two models for the round-off error present in fixed-point arithmetic. The first is a generic model with no assumptions on the predicted system or weight matrices. The second is a parametric model that exploits the Toeplitz structure of the MPC problem for a Schur-stable system. We also propose a metric for measuring the amount of round-off error the FGM iteration can tolerate before becoming unstable. This metric is combined with the round-off error models to compute the minimum number of fractional bits needed for the fixed-point data type. Using these models, we show that exploiting the MPC problem structure nearly halves the number of fractional bits needed to implement an example problem. We show that this results in significant decreases in resource usage, computational energy and execution time for an implementation on a Field Programmable Gate Array.</p>
-
-</details>
-
-
-
-
-
-<details>
-    <summary>
-Bibtex
-</summary>
-    
-<pre>
-@inproceedings{McInerney2019_cdc,
+<div id="bibMcInerney2019_cdc" class="summary" style="display: none;">
+<pre>@inproceedings{McInerney2019_cdc,
   address = {Nice, France},
   author = {McInerney, Ian and Kerrigan, Eric C. and Constantinides, George A.},
   booktitle = {58th IEEE Conference on Decision and Control (CDC)},
@@ -530,10 +489,8 @@ Bibtex
   year = {2019},
   doi = {10.1109/CDC40024.2019.9029910}
 }
-
 </pre>
-
-</details>
+</div>
 
 </p>
 
@@ -571,29 +528,22 @@ Bibtex
 
 
 
+<br />
+
+<button class="button button-abs" onclick="toggleAbstract('absMcInerney2018_UKACC')">Abstract</button>
+
+<button class="button button-bib" onclick="toggleBibtex('bibMcInerney2018_UKACC')">Bibtex</button>
+
+<br />
+
+<div id="absMcInerney2018_UKACC" class="summary" style="display: none;">
+<div><p>Written assessments, such as book problems and exams, have customarily been used in control courses to measure student progress, but usually only gauge their knowledge of the theoretical concepts. More complicated control methods, such as predictive control, benefit from gauging student progress through implementation projects. We present a set of automatically marked project-based assessments that test student knowledge on concepts ranging from the derivation of physics models to the creation of a closed-loop predictive controller. We present a simulation framework that allows for the students to utilize any predictive control concepts that they decide to use in their implementation. The framework then automatically tests the student solutions against multiple constraint sets and conditions to provide quantitative data for marking the assessment.</p>
+</div>
+</div>
 
 
-
-<details>
-    <summary>
-Abstract
-</summary>
-    
-<p>Written assessments, such as book problems and exams, have customarily been used in control courses to measure student progress, but usually only gauge their knowledge of the theoretical concepts. More complicated control methods, such as predictive control, benefit from gauging student progress through implementation projects. We present a set of automatically marked project-based assessments that test student knowledge on concepts ranging from the derivation of physics models to the creation of a closed-loop predictive controller. We present a simulation framework that allows for the students to utilize any predictive control concepts that they decide to use in their implementation. The framework then automatically tests the student solutions against multiple constraint sets and conditions to provide quantitative data for marking the assessment.</p>
-
-</details>
-
-
-
-
-
-<details>
-    <summary>
-Bibtex
-</summary>
-    
-<pre>
-@inproceedings{McInerney2018_UKACC,
+<div id="bibMcInerney2018_UKACC" class="summary" style="display: none;">
+<pre>@inproceedings{McInerney2018_UKACC,
   address = {Sheffield, UK},
   author = {McInerney, Ian and Kerrigan, Eric C.},
   booktitle = {2018 UKACC 12th International Conference on Control (CONTROL)},
@@ -604,10 +554,8 @@ Bibtex
   month = aug,
   year = {2018}
 }
-
 </pre>
-
-</details>
+</div>
 
 </p>
 
@@ -647,29 +595,22 @@ Bibtex
 
 
 
+<br />
+
+<button class="button button-abs" onclick="toggleAbstract('absMcInerney2018_NMPC')">Abstract</button>
+
+<button class="button button-bib" onclick="toggleBibtex('bibMcInerney2018_NMPC')">Bibtex</button>
+
+<br />
+
+<div id="absMcInerney2018_NMPC" class="summary" style="display: none;">
+<div><p>Over the past 20 years, great strides have been made in the real-time implementation of linear MPC on FPGA devices. Starting from initial work, which demonstrated the benefits of embedding linear MPC onto FPGAs, recent work has shown sampling rates of more than 1 MHz are possible with FPGA-based implementations. This work surveys FPGA implementations of linear MPC, with a focus on the computational architecture. This includes the choice of number representation, the parallelizations exploited and the memory architecture. We discuss the transferability of those design choices to the FPGA implementation of nonlinear MPC, and provide some future research directions related to the implementation of MPC on FPGAs.</p>
+</div>
+</div>
 
 
-
-<details>
-    <summary>
-Abstract
-</summary>
-    
-<p>Over the past 20 years, great strides have been made in the real-time implementation of linear MPC on FPGA devices. Starting from initial work, which demonstrated the benefits of embedding linear MPC onto FPGAs, recent work has shown sampling rates of more than 1 MHz are possible with FPGA-based implementations. This work surveys FPGA implementations of linear MPC, with a focus on the computational architecture. This includes the choice of number representation, the parallelizations exploited and the memory architecture. We discuss the transferability of those design choices to the FPGA implementation of nonlinear MPC, and provide some future research directions related to the implementation of MPC on FPGAs.</p>
-
-</details>
-
-
-
-
-
-<details>
-    <summary>
-Bibtex
-</summary>
-    
-<pre>
-@inproceedings{McInerney2018_NMPC,
+<div id="bibMcInerney2018_NMPC" class="summary" style="display: none;">
+<pre>@inproceedings{McInerney2018_NMPC,
   address = {Madison, Wisconsin, US},
   author = {McInerney, Ian and Constantinides, George A. and Kerrigan, Eric C.},
   booktitle = {6th IFAC Conference on Nonlinear Model Predictive Control},
@@ -679,10 +620,8 @@ Bibtex
   title = {A Survey of the Implementation of Linear Model Predictive Control on {FPGA}s},
   year = {2018}
 }
-
 </pre>
-
-</details>
+</div>
 
 </p>
 
@@ -720,29 +659,22 @@ Bibtex
 
 
 
+<br />
+
+<button class="button button-abs" onclick="toggleAbstract('absMcInerney2017_cdc')">Abstract</button>
+
+<button class="button button-bib" onclick="toggleBibtex('bibMcInerney2017_cdc')">Bibtex</button>
+
+<br />
+
+<div id="absMcInerney2017_cdc" class="summary" style="display: none;">
+<div><p>This paper presents a distributed method to locate a target object using multi-agent systems with only knowledge of the agent position and distance between them and the target. The problem is formulated as a non-convex quadratically constrained program, which is then solved using an optimization dynamics approach. The method presented can be applied to an arbitrary undirected network, and only requires agents communicating their estimate of the target’s position and their calculated dual variables. The proposed method is derived from the Range-Based Least-Squares method, and becomes the Maximum Likelihood Estimator for this problem under Gaussian noise. We present the convergence results and also numerical simulations of this method.</p>
+</div>
+</div>
 
 
-
-<details>
-    <summary>
-Abstract
-</summary>
-    
-<p>This paper presents a distributed method to locate a target object using multi-agent systems with only knowledge of the agent position and distance between them and the target. The problem is formulated as a non-convex quadratically constrained program, which is then solved using an optimization dynamics approach. The method presented can be applied to an arbitrary undirected network, and only requires agents communicating their estimate of the target’s position and their calculated dual variables. The proposed method is derived from the Range-Based Least-Squares method, and becomes the Maximum Likelihood Estimator for this problem under Gaussian noise. We present the convergence results and also numerical simulations of this method.</p>
-
-</details>
-
-
-
-
-
-<details>
-    <summary>
-Bibtex
-</summary>
-    
-<pre>
-@inproceedings{McInerney2017_cdc,
+<div id="bibMcInerney2017_cdc" class="summary" style="display: none;">
+<pre>@inproceedings{McInerney2017_cdc,
   address = {Melbourne, Australia},
   author = {McInerney, Ian and Ma, Xu and Elia, Nicola},
   booktitle = {56th IEEE Conference on Decision and Control (CDC)},
@@ -752,15 +684,14 @@ Bibtex
   year = {2017},
   doi = {10.1109/CDC.2017.8263973}
 }
-
 </pre>
-
-</details>
+</div>
 
 </p>
 
 </div>
 </li></ol>
+<p><br /></p>
 
 <h2 id="working-papers">Working Papers</h2>
 <hr />
@@ -797,29 +728,22 @@ Bibtex
 
 
 
+<br />
+
+<button class="button button-abs" onclick="toggleAbstract('absMcInerney2019_boundingComputationalComplexity')">Abstract</button>
+
+<button class="button button-bib" onclick="toggleBibtex('bibMcInerney2019_boundingComputationalComplexity')">Bibtex</button>
+
+<br />
+
+<div id="absMcInerney2019_boundingComputationalComplexity" class="summary" style="display: none;">
+<div><p>We present a framework for upper bounding the number of iterations required by first-order optimization algorithms implementing constrained LQR controllers. We derive new bounds for the condition number and extremal eigenvalues of the primal and dual Hessian matrices when the cost function is scaled. These bounds are horizon-independent, allowing for their use with receding, variable and decreasing horizon controllers. We considerably relax prior assumptions on the structure of the weight matrices and assume only that the system is Schur-stable and the primal Hessian of the quadratic program (QP) is positive-definite. Our analysis uses the Toeplitz structure of the QP matrices to relate their spectrum to the transfer function of the system, allowing for the use of system-theoretic techniques to compute the bounds. Using these bounds, we can compute the effect on the computational complexity of trading off the input energy used against the state deviation. An example system shows a three-times increase in algorithm iterations between the two extremes, with the state 2-norm decreased by only 5% despite a greatly increased state deviation penalty.</p>
+</div>
+</div>
 
 
-
-<details>
-    <summary>
-Abstract
-</summary>
-    
-<p>We present a framework for upper bounding the number of iterations required by first-order optimization algorithms implementing constrained LQR controllers. We derive new bounds for the condition number and extremal eigenvalues of the primal and dual Hessian matrices when the cost function is scaled. These bounds are horizon-independent, allowing for their use with receding, variable and decreasing horizon controllers. We considerably relax prior assumptions on the structure of the weight matrices and assume only that the system is Schur-stable and the primal Hessian of the quadratic program (QP) is positive-definite. Our analysis uses the Toeplitz structure of the QP matrices to relate their spectrum to the transfer function of the system, allowing for the use of system-theoretic techniques to compute the bounds. Using these bounds, we can compute the effect on the computational complexity of trading off the input energy used against the state deviation. An example system shows a three-times increase in algorithm iterations between the two extremes, with the state 2-norm decreased by only 5% despite a greatly increased state deviation penalty.</p>
-
-</details>
-
-
-
-
-
-<details>
-    <summary>
-Bibtex
-</summary>
-    
-<pre>
-@article{McInerney2019_boundingComputationalComplexity,
+<div id="bibMcInerney2019_boundingComputationalComplexity" class="summary" style="display: none;">
+<pre>@article{McInerney2019_boundingComputationalComplexity,
   author = {McInerney, Ian and Kerrigan, Eric C. and Constantinides, George A.},
   title = {Bounding Computational Complexity under Cost Function Scaling in Predictive Control},
   journal = {arXiv:1902.02221},
@@ -827,15 +751,14 @@ Bibtex
   year = {2019},
   codedoi = {10.24433/CO.3311801.v1}
 }
-
 </pre>
-
-</details>
+</div>
 
 </p>
 
 </div>
 </li></ol>
+<p><br /></p>
 
 <h2 id="thesis">Thesis</h2>
 <hr />
@@ -872,33 +795,26 @@ Bibtex
 
 
 
+<br />
 
+<button class="button button-abs" onclick="toggleAbstract('absMcInerney2017_MSThesis')">Abstract</button>
 
+<button class="button button-bib" onclick="toggleBibtex('bibMcInerney2017_MSThesis')">Bibtex</button>
 
-<details>
-    <summary>
-Abstract
-</summary>
-    
-<p>Research on multi-agent systems of UAVs is of growing interest in the research community, with specific interest in the testing of novel algorithms on actual systems. Many existing testbeds already exist, but the majority of them utilize expensive quadrotors for their agents. With the recent surge in interest from consumers, companies have started to market lower cost quadrotor options. One such option is the Crazyflie 2.0 from Bitcraze. This quadrotor measures just 10cm from rotor to rotor, uses open-source firmware, and has developed a strong community backing. This work develops a multi-agent testbed using the Crazyflie 2.0.
+<br />
+
+<div id="absMcInerney2017_MSThesis" class="summary" style="display: none;">
+<div><p>Research on multi-agent systems of UAVs is of growing interest in the research community, with specific interest in the testing of novel algorithms on actual systems. Many existing testbeds already exist, but the majority of them utilize expensive quadrotors for their agents. With the recent surge in interest from consumers, companies have started to market lower cost quadrotor options. One such option is the Crazyflie 2.0 from Bitcraze. This quadrotor measures just 10cm from rotor to rotor, uses open-source firmware, and has developed a strong community backing. This work develops a multi-agent testbed using the Crazyflie 2.0.
     <p>This work presents a parameterization of the Crazyflie quadrotor so it can be modeled and have more advanced controllers designed for it. Additionally, this work discusses the default control loop of the Crazyflie 2.0. Then nested-loop PID controllers are designed and compared against the simulated physics model.
     <p>A software system that is capable of controlling multiple flying Crazyflie’s is also presented. This system is also capable of modifying the controller at runtime, and implementing distributed computation on the Crazyflie.
     <p>Finally, a novel algorithm for localization of a target object using distance-only measurements is presented. This algorithm uses optimization dynamics to solve a non-convex QCQP formulation of the problem in a distributed manner. The algorithm is presented and then implemented using the distributed computation framework presented in this work.
 </p></p></p></p>
-
-</details>
-
-
+</div>
+</div>
 
 
-
-<details>
-    <summary>
-Bibtex
-</summary>
-    
-<pre>
-@mastersthesis{McInerney2017_MSThesis,
+<div id="bibMcInerney2017_MSThesis" class="summary" style="display: none;">
+<pre>@mastersthesis{McInerney2017_MSThesis,
   author = {McInerney, Ian Scott},
   booktitle = {Thesis},
   school = {Iowa State University},
@@ -909,16 +825,16 @@ Bibtex
   doi = {10.31274/etd-180810-5192},
   codedoi = {10.5281/zenodo.4719659}
 }
-
 </pre>
-
-</details>
+</div>
 
 </p>
 
 </div>
 </li></ol>
+<p><br /></p>
 
+<p><strong>Copyright disclaimer:</strong> The documents contained in this page are included to ensure timely dissemination of scholarly and technical work on a non-commercial basis. Copyright and all rights therein are maintained by the authors or by other copyright holders, notwithstanding that they have offered their works here electronically. It is understood that all persons copying this information will adhere to the terms and constraints invoked by each author’s copyright. These works may not be reposted without the explicit permission of the copyright holder.</p>
 
   </div><!--closing resume div-->
   </article>
@@ -928,12 +844,34 @@ Bibtex
   <footer>
     
 
-<span>&copy; 2021 Ian McInerney. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://ncsu-libraries.github.io/jekyll-academic/" rel="nofollow">Jekyll Academic</a> theme.
+<span>&copy; 2022 Ian McInerney. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://ncsu-libraries.github.io/jekyll-academic/" rel="nofollow">Jekyll Academic</a> theme.
 <br /></span>
 
 
   </footer>
 </div><!-- /.footer-wrap -->
+
+
+<!-- Scripts for the bibliography -->
+<script>
+function toggleBibtex( parameter ) {
+    var x= document.getElementById( parameter );
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+function toggleAbstract( parameter ) {
+    var x= document.getElementById( parameter );
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>

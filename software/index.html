@@ -216,12 +216,34 @@ I am a member of the lead development team, and am responsible for designing/imp
   <footer>
     
 
-<span>&copy; 2021 Ian McInerney. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://ncsu-libraries.github.io/jekyll-academic/" rel="nofollow">Jekyll Academic</a> theme.
+<span>&copy; 2022 Ian McInerney. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://ncsu-libraries.github.io/jekyll-academic/" rel="nofollow">Jekyll Academic</a> theme.
 <br /></span>
 
 
   </footer>
 </div><!-- /.footer-wrap -->
+
+
+<!-- Scripts for the bibliography -->
+<script>
+function toggleBibtex( parameter ) {
+    var x= document.getElementById( parameter );
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+function toggleAbstract( parameter ) {
+    var x= document.getElementById( parameter );
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
