@@ -18,7 +18,7 @@ jobs:
     - name: Set up Ruby
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: 2.6.x
+        ruby-version: 3.0.x
 
     - name: Build Jekyll site
       run: |
