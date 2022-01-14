@@ -45,7 +45,7 @@ module Jekyll
         set_context_to context
 
         # Only select items that are public.
-        items = entries.select { |e| e.public == 'yes' }
+        items = entries.select { |e| entry_is_public(e) }
 
         initialize_prefix_defaults()
         initialize_type_labels()

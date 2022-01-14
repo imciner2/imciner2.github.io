@@ -16,6 +16,15 @@ module Jekyll
       return idx_html + ref
     end
 
+    # Default to public if no key
+    def entry_is_public(entry)
+      if entry.field?(:public)
+        return entry.public == 'yes'
+      else
+        return true
+      end
+    end
+
     # Generate the publication type images.
     def render_ref_img(item)
       css_points = Hash[{

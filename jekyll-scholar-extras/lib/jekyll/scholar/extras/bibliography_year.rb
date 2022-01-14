@@ -29,7 +29,7 @@ module Jekyll
 
         @type_counts.keys.each { |t|
           bib = bibliography.query('@*') { |b|
-            (b.public == 'yes' && b.type == t)
+            (entry_is_public(b) && b.type == t)
           }
           @type_counts[t] = bib.size
         }
@@ -59,7 +59,7 @@ module Jekyll
 
       def entries_year(year)
         b = bibliography.query('@*') { 
-          |a| (a.year == year && a.public == 'yes')
+          |a| (a.year == year && entry_is_public(a))
         }
       end
 
