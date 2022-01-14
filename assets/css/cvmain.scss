@@ -35,45 +35,48 @@ $lowlightcolor: {{ site.lowlight-color }};
 @import "print";
 
 
-//
-// <details> tag
-//
-details {
-    border-radius: 10px;
-    padding: 0px 8px;
-    margin-bottom: 15px;
-}
-
-details[open] {
-    background: lighten($basecolor, 75%);
-    padding: 0px 8px 8px 8px;
-}
-
-summary {
-  //margin: 0px 0px 8px 0px;
+/* Elements for showing the bibtex/abstract */
+.summary {
+  margin: 0px 0px 8px 0px;
   outline:none;
   padding: 2px 6px;
-  width: 10em;
   background: lighten($basecolor, 75%);
   border: none;
   border-radius: 10px;
   cursor: pointer;
 }
 
-details summary {
-    color: #2a7ae2;
+
+/* Buttons for showing items */
+.button {
+  float: left;
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 1px;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button-abs {
+    background-color: #4CAF50;
 }
 
 
 /* Bibliography */
-
 ol.bibliography {
   counter-reset: item
 }
 
 ol.bibliography li {
   list-style-type: none;
-  margin: 30px 0;
+  margin: 10px 0;
 }
 
 ol.bibliography li:before {

@@ -52,25 +52,23 @@
 <span class=pub_icons><a href="https://{{ entry.video }}" target="_blank"><i class="fas fa-video"></i> Video</a></span>
 {% endif %}
 
+<br>
 {% if entry.abstract %}
-{% capture details %}
-{{ entry.abstract }}
-{% endcapture %}
-{% capture summary %}
-Abstract
-{% endcapture %}
-{% include _details.html %}
+<button class="button button-abs"  onclick="toggleAbstract('abs{{entry.key}}')">Abstract</button>
+{% endif %}
+<button class="button button-bib"  onclick="toggleBibtex('bib{{entry.key}}')">Bibtex</button>
+
+<br>
+{% if entry.abstract %}
+<div id="abs{{entry.key}}" class="summary" style="display: none;">
+<div>{{entry.abstract | markdownify}}</div>
+</div>
 {% endif %}
 
-{% capture details %}
-<pre>
-{{ entry.bibtex }}
-</pre>
-{% endcapture %}
-{% capture summary %}
-Bibtex
-{% endcapture %}
-{% include _details.html %}
+<div id="bib{{entry.key}}" class="summary" style="display: none;">
+<pre>{{entry.bibtex}}</pre>
+</div>
+
 </p>
 
 </div>
