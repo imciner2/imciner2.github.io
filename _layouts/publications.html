@@ -37,21 +37,37 @@
 
 <!-- Scripts for the bibliography -->
 <script>
-function toggleBibtex( parameter ) {
-    var x= document.getElementById( parameter );
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
+function toggleBibtex( parameter )
+{
+    var tex = document.getElementById( 'bib' + parameter );
+    var img = document.getElementById( 'bib-button' + parameter );
+
+    if( tex.style.display === 'none' )
+    {
+        tex.style.display = 'block';
+        img.className = 'fas fa-caret-up';
+    }
+    else
+    {
+        tex.style.display = 'none';
+        img.className = 'fas fa-caret-down';
     }
 }
 
-function toggleAbstract( parameter ) {
-    var x= document.getElementById( parameter );
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
+function toggleAbstract( parameter )
+{
+    var tex = document.getElementById( 'abs' + parameter );
+    var img = document.getElementById( 'abs-button' + parameter );
+
+    if( tex.style.display === 'none' )
+    {
+        tex.style.display = 'block';
+        img.className = 'fas fa-caret-up';
+    }
+    else
+    {
+        tex.style.display = 'none';
+        img.className = 'fas fa-caret-down';
     }
 }
 </script>

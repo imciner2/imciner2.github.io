@@ -54,9 +54,9 @@
 
 <br>
 {% if entry.abstract %}
-<button class="button button-abs"  onclick="toggleAbstract('abs{{entry.key}}')">Abstract</button>
+<button class="button button-abs"  onclick="toggleAbstract('{{entry.key}}')">Abstract <i id="abs-button{{entry.key}}" class="fas fa-caret-down"></i></button>
 {% endif %}
-<button class="button button-bib"  onclick="toggleBibtex('bib{{entry.key}}')">Bibtex</button>
+<button class="button button-bib"  onclick="toggleBibtex('{{entry.key}}')">Bibtex <i id="bib-button{{entry.key}}" class="fas fa-caret-down"></i></button>
 
 <br>
 {% if entry.abstract %}
