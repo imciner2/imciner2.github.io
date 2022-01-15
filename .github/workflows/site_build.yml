@@ -20,6 +20,12 @@ jobs:
       with:
         ruby-version: 3.0.x
 
+    - name: Build jekyll-scholar-extras
+      run: |
+        cd jekyll-scholar-extras/
+        gem build jekyll-scholar-extras.gemspec
+        cd ..
+
     - name: Build Jekyll site
       run: |
         set -xo pipefail
