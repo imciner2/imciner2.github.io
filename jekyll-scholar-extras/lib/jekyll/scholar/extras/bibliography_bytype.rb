@@ -87,39 +87,6 @@ module Jekyll
               reference.insert(reference.rindex('</div>'), ts.to_s)
             end 
           end
-
-          # Check if there are ACM PDF links
-          # Really awkward way of insertion
-          reference.insert(reference.rindex('</div>').to_i,render_acmpdf_link(entry))
-
-          # Render links if repository specified
-          if repository? && !entry.field?(:acmpdflink)
-            if not repository_link_for(entry).nil?
-              pdflink = "<div class=\"pure-button csl-pdf\"><a href=\"" + repository_link_for(entry) + "\">PDF</a></div>"
-              reference.insert(reference.rindex('</div>'), pdflink.to_s )
-            end
-
-            # Check for SLIDES PDF.
-            if not repository_link_for(entry).nil?
-              link = repository_slides_link_for(entry)
-              if link.to_s.include?("_slides")
-                pdflink = "<div class=\"pure-button csl-slides\"><a href=\"" + repository_slides_link_for(entry) + "\">SLIDES</a></div>"
-                reference.insert(reference.rindex('</div>'), pdflink.to_s )                      
-              end
-            end
-
-            
-          end
-
-          # Is there a link for code
-          if entry.field?(:code)
-            code_url = "<div class=\"pure-button csl-code\"><a href=\"" + entry.code.to_s + "\">CODE</a></div>"
-            reference.insert(reference.rindex('</div>').to_i, code_url.to_s )                      
-          end   
-
-                  # Generate the bibtex button
-          tex_bib = "<div class=\"pure-button csl-bibtex\"><a href=\"" + bibtex_link_for(entry).to_s + "\">BIBTEX</a></div>"
-          reference.insert(reference.rindex('</div>').to_i, tex_bib.to_s )
           
           content_tag config['bibliography_item_tag'], reference
           content_tag "li", reference, { :class => render_ref_img(entry) }
