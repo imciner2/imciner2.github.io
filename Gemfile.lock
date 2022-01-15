@@ -1,3 +1,12 @@
+PATH
+  remote: jekyll-scholar-extras
+  specs:
+    jekyll-scholar-extras (0.1.5)
+      bibtex-ruby (~> 6.0)
+      citeproc-ruby (~> 1.0)
+      jekyll (~> 4.0)
+      jekyll-scholar (~> 7.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -130,6 +139,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-gist
   jekyll-scholar
+  jekyll-scholar-extras!
   jekyll-seo-tag
   jekyll-sitemap
   kramdown-parser-gfm

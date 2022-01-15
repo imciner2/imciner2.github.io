@@ -79,12 +79,15 @@ scholar:
   source: ./content/bibliographies
   bibliography: '**/*.bib'
   bibliography_template: bib
+  # Sorting is done by the plugin
+  bibliography_list_tag: "ul"
   sort_by:
     - year
     - month
   order: descending
   bibtex_skip_fields:
     - abstract
+    - group
     - month_numeric
     - file
     - note

@@ -24,6 +24,7 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
   gem "jekyll-gist"
   gem "jekyll-scholar"
+  gem "jekyll-scholar-extras", path: "./jekyll-scholar-extras"
   gem "kramdown-parser-gfm"
 end
 

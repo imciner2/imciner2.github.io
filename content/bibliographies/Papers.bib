@@ -1,4 +1,4 @@
-@article{McInerney2021_closedFormPreconditioner,
+@unpublished{McInerney2021_closedFormPreconditioner,
     group = {preprint},
     abstract = {First-order optimization solvers, such as the Fast Gradient Method, are increasingly being used to solve Model Predictive Control problems in resource-constrained environments. Unfortunately, the convergence rate of these solvers is significantly affected by the conditioning of the problem data, with ill-conditioned problems requiring a large number of iterations. To reduce the number of iterations required, we present a simple method for computing a horizon-independent preconditioning matrix for the Hessian of the condensed problem. The preconditioner is based on the block Toeplitz structure of the Hessian. Horizon-independence allows one to use only the predicted system and cost matrices to compute the preconditioner, instead of the full Hessian. The proposed preconditioner has equivalent performance to an optimal preconditioner in numerical examples, producing speedups between 2x and 9x for the Fast Gradient Method. Additionally, we derive horizon-independent spectral bounds for the Hessian in terms of the transfer function of the predicted system, and show how these can be used to compute a novel horizon-independent bound on the condition number for the preconditioned Hessian.},
     author = {McInerney, Ian and Kerrigan, Eric C. and Constantinides, George A.},
@@ -72,7 +72,7 @@
     poster = {2019_CDC_ModelingRoundoffError.pdf}
 }
 
-@article{McInerney2019_boundingComputationalComplexity,
+@techreport{McInerney2019_boundingComputationalComplexity,
     group = {report},
     abstract = {We present a framework for upper bounding the number of iterations required by first-order optimization algorithms implementing constrained LQR controllers. We derive new bounds for the condition number and extremal eigenvalues of the primal and dual Hessian matrices when the cost function is scaled. These bounds are horizon-independent, allowing for their use with receding, variable and decreasing horizon controllers. We considerably relax prior assumptions on the structure of the weight matrices and assume only that the system is Schur-stable and the primal Hessian of the quadratic program (QP) is positive-definite. Our analysis uses the Toeplitz structure of the QP matrices to relate their spectrum to the transfer function of the system, allowing for the use of system-theoretic techniques to compute the bounds. Using these bounds, we can compute the effect on the computational complexity of trading off the input energy used against the state deviation. An example system shows a three-times increase in algorithm iterations between the two extremes, with the state 2-norm decreased by only 5% despite a greatly increased state deviation penalty.},
     author = {McInerney, Ian and Kerrigan, Eric C. and Constantinides, George A.},
@@ -127,7 +127,7 @@
     file = {2017_CDC_DistributedTrilateration.pdf}
 }
 
-@mastersthesis{McInerney2017_MSThesis,
+@thesis{McInerney2017_MSThesis,
     group = {thesis},
     abstract = {<p>Research on multi-agent systems of UAVs is of growing interest in the research community, with specific interest in the testing of novel algorithms on actual systems. Many existing testbeds already exist, but the majority of them utilize expensive quadrotors for their agents. With the recent surge in interest from consumers, companies have started to market lower cost quadrotor options. One such option is the Crazyflie 2.0 from Bitcraze. This quadrotor measures just 10cm from rotor to rotor, uses open-source firmware, and has developed a strong community backing. This work develops a multi-agent testbed using the Crazyflie 2.0.
     <p>This work presents a parameterization of the Crazyflie quadrotor so it can be modeled and have more advanced controllers designed for it. Additionally, this work discusses the default control loop of the Crazyflie 2.0. Then nested-loop PID controllers are designed and compared against the simulated physics model.

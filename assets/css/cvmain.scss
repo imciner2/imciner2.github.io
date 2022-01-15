@@ -70,18 +70,18 @@ $lowlightcolor: {{ site.lowlight-color }};
 
 
 /* Bibliography */
-ol.bibliography {
-  counter-reset: item
+ul.bibliography {
+  counter-reset: item;
 }
 
-ol.bibliography li {
+ul.bibliography li {
   list-style-type: none;
   margin: 10px 0;
 }
 
-ol.bibliography li:before {
-  content: "[" counter(item) "] ";
-  counter-increment: item;
+ul.bibliography li:before {
+/*  content: "[" counter(item) "] "; */
+/*  counter-increment: item; */
   position: absolute;
   text-align: right;
   width: 4em;
