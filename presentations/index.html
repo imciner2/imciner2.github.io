@@ -55,6 +55,7 @@
 <!-- Modernizr -->
 <script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
 
+<link rel="stylesheet" href="/assets/css/csl.css">
 
 <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
 <!-- Icons -->
@@ -154,12 +155,12 @@
 
 <p>Note: The following presentations were given at conferences where no paper was published in the proceedings. For conference presentations with an associated proceedings paper, see the <a href="/publications/">publications</a> page.</p>
 
-<ol class="bibliography"><li><!--
+<ul class="bibliography"><li><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
 -->
-<div>
+<div class="csl-block csl-content">
 <span id="McInerney2020_IFAC"><strong>I. McInerney</strong>, E. C. Kerrigan, and G. A. Constantinides, “Closed-Form Preconditioner Design for Linear Predictive Control,” presented at the <em>21st IFAC World Congress</em>, Berlin, Germany, Jul. 2020.</span>
 
 <p>
@@ -188,11 +189,14 @@
 <span class="pub_icons"><a href="https://youtu.be/WrqLrvuM1v8" target="_blank"><i class="fas fa-video"></i> Video</a></span>
 
 
+
+
+
 <br />
 
-<button class="button button-abs" onclick="toggleAbstract('absMcInerney2020_IFAC')">Abstract</button>
+<button class="button button-abs left-align" onclick="toggleAbstract('McInerney2020_IFAC')">Abstract <i id="abs-buttonMcInerney2020_IFAC" class="fas fa-caret-down"></i></button>
 
-<button class="button button-bib" onclick="toggleBibtex('bibMcInerney2020_IFAC')">Bibtex</button>
+<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2020_IFAC')">Bibtex <i id="bib-buttonMcInerney2020_IFAC" class="fas fa-caret-down"></i></button>
 
 <br />
 
@@ -223,7 +227,7 @@
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
 -->
-<div>
+<div class="csl-block csl-content">
 <span id="McInerney2019_ICIAM"><strong>I. McInerney</strong>, E. C. Kerrigan, and G. A. Constantinides, “Bounding computational complexity under cost function scaling in predictive control,” presented at the <em>International Conference on Industrial and Applied Mathematics (ICIAM)</em>, Valencia, Spain, Jul. 2019.</span>
 
 <p>
@@ -248,11 +252,14 @@
 
 
 
+
+
+
 <br />
 
-<button class="button button-abs" onclick="toggleAbstract('absMcInerney2019_ICIAM')">Abstract</button>
+<button class="button button-abs left-align" onclick="toggleAbstract('McInerney2019_ICIAM')">Abstract <i id="abs-buttonMcInerney2019_ICIAM" class="fas fa-caret-down"></i></button>
 
-<button class="button button-bib" onclick="toggleBibtex('bibMcInerney2019_ICIAM')">Bibtex</button>
+<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2019_ICIAM')">Bibtex <i id="bib-buttonMcInerney2019_ICIAM" class="fas fa-caret-down"></i></button>
 
 <br />
 
@@ -283,7 +290,7 @@
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
 -->
-<div>
+<div class="csl-block csl-content">
 <span id="McInerney2019_NACONF"><strong>I. McInerney</strong>, E. C. Kerrigan, and G. A. Constantinides, “Modeling round-off error in the fast gradient method for predictive control,” presented at the <em>28th Biennial Numerical Analysis Conference</em>, Glasgow, Scotland, UK, Jun. 2019.</span>
 
 <p>
@@ -310,9 +317,12 @@
 
 
 
+
+
+
 <br />
 
-<button class="button button-bib" onclick="toggleBibtex('bibMcInerney2019_NACONF')">Bibtex</button>
+<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2019_NACONF')">Bibtex <i id="bib-buttonMcInerney2019_NACONF" class="fas fa-caret-down"></i></button>
 
 <br />
 
@@ -332,7 +342,7 @@
 </p>
 
 </div>
-</li></ol>
+</li></ul>
 <p><br /></p>
 
 <p><strong>Copyright disclaimer:</strong> The documents contained in this page are included to ensure timely dissemination of scholarly and technical work on a non-commercial basis. Copyright and all rights therein are maintained by the authors or by other copyright holders, notwithstanding that they have offered their works here electronically. It is understood that all persons copying this information will adhere to the terms and constraints invoked by each author’s copyright. These works may not be reposted without the explicit permission of the copyright holder.</p>
@@ -355,21 +365,37 @@
 
 <!-- Scripts for the bibliography -->
 <script>
-function toggleBibtex( parameter ) {
-    var x= document.getElementById( parameter );
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
+function toggleBibtex( parameter )
+{
+    var tex = document.getElementById( 'bib' + parameter );
+    var img = document.getElementById( 'bib-button' + parameter );
+
+    if( tex.style.display === 'none' )
+    {
+        tex.style.display = 'block';
+        img.className = 'fas fa-caret-up';
+    }
+    else
+    {
+        tex.style.display = 'none';
+        img.className = 'fas fa-caret-down';
     }
 }
 
-function toggleAbstract( parameter ) {
-    var x= document.getElementById( parameter );
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
+function toggleAbstract( parameter )
+{
+    var tex = document.getElementById( 'abs' + parameter );
+    var img = document.getElementById( 'abs-button' + parameter );
+
+    if( tex.style.display === 'none' )
+    {
+        tex.style.display = 'block';
+        img.className = 'fas fa-caret-up';
+    }
+    else
+    {
+        tex.style.display = 'none';
+        img.className = 'fas fa-caret-down';
     }
 }
 </script>

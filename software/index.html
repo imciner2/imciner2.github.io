@@ -55,6 +55,7 @@
 <!-- Modernizr -->
 <script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
 
+<link rel="stylesheet" href="/assets/css/csl.css">
 
 <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
 <!-- Icons -->
@@ -226,21 +227,37 @@ I am a member of the lead development team, and am responsible for designing/imp
 
 <!-- Scripts for the bibliography -->
 <script>
-function toggleBibtex( parameter ) {
-    var x= document.getElementById( parameter );
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
+function toggleBibtex( parameter )
+{
+    var tex = document.getElementById( 'bib' + parameter );
+    var img = document.getElementById( 'bib-button' + parameter );
+
+    if( tex.style.display === 'none' )
+    {
+        tex.style.display = 'block';
+        img.className = 'fas fa-caret-up';
+    }
+    else
+    {
+        tex.style.display = 'none';
+        img.className = 'fas fa-caret-down';
     }
 }
 
-function toggleAbstract( parameter ) {
-    var x= document.getElementById( parameter );
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
+function toggleAbstract( parameter )
+{
+    var tex = document.getElementById( 'abs' + parameter );
+    var img = document.getElementById( 'abs-button' + parameter );
+
+    if( tex.style.display === 'none' )
+    {
+        tex.style.display = 'block';
+        img.className = 'fas fa-caret-up';
+    }
+    else
+    {
+        tex.style.display = 'none';
+        img.className = 'fas fa-caret-down';
     }
 }
 </script>
