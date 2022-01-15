@@ -24,7 +24,10 @@ module Jekyll
                               :inproceedings => 0,
                               :incollection=> 0,
                               :techreport => 0,
-                              :book => 0
+                              :book => 0,
+                              :unpublished => 0,
+                              :patent => 0,
+                              :thesis => 0
                             }]
 
         @type_counts.keys.each { |t|
@@ -36,12 +39,8 @@ module Jekyll
       end
 
       def initialize_type_order()
-        @type_order = Hash[{ :article => 0,
-                             :book => 0,
-                             :incollection=> 0,
-                             :inproceedings => 0,
-                             :techreport => 0
-                           }]
+        @type_order = Hash[{}]
+        entries.each{ |i| @type_order[i.type] = 0}
       end
 
 
@@ -52,8 +51,8 @@ module Jekyll
       end
 
       def render_year(y)
-        ys = content_tag "h2 class=\"csl-year-header\"", y
-        ys = content_tag "div class=\"csl-year-icon\"", ys
+        ys = content_tag "h2", y, { :class => "csl-year-header" }
+        ys = content_tag "div", ys, { :class => "csl-year-icon" }
       end
 
 
@@ -92,7 +91,7 @@ module Jekyll
 
                 if entry.field?(extra_parse_fields['award'])
                   # TODO: Awkward -- Find position to insert it. Before the last </div>
-                  ts = content_tag "div class=\"csl-award\"", entry.award.to_s
+                  ts = content_tag "div", entry.award.to_s, { :class => "csl-award" }
                   reference_position = reference.rindex('</div>')
                   if reference_position.nil? 
                   else 
@@ -100,52 +99,8 @@ module Jekyll
                   end
                 end
 
-                # There are multiple ways to have PDFs associated.
-                # Priority is suggested as below.
-                # 1. ACM links to PDF through authorizer
-                # 2. Repository links
-                # 3. Just web links to somewhere else.
-                #
-
-                # Check if there are ACM PDF links
-                position = reference.rindex('</div>')
-                reference.insert(position.to_i,render_acmpdf_link(entry))
-
-                # Render links if repository specified but not acmpdflink
-                if repository? && !entry.field?(:acmpdflink) 
-                  if not repository_link_for(entry).nil?
-#                    puts "link is not null"
-#                    puts repository_link_for(entry)
-                    pdflink = "<div class=\"pure-button csl-pdf\"><a href=\"" + repository_link_for(entry) + "\">PDF</a></div>"
-                    reference.insert(reference.rindex('</div>'), pdflink.to_s )
-                  end
-
-                  # Check for SLIDES PDF.
-                  if not repository_link_for(entry).nil?
-                    link = repository_slides_link_for(entry)
-#                    puts link.to_s
-                    if link.to_s.include?(@config_extras['slides'])
-                      pdflink = "<div class=\"pure-button csl-slides\"><a href=\"" + repository_slides_link_for(entry) + "\">SLIDES</a></div>"
-                      reference.insert(reference.rindex('</div>'), pdflink.to_s )                      
-                    end
-                  end
-                  
-
-                  # Is there a link for code
-                  if entry.field?(:code)
-                    code_url = "<div class=\"pure-button csl-code\"><a href=\"" + entry.code.to_s + "\">CODE</a></div>"
-                    reference.insert(reference.rindex('</div>').to_i, code_url.to_s )                      
-                  end   
-
-                  
-                end
-
-                # Generate the bibtex button for all pubs
-                tex_bib = "<div class=\"pure-button csl-bibtex\"><a href=\"" + bibtex_link_for(entry).to_s + "\">BIBTEX</a></div>"
-                reference.insert(reference.rindex('</div>').to_i, tex_bib.to_s )
-                
                 # Content tag is dependent on type of article.
-                content_tag "li class=\"" + render_ref_img(entry) + "\"", reference
+                content_tag "li", reference, { :class => render_ref_img(entry) }
               end
 #              split_reference reference                                    
             }.join("\n")

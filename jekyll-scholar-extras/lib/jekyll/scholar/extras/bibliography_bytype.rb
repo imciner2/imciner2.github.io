@@ -15,11 +15,14 @@ module Jekyll
 
       def initialize_type_labels()
         @type_labels =
-          Hash[{ "@article" => "Journal Articles",
-                 "@inproceedings" => "Conference and Workshop Papers",
+          Hash[{ "@article" => "Peer-reviewed Journal Articles",
+                 "@inproceedings" => "Peer-reviewed Conference and Workshop Papers",
                  "@incollection" => "Book Chapters",
                  "@techreport" => "Technical Reports",
-                 "@book" => "Books"
+                 "@book" => "Books",
+                 "@thesis" => "Thesis",
+                 "@patent" => "Patents",
+                 "@unpublished" => "Preprints"
                }]
       end
 
@@ -32,13 +35,13 @@ module Jekyll
         si = '[' + @prefix_defaults[item.type].to_s + @type_counts.to_s + ']'
         @type_counts = @type_counts - 1
         
-        idx_html = content_tag "div class=\"csl-index\"", si
+        idx_html = content_tag "div", si, { :class => "csl-index"}
         return idx_html + ref
       end
 
       def render_header(y)
-        ys = content_tag "h2 class=\"csl-year-header\"", y
-        ys = content_tag "div class=\"csl-year-icon\"", ys
+        ys = content_tag "h2", y, { :class => "csl-year-header" }
+        ys = content_tag "div", ys, { :class => "csl-year-icon" }
       end
 
       def render(context)
@@ -76,7 +79,7 @@ module Jekyll
 
           if entry.field?(:award)
             # TODO: Awkward -- Find position to insert it. Before the last </div>
-            ts = content_tag "div class=\"csl-award\"", entry.award.to_s
+            ts = content_tag "div", entry.award.to_s, { :class => "csl-award" }
             reference_position = reference.rindex('</div>')
             if reference_position.nil?
               puts "NILL"
@@ -119,7 +122,7 @@ module Jekyll
           reference.insert(reference.rindex('</div>').to_i, tex_bib.to_s )
           
           content_tag config['bibliography_item_tag'], reference
-          content_tag "li class=\"" + render_ref_img(entry) + "\"", reference
+          content_tag "li", reference, { :class => render_ref_img(entry) }
         }.join("\n")
 
 

@@ -12,7 +12,7 @@ module Jekyll
       si = '[' + @prefix_defaults[item.type].to_s + @type_counts[item.type].to_s + ']'
       @type_counts[item.type] = @type_counts[item.type].to_i - 1
       
-      idx_html = content_tag "div class=\"csl-index\"", si
+      idx_html = content_tag "span", si, { :class => "csl-index" }
       return idx_html + ref
     end
 
@@ -29,10 +29,13 @@ module Jekyll
     def render_ref_img(item)
       css_points = Hash[{
                           :article => "csl-point-journal-icon",
+                          :unpublished => "csl-point-journal-icon",
                           :inproceedings => "csl-point-conference-icon",
                           :incollection=> "csl-point-bookchapter-icon",
                           :techreport => "csl-point-techreport-icon",
-                          :book => "csl-point-book-icon"
+                          :patent => "csl-point-techreport-icon",
+                          :book => "csl-point-book-icon",
+                          :thesis => "csl-point-book-icon"
                         }]
 
       s = css_points[item.type]
@@ -47,7 +50,10 @@ module Jekyll
                                 :inproceedings => "C",
                                 :incollection=> "BC",
                                 :techreport => "TR",
-                                :book => "B"
+                                :book => "B",
+                                :thesis => "T",
+                                :unpublished => "PP",
+                                :patent => "PA"
                               }]
     end
 
