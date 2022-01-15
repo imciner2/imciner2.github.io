@@ -344,6 +344,7 @@
           <group delimiter=", ">
             <text macro="title"/>
             <text variable="number"/>
+            <text variable="textnumber"/>
             <text macro="issued"/>
           </group>
         </else-if>

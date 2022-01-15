@@ -52,11 +52,16 @@
 <span class=pub_icons><a href="https://{{ entry.video }}" target="_blank"><i class="fas fa-video"></i> Video</a></span>
 {% endif %}
 
+{% if entry.url %}
+<span class=pub_icons><a href="https://{{ entry.url }}" target="_blank"><i class="fas fa-globe"></i> Web link</a></span>
+{% endif %}
+
+
 <br>
 {% if entry.abstract %}
-<button class="button button-abs"  onclick="toggleAbstract('{{entry.key}}')">Abstract <i id="abs-button{{entry.key}}" class="fas fa-caret-down"></i></button>
+<button class="button button-abs left-align"  onclick="toggleAbstract('{{entry.key}}')">Abstract <i id="abs-button{{entry.key}}" class="fas fa-caret-down"></i></button>
 {% endif %}
-<button class="button button-bib"  onclick="toggleBibtex('{{entry.key}}')">Bibtex <i id="bib-button{{entry.key}}" class="fas fa-caret-down"></i></button>
+<button class="button button-bib left-align"  onclick="toggleBibtex('{{entry.key}}')">Bibtex <i id="bib-button{{entry.key}}" class="fas fa-caret-down"></i></button>
 
 <br>
 {% if entry.abstract %}

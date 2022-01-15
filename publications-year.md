@@ -5,6 +5,14 @@ layout: publications
 
 # Publications
 
+<div>
+  <div class="right-align">
+    <p>
+      <a class="button" href="{{ site.baseurl }}{% link publications.md %}">By Type</a>
+      <a class="button" href="{{ site.baseurl }}{% link publications-year.md %}">By Year</a>
+    </p>
+  </div>
+</div>
 
 {% bibliography_year --file Papers --style ./content/bibliographies/display_style.csl %}
 

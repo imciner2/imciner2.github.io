@@ -95,6 +95,7 @@ scholar:
     - poster
     - extendedabstract
     - video
+    - textnumber
   bibtex_filters:
     - markdown
     - latex

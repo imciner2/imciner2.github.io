@@ -46,10 +46,24 @@ $lowlightcolor: {{ site.lowlight-color }};
   cursor: pointer;
 }
 
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    display: block;
+    cursor: pointer;
+    position: relative;
+    top: -1em;
+
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+}
 
 /* Buttons for showing items */
 .button {
-  float: left;
   border: none;
   color: white;
   padding: 5px 12px;
@@ -60,8 +74,6 @@ $lowlightcolor: {{ site.lowlight-color }};
   margin: 8px 1px;
   cursor: pointer;
   border-radius: 5px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
 }
 
 .button-abs {
@@ -106,4 +118,13 @@ ul.list_header {
   list-style-type: disc;
   margin-block-start: 0em;
   margin-block-end: 0em;
+}
+
+
+.left-align {
+   float: left;
+}
+
+.right-align {
+   float: right;
 }
