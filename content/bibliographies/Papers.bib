@@ -1,3 +1,19 @@
+@thesis{McInerney2022_PhdThesis,
+    group = {thesis},
+    abstract = {There has been an increased interest in controlling complex systems using Model Predictive Control (MPC). However, the use of resource-constrained computing platforms in these systems has slowed the adoption of MPC. This thesis focuses on increasing the efficiency of numerical methods for MPC in terms of resource usage and solution time, while also simplifying the design process.
+
+We first show how block Toeplitz operators can be used to link the linear MPC matrices to the transfer function of the predicted system, resulting in horizon-independent bounds on the condition number of the condensed Hessian and the upper iteration bound for the Fast Gradient Method (FGM). We derive a horizon-independent preconditioner that produces up to a 9x speedup for the FGM while reducing the preconditioner computation time by up to 50,000x compared to an existing preconditioner. We propose a new method for computing the minimum number of fractional bits needed to ensure the FGM with fixed-point arithmetic is stable, with an example showing decreases of up to 77\% in resource usage and 50\% in the computational energy when using this method on a Field Programmable Gate Array.
+
+Finally, we present a framework using the derivative-free Mesh Adaptive Direct Search method to solve nonlinear MPC problems with non-differentiable features or quantized variables without the need for complex or costly reformulations. We augment the system dynamics with additional states to compute the Lagrange cost term and the violation of the path constraints along the state trajectory, and then perform a structured search of the input space using a single-shooting simulation of the system dynamics. We demonstrate this framework on a robust Goddard rocket problem with a non-differentiable cost and a quantized thrust input, where we achieve an altitude within 40\,m of the target, while other methods are unable to get closer than 180m.},
+    author = {McInerney, Ian Scott},
+    booktitle = {Thesis},
+    school = {Department of Electrical and Electronic Engineering, Imperial College London},
+    title = {{Numerical Methods for Model Predictive Control}},
+    type = {Ph.D. Dissertation},
+    address = {London, UK},
+    year = {2022},
+}
+
 @article{McInerney2022_closedFormPreconditioner,
     group = {journal},
     abstract = {First-order optimization solvers, such as the Fast Gradient Method, are increasingly being used to solve Model Predictive Control problems in resource-constrained environments. Unfortunately, the convergence rate of these solvers is significantly affected by the conditioning of the problem data, with ill-conditioned problems requiring a large number of iterations. To reduce the number of iterations required, we present a simple method for computing a horizon-independent preconditioning matrix for the Hessian of the condensed problem. The preconditioner is based on the block Toeplitz structure of the Hessian. Horizon-independence allows one to use only the predicted system and cost matrices to compute the preconditioner, instead of the full Hessian. The proposed preconditioner has equivalent performance to an optimal preconditioner in numerical examples, producing speedups between 2x and 9x for the Fast Gradient Method. Additionally, we derive horizon-independent spectral bounds for the Hessian in terms of the transfer function of the predicted system, and show how these can be used to compute a novel horizon-independent bound on the condition number for the preconditioned Hessian.},
@@ -9,7 +25,7 @@
     arxiv = {2010.08572},
     year = {2022},
     file = {2022_IEEE-TAC_Preconditioning.pdf},
-    status = {(Accepted, in-press)}
+    note = {Accepted, in-press}
 }
 
 @inproceedings{McInerney2021_NMPC,
@@ -140,9 +156,11 @@
     <p>Finally, a novel algorithm for localization of a target object using distance-only measurements is presented. This algorithm uses optimization dynamics to solve a non-convex QCQP formulation of the problem in a distributed manner. The algorithm is presented and then implemented using the distributed computation framework presented in this work.},
     author = {McInerney, Ian Scott},
     booktitle = {Thesis},
-    school = {Iowa State University},
+    school = {Department of Electrical and Computer Engineering, Iowa State University},
+    address = {Ames, IA, USA},
     title = {{Development of a multi-agent quadrotor research platform with distributed computational capabilities}},
-    type = {Master Thesis},
+    type = {M.S. Thesis},
+    month = {aug},
     year = {2017},
     doi = {10.31274/etd-180810-5192},
     codedoi = {10.5281/zenodo.4719659}
