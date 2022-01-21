@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('bibtex-ruby', '~> 6.0')
 
   s.files        = `git ls-files`.split("\n")
-  s.test_files   = `git ls-files -- {samples,test,spec,features}/*`.split("\n")
+  s.test_files   = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables  = []
   s.require_path = 'lib'
   
