@@ -1,10 +1,15 @@
-@unpublished{McInerney2021_closedFormPreconditioner,
-    group = {preprint},
+@article{McInerney2022_closedFormPreconditioner,
+    group = {journal},
     abstract = {First-order optimization solvers, such as the Fast Gradient Method, are increasingly being used to solve Model Predictive Control problems in resource-constrained environments. Unfortunately, the convergence rate of these solvers is significantly affected by the conditioning of the problem data, with ill-conditioned problems requiring a large number of iterations. To reduce the number of iterations required, we present a simple method for computing a horizon-independent preconditioning matrix for the Hessian of the condensed problem. The preconditioner is based on the block Toeplitz structure of the Hessian. Horizon-independence allows one to use only the predicted system and cost matrices to compute the preconditioner, instead of the full Hessian. The proposed preconditioner has equivalent performance to an optimal preconditioner in numerical examples, producing speedups between 2x and 9x for the Fast Gradient Method. Additionally, we derive horizon-independent spectral bounds for the Hessian in terms of the transfer function of the predicted system, and show how these can be used to compute a novel horizon-independent bound on the condition number for the preconditioned Hessian.},
     author = {McInerney, Ian and Kerrigan, Eric C. and Constantinides, George A.},
     title = {Horizon-independent Preconditioner Design for Linear Predictive Control},
+    journal = {IEEE Transactions on Automatic Control},
+    publisher = {IEEE},
+    doi = {10.1109/TAC.2022.3145657},
     arxiv = {2010.08572},
-    year = {2021},
+    year = {2022},
+    file = {2022_IEEE-TAC_Preconditioning.pdf},
+    status = {(Accepted, in-press)}
 }
 
 @inproceedings{McInerney2021_NMPC,
