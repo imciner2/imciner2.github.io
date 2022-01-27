@@ -162,16 +162,83 @@
   </div>
 </div>
 
-<ul class="bibliography"><div class="csl-year-icon"><h2 class="csl-year-header">2021</h2></div><li class="csl-point-journal-icon"><span class="csl-index">[PP1]</span><!--
+<ul class="bibliography"><div class="csl-year-icon"><h2 class="csl-year-header">2022</h2></div><li class="csl-point-book-icon"><span class="csl-index">[T2]</span><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
 -->
 <div class="csl-block csl-content">
-<span id="McInerney2021_closedFormPreconditioner"><strong>I. McInerney</strong>, E. C. Kerrigan, and G. A. Constantinides, “Horizon-independent Preconditioner Design for Linear Predictive Control,” 2021.</span>
+<span id="McInerney2022_PhdThesis"><strong>I. S. McInerney</strong>, “Numerical Methods for Model Predictive Control,” Ph.D. Dissertation, Department of Electrical and Electronic Engineering, Imperial College London, London, UK, 2022.</span>
 
 <p>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleAbstract('McInerney2022_PhdThesis')">Abstract <i id="abs-buttonMcInerney2022_PhdThesis" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2022_PhdThesis')">Bibtex <i id="bib-buttonMcInerney2022_PhdThesis" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="absMcInerney2022_PhdThesis" class="summary" style="display: none;">
+<div><p>There has been an increased interest in controlling complex systems using Model Predictive Control (MPC). However, the use of resource-constrained computing platforms in these systems has slowed the adoption of MPC. This thesis focuses on increasing the efficiency of numerical methods for MPC in terms of resource usage and solution time, while also simplifying the design process.</p>
+
+<p>We first show how block Toeplitz operators can be used to link the linear MPC matrices to the transfer function of the predicted system, resulting in horizon-independent bounds on the condition number of the condensed Hessian and the upper iteration bound for the Fast Gradient Method (FGM). We derive a horizon-independent preconditioner that produces up to a 9x speedup for the FGM while reducing the preconditioner computation time by up to 50,000x compared to an existing preconditioner. We propose a new method for computing the minimum number of fractional bits needed to ensure the FGM with fixed-point arithmetic is stable, with an example showing decreases of up to 77% in resource usage and 50% in the computational energy when using this method on a Field Programmable Gate Array.</p>
+
+<p>Finally, we present a framework using the derivative-free Mesh Adaptive Direct Search method to solve nonlinear MPC problems with non-differentiable features or quantized variables without the need for complex or costly reformulations. We augment the system dynamics with additional states to compute the Lagrange cost term and the violation of the path constraints along the state trajectory, and then perform a structured search of the input space using a single-shooting simulation of the system dynamics. We demonstrate this framework on a robust Goddard rocket problem with a non-differentiable cost and a quantized thrust input, where we achieve an altitude within 40 m of the target, while other methods are unable to get closer than 180m.</p>
+</div>
+</div>
+
+
+<div id="bibMcInerney2022_PhdThesis" class="summary" style="display: none;">
+<pre>@thesis{McInerney2022_PhdThesis,
+  author = {McInerney, Ian Scott},
+  booktitle = {Thesis},
+  school = {Department of Electrical and Electronic Engineering, Imperial College London},
+  title = {{Numerical Methods for Model Predictive Control}},
+  type = {Ph.D. Dissertation},
+  address = {London, UK},
+  year = {2022}
+}
+</pre>
+</div>
+
+</p>
+
+</div>
+</li><li class="csl-point-journal-icon"><span class="csl-index">[J3]</span><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="McInerney2022_closedFormPreconditioner"><strong>I. McInerney</strong>, E. C. Kerrigan, and G. A. Constantinides, “Horizon-independent Preconditioner Design for Linear Predictive Control,” <em>IEEE Transactions on Automatic Control</em>, 2022, (<em>Accepted, in-press</em>).</span>
+
+<p>
+
+
+<span class="pub_icons"><a href="https://dx.doi.org/10.1109/TAC.2022.3145657" target="_blank"><i class="ai ai-fw ai-doi"></i>10.1109/TAC.2022.3145657</a></span>
 
 
 
@@ -179,6 +246,7 @@
 
 
 
+<span class="pub_icons"><a href="/content/papers/2022_IEEE-TAC_Preconditioning.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
 
 
 
@@ -195,26 +263,30 @@
 
 
 
-<br />
-
-<button class="button button-abs left-align" onclick="toggleAbstract('McInerney2021_closedFormPreconditioner')">Abstract <i id="abs-buttonMcInerney2021_closedFormPreconditioner" class="fas fa-caret-down"></i></button>
-
-<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2021_closedFormPreconditioner')">Bibtex <i id="bib-buttonMcInerney2021_closedFormPreconditioner" class="fas fa-caret-down"></i></button>
 
 <br />
 
-<div id="absMcInerney2021_closedFormPreconditioner" class="summary" style="display: none;">
+<button class="button button-abs left-align" onclick="toggleAbstract('McInerney2022_closedFormPreconditioner')">Abstract <i id="abs-buttonMcInerney2022_closedFormPreconditioner" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2022_closedFormPreconditioner')">Bibtex <i id="bib-buttonMcInerney2022_closedFormPreconditioner" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="absMcInerney2022_closedFormPreconditioner" class="summary" style="display: none;">
 <div><p>First-order optimization solvers, such as the Fast Gradient Method, are increasingly being used to solve Model Predictive Control problems in resource-constrained environments. Unfortunately, the convergence rate of these solvers is significantly affected by the conditioning of the problem data, with ill-conditioned problems requiring a large number of iterations. To reduce the number of iterations required, we present a simple method for computing a horizon-independent preconditioning matrix for the Hessian of the condensed problem. The preconditioner is based on the block Toeplitz structure of the Hessian. Horizon-independence allows one to use only the predicted system and cost matrices to compute the preconditioner, instead of the full Hessian. The proposed preconditioner has equivalent performance to an optimal preconditioner in numerical examples, producing speedups between 2x and 9x for the Fast Gradient Method. Additionally, we derive horizon-independent spectral bounds for the Hessian in terms of the transfer function of the predicted system, and show how these can be used to compute a novel horizon-independent bound on the condition number for the preconditioned Hessian.</p>
 </div>
 </div>
 
 
-<div id="bibMcInerney2021_closedFormPreconditioner" class="summary" style="display: none;">
-<pre>@unpublished{McInerney2021_closedFormPreconditioner,
+<div id="bibMcInerney2022_closedFormPreconditioner" class="summary" style="display: none;">
+<pre>@article{McInerney2022_closedFormPreconditioner,
   author = {McInerney, Ian and Kerrigan, Eric C. and Constantinides, George A.},
   title = {Horizon-independent Preconditioner Design for Linear Predictive Control},
+  journal = {IEEE Transactions on Automatic Control},
+  publisher = {IEEE},
+  doi = {10.1109/TAC.2022.3145657},
   arxiv = {2010.08572},
-  year = {2021}
+  year = {2022}
 }
 </pre>
 </div>
@@ -222,78 +294,7 @@
 </p>
 
 </div>
-</li><li class="csl-point-conference-icon"><span class="csl-index">[C5]</span><!--
-    * Bold my name when it appears in the author's list
-    * Replace all uses of italics with the <em> tag so it actually shows up as italics
-    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
--->
-<div class="csl-block csl-content">
-<span id="McInerney2021_NMPC"><strong>I. McInerney</strong>, L. Nita, Y. Nie, A. Oliveri, and E. C. Kerrigan, “Towards a Framework for Nonlinear Predictive Control Using Derivative-Free Optimization,” in <em>7th IFAC Conference on Nonlinear Predictive Control</em>, Bratislava, Slovakia, 2021, pp. 284–289.</span>
-
-<p>
-
-
-<span class="pub_icons"><a href="https://dx.doi.org/10.1016/j.ifacol.2021.08.558" target="_blank"><i class="ai ai-fw ai-doi"></i>10.1016/j.ifacol.2021.08.558</a></span>
-
-
-
-<span class="pub_icons"><a href="https://arxiv.com/abs/2106.05025" target="_blank"><i class="ai ai-fw ai-arxiv"></i>arXiv: 2106.05025</a></span>
-
-
-
-<span class="pub_icons"><a href="/content/papers/2021_NMPC_TowardsADerivativeFreeFramework.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="pub_icons"><a href="https://youtu.be/LE5CXyx6bCM" target="_blank"><i class="fas fa-video"></i> Video</a></span>
-
-
-
-
-
-<br />
-
-<button class="button button-abs left-align" onclick="toggleAbstract('McInerney2021_NMPC')">Abstract <i id="abs-buttonMcInerney2021_NMPC" class="fas fa-caret-down"></i></button>
-
-<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2021_NMPC')">Bibtex <i id="bib-buttonMcInerney2021_NMPC" class="fas fa-caret-down"></i></button>
-
-<br />
-
-<div id="absMcInerney2021_NMPC" class="summary" style="display: none;">
-<div><p>The use of derivative-based solvers to compute solutions to optimal control problems with non-differentiable cost or dynamics often requires reformulations or relaxations that complicate the implementation or increase computational complexity. We present an initial framework for using the derivative-free Mesh Adaptive Direct Search (MADS) algorithm to solve Nonlinear Model Predictive Control problems with non-differentiable features without the need for reformulation. The MADS algorithm performs a structured search of the input space by simulating selected system trajectories and computing the subsequent cost value. We propose handling the path constraints and the Lagrange cost term by augmenting the system dynamics with additional states to compute the violation and cost value alongside the state trajectories, eliminating the need for reconstructing the state trajectories in a separate phase. We demonstrate the practicality of this framework by solving a robust rocket control problem, where the objective is to reach a target altitude as close as possible, given a system with uncertain parameters. This example uses a non-differentiable cost function and simulates two different system trajectories simultaneously, with each system having its own free final time.</p>
-</div>
-</div>
-
-
-<div id="bibMcInerney2021_NMPC" class="summary" style="display: none;">
-<pre>@inproceedings{McInerney2021_NMPC,
-  address = {Bratislava, Slovakia},
-  author = {McInerney, Ian and Nita, Lucian and Nie, Yuanbo and Oliveri, Alberto and Kerrigan, Eric C.},
-  booktitle = {7th IFAC Conference on Nonlinear Predictive Control},
-  pages = {284--289},
-  publisher = {IFAC},
-  title = {Towards a Framework for Nonlinear Predictive Control Using Derivative-Free Optimization},
-  year = {2021},
-  doi = {10.1016/j.ifacol.2021.08.558},
-  arxiv = {2106.05025}
-}
-</pre>
-</div>
-
-</p>
-
-</div>
-</li><li class="csl-point-journal-icon"><span class="csl-index">[J2]</span><!--
+</li><div class="csl-year-icon"><h2 class="csl-year-header">2021</h2></div><li class="csl-point-journal-icon"><span class="csl-index">[J2]</span><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
@@ -427,6 +428,77 @@
   number = {2},
   pages = {1425--1434},
   doi = {10.1109/TEC.2021.3060319}
+}
+</pre>
+</div>
+
+</p>
+
+</div>
+</li><li class="csl-point-conference-icon"><span class="csl-index">[C5]</span><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="McInerney2021_NMPC"><strong>I. McInerney</strong>, L. Nita, Y. Nie, A. Oliveri, and E. C. Kerrigan, “Towards a Framework for Nonlinear Predictive Control Using Derivative-Free Optimization,” in <em>7th IFAC Conference on Nonlinear Predictive Control</em>, Bratislava, Slovakia, 2021, pp. 284–289.</span>
+
+<p>
+
+
+<span class="pub_icons"><a href="https://dx.doi.org/10.1016/j.ifacol.2021.08.558" target="_blank"><i class="ai ai-fw ai-doi"></i>10.1016/j.ifacol.2021.08.558</a></span>
+
+
+
+<span class="pub_icons"><a href="https://arxiv.com/abs/2106.05025" target="_blank"><i class="ai ai-fw ai-arxiv"></i>arXiv: 2106.05025</a></span>
+
+
+
+<span class="pub_icons"><a href="/content/papers/2021_NMPC_TowardsADerivativeFreeFramework.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="pub_icons"><a href="https://youtu.be/LE5CXyx6bCM" target="_blank"><i class="fas fa-video"></i> Video</a></span>
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleAbstract('McInerney2021_NMPC')">Abstract <i id="abs-buttonMcInerney2021_NMPC" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2021_NMPC')">Bibtex <i id="bib-buttonMcInerney2021_NMPC" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="absMcInerney2021_NMPC" class="summary" style="display: none;">
+<div><p>The use of derivative-based solvers to compute solutions to optimal control problems with non-differentiable cost or dynamics often requires reformulations or relaxations that complicate the implementation or increase computational complexity. We present an initial framework for using the derivative-free Mesh Adaptive Direct Search (MADS) algorithm to solve Nonlinear Model Predictive Control problems with non-differentiable features without the need for reformulation. The MADS algorithm performs a structured search of the input space by simulating selected system trajectories and computing the subsequent cost value. We propose handling the path constraints and the Lagrange cost term by augmenting the system dynamics with additional states to compute the violation and cost value alongside the state trajectories, eliminating the need for reconstructing the state trajectories in a separate phase. We demonstrate the practicality of this framework by solving a robust rocket control problem, where the objective is to reach a target altitude as close as possible, given a system with uncertain parameters. This example uses a non-differentiable cost function and simulates two different system trajectories simultaneously, with each system having its own free final time.</p>
+</div>
+</div>
+
+
+<div id="bibMcInerney2021_NMPC" class="summary" style="display: none;">
+<pre>@inproceedings{McInerney2021_NMPC,
+  address = {Bratislava, Slovakia},
+  author = {McInerney, Ian and Nita, Lucian and Nie, Yuanbo and Oliveri, Alberto and Kerrigan, Eric C.},
+  booktitle = {7th IFAC Conference on Nonlinear Predictive Control},
+  pages = {284--289},
+  publisher = {IFAC},
+  title = {Towards a Framework for Nonlinear Predictive Control Using Derivative-Free Optimization},
+  year = {2021},
+  doi = {10.1016/j.ifacol.2021.08.558},
+  arxiv = {2106.05025}
 }
 </pre>
 </div>
@@ -704,7 +776,79 @@
 </p>
 
 </div>
-</li><div class="csl-year-icon"><h2 class="csl-year-header">2017</h2></div><li class="csl-point-conference-icon"><span class="csl-index">[C1]</span><!--
+</li><div class="csl-year-icon"><h2 class="csl-year-header">2017</h2></div><li class="csl-point-book-icon"><span class="csl-index">[T1]</span><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="McInerney2017_MSThesis"><strong>I. S. McInerney</strong>, “Development of a multi-agent quadrotor research platform with distributed computational capabilities,” M.S. Thesis, Department of Electrical and Computer Engineering, Iowa State University, Ames, IA, USA, 2017.</span>
+
+<p>
+
+
+<span class="pub_icons"><a href="https://dx.doi.org/10.31274/etd-180810-5192" target="_blank"><i class="ai ai-fw ai-doi"></i>10.31274/etd-180810-5192</a></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="pub_icons"><a href="https://dx.doi.org/10.5281/zenodo.4719659" target="_blank"><i class="fas fa-code"></i>10.5281/zenodo.4719659</a></span>
+
+
+
+
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleAbstract('McInerney2017_MSThesis')">Abstract <i id="abs-buttonMcInerney2017_MSThesis" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2017_MSThesis')">Bibtex <i id="bib-buttonMcInerney2017_MSThesis" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="absMcInerney2017_MSThesis" class="summary" style="display: none;">
+<div><p>Research on multi-agent systems of UAVs is of growing interest in the research community, with specific interest in the testing of novel algorithms on actual systems. Many existing testbeds already exist, but the majority of them utilize expensive quadrotors for their agents. With the recent surge in interest from consumers, companies have started to market lower cost quadrotor options. One such option is the Crazyflie 2.0 from Bitcraze. This quadrotor measures just 10cm from rotor to rotor, uses open-source firmware, and has developed a strong community backing. This work develops a multi-agent testbed using the Crazyflie 2.0.
+    <p>This work presents a parameterization of the Crazyflie quadrotor so it can be modeled and have more advanced controllers designed for it. Additionally, this work discusses the default control loop of the Crazyflie 2.0. Then nested-loop PID controllers are designed and compared against the simulated physics model.
+    <p>A software system that is capable of controlling multiple flying Crazyflie’s is also presented. This system is also capable of modifying the controller at runtime, and implementing distributed computation on the Crazyflie.
+    <p>Finally, a novel algorithm for localization of a target object using distance-only measurements is presented. This algorithm uses optimization dynamics to solve a non-convex QCQP formulation of the problem in a distributed manner. The algorithm is presented and then implemented using the distributed computation framework presented in this work.
+</p></p></p></p>
+</div>
+</div>
+
+
+<div id="bibMcInerney2017_MSThesis" class="summary" style="display: none;">
+<pre>@thesis{McInerney2017_MSThesis,
+  author = {McInerney, Ian Scott},
+  booktitle = {Thesis},
+  school = {Department of Electrical and Computer Engineering, Iowa State University},
+  address = {Ames, IA, USA},
+  title = {{Development of a multi-agent quadrotor research platform with distributed computational capabilities}},
+  type = {M.S. Thesis},
+  month = aug,
+  year = {2017},
+  doi = {10.31274/etd-180810-5192},
+  codedoi = {10.5281/zenodo.4719659}
+}
+</pre>
+</div>
+
+</p>
+
+</div>
+</li><li class="csl-point-conference-icon"><span class="csl-index">[C1]</span><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
@@ -763,76 +907,6 @@
   title = {Cooperative Localization from Imprecise Range-Only Measurements: A Non-Convex Distributed Approach},
   year = {2017},
   doi = {10.1109/CDC.2017.8263973}
-}
-</pre>
-</div>
-
-</p>
-
-</div>
-</li><li class="csl-point-book-icon"><span class="csl-index">[T1]</span><!--
-    * Bold my name when it appears in the author's list
-    * Replace all uses of italics with the <em> tag so it actually shows up as italics
-    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
--->
-<div class="csl-block csl-content">
-<span id="McInerney2017_MSThesis"><strong>I. S. McInerney</strong>, “Development of a multi-agent quadrotor research platform with distributed computational capabilities,” Master Thesis, Iowa State University, 2017.</span>
-
-<p>
-
-
-<span class="pub_icons"><a href="https://dx.doi.org/10.31274/etd-180810-5192" target="_blank"><i class="ai ai-fw ai-doi"></i>10.31274/etd-180810-5192</a></span>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="pub_icons"><a href="https://dx.doi.org/10.5281/zenodo.4719659" target="_blank"><i class="fas fa-code"></i>10.5281/zenodo.4719659</a></span>
-
-
-
-
-
-
-
-
-
-<br />
-
-<button class="button button-abs left-align" onclick="toggleAbstract('McInerney2017_MSThesis')">Abstract <i id="abs-buttonMcInerney2017_MSThesis" class="fas fa-caret-down"></i></button>
-
-<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2017_MSThesis')">Bibtex <i id="bib-buttonMcInerney2017_MSThesis" class="fas fa-caret-down"></i></button>
-
-<br />
-
-<div id="absMcInerney2017_MSThesis" class="summary" style="display: none;">
-<div><p>Research on multi-agent systems of UAVs is of growing interest in the research community, with specific interest in the testing of novel algorithms on actual systems. Many existing testbeds already exist, but the majority of them utilize expensive quadrotors for their agents. With the recent surge in interest from consumers, companies have started to market lower cost quadrotor options. One such option is the Crazyflie 2.0 from Bitcraze. This quadrotor measures just 10cm from rotor to rotor, uses open-source firmware, and has developed a strong community backing. This work develops a multi-agent testbed using the Crazyflie 2.0.
-    <p>This work presents a parameterization of the Crazyflie quadrotor so it can be modeled and have more advanced controllers designed for it. Additionally, this work discusses the default control loop of the Crazyflie 2.0. Then nested-loop PID controllers are designed and compared against the simulated physics model.
-    <p>A software system that is capable of controlling multiple flying Crazyflie’s is also presented. This system is also capable of modifying the controller at runtime, and implementing distributed computation on the Crazyflie.
-    <p>Finally, a novel algorithm for localization of a target object using distance-only measurements is presented. This algorithm uses optimization dynamics to solve a non-convex QCQP formulation of the problem in a distributed manner. The algorithm is presented and then implemented using the distributed computation framework presented in this work.
-</p></p></p></p>
-</div>
-</div>
-
-
-<div id="bibMcInerney2017_MSThesis" class="summary" style="display: none;">
-<pre>@thesis{McInerney2017_MSThesis,
-  author = {McInerney, Ian Scott},
-  booktitle = {Thesis},
-  school = {Iowa State University},
-  title = {{Development of a multi-agent quadrotor research platform with distributed computational capabilities}},
-  type = {Master Thesis},
-  year = {2017},
-  doi = {10.31274/etd-180810-5192},
-  codedoi = {10.5281/zenodo.4719659}
 }
 </pre>
 </div>
