@@ -87,13 +87,9 @@ body {
 		@media #{$small} {
 			display: none;
 		}
-
-	}
-	.bio-photo {
-		max-width: 110px;
-		@include rounded(150px);
-		@media #{$small} {
-			display: none;
+		.bio-photo {
+			max-width: 110px;
+			@include rounded(150px);
 		}
 	}
 	ul {
