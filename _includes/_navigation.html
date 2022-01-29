@@ -6,6 +6,16 @@
 			<div class="grid-name">
 				<h3 itemprop="name" class="author-name">{{ author.name }}</h3>
 			</div>
+			<div class="grid-links">
+				{% if author.email %}<a href="mailto:{{ author.email }}" class="social-links" target="_blank"><i class="fas fa-fw fa-envelope-square"></i></a>{% endif %}
+				{% if author.twitter %}<a href="https://twitter.com/{{ author.twitter }}" class="social-links" target="_blank"><i class="fab fa-fw fa-twitter-square"></i> Twitter</a>{% endif %}
+				{% if author.google.scholar %}<a href="https://scholar.google.com/citations?user={{ author.google.scholar}}" class="social-links" target="_blank"><i class="ai ai-fw ai-google-scholar"></i></a>{% endif %}
+				{% if author.arxiv %}<a href="https://arxiv.com/a/{{ author.arxiv}}" class="social-links" target="_blank"><i class="ai ai-fw ai-arxiv"></i></a>{% endif %}
+				{% if author.orcid %}<a href="https://orcid.org/{{ author.orcid }}" class="social-links" target="_blank"><i class="ai ai-fw ai-orcid"></i></a>{% endif %}
+				{% if author.linkedin %}<a href="https://linkedin.com/in/{{ author.linkedin }}" class="social-links" target="_blank"><i class="fab fa-fw fa-linkedin"></i></a>{% endif %}
+				{% if author.github %}<a href="https://github.com/{{ author.github }}" class="social-links" target="_blank"><i class="fab fa-fw fa-github"></i></a>{% endif %}
+				{% if author.gitlab %}<a href="https://gitlab.com/{{ author.gitlab }}" class="social-links" target="_blank"><i class="fab fa-fw fa-gitlab"></i></a>{% endif %}
+			</div>
 			<div class="grid-photo">
 				{% if author.avatar contains 'http' %}
 					<img src="{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} photo">

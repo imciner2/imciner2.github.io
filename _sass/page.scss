@@ -61,28 +61,58 @@ body {
 	@media #{$x-large} {
 		@include grid(12,8);
 	}
-	.author-name {
-		@media #{$small} {
-			display: none;
-		}
-	}
 	.grid-top {
 		display: grid;
 	}
+	.grid-menu {
+	  grid-column: 1 / span 2;
+  	grid-row: 1 / span 1;
+ 	}
 	.grid-name {
 	  grid-column: 1 / span 1;
-		grid-row: 1 / span 1;
+		grid-row: 2 / span 1;
+		align-self: center;
+		justify-self: center;
 		@media #{$small} {
 			display: none;
 		}
+		.author-name {
+			font-weight: 700;
+			margin-top: 1.875rem;
+			margin-bottom: 1.875rem;
+		}
 	}
-	.grid-menu {
+	.grid-links {
 	  grid-column: 1 / span 1;
-  	grid-row: 2 / span 1;
- 	}
+		grid-row: 3 / span 1;
+		align-self: center;
+		justify-self: center;
+		@media #{$small} {
+			display: none;
+		}
+		.social-links {
+		  display: inline-block;
+			margin-bottom: 5px;
+			@include font-rem(14);
+			color: $black;
+			&:visited {
+			  color: $black;
+			}
+			&:hover {
+			  @include scale(1.5);
+			}
+			&:active {
+			  @include translate(0, 2px);
+			}
+			.fa {
+				margin-right: 5px;
+			}
+		}
+	}
 	.grid-photo {
 	  grid-column: 2 / span 1;
-	  grid-row: 1 / span 2;
+	  grid-row: 2 / span 2;
+	  align-self: center;
   	justify-self: center;
 		@media #{$small} {
 			display: none;
@@ -426,6 +456,7 @@ $button-size: 1.5rem;
 			max-width: 125px;
 		}
 		h3 {
+    	font-weight: 700;
 			margin-top: 10px;
 			margin-bottom: 10px;
 		}
