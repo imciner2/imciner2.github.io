@@ -61,7 +61,7 @@ ol {
 
 .csl-year-icon:before {
     content: "\f009";
-    font-family: FontAwesome;
+    font-family: 'Font Awesome 5 Free Solid';
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
@@ -87,7 +87,7 @@ ol {
     content: "\f0c8";
     color: #BA55D3;
                /*#660066;  */
-    font-family: FontAwesome;
+    font-family: 'Font Awesome 5 Free Solid';
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
@@ -104,7 +104,7 @@ ol {
 
 .csl-point-conference-icon:before {
     content: "\f0c8";
-    font-family: FontAwesome;
+    font-family: 'Font Awesome 5 Free Solid';
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
@@ -125,7 +125,7 @@ ol {
 
 .csl-point-bookchapter-icon:before {
     content: "\f0c8";
-    font-family: FontAwesome;
+    font-family: 'Font Awesome 5 Free Solid';
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
@@ -146,7 +146,7 @@ ol {
 
 .csl-point-techreport-icon:before {
     content: "\f0c8";
-    font-family: FontAwesome;
+    font-family: 'Font Awesome 5 Free Solid';
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
@@ -166,7 +166,7 @@ ol {
 
 .csl-point-book-icon:before {
     content: "\f0c8";
-    font-family: FontAwesome;
+    font-family: 'Font Awesome 5 Free Solid';
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
