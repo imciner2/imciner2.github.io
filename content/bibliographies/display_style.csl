@@ -218,6 +218,7 @@
         <!--<text variable="DOI" prefix="DOI: "/>-->
       </else-if>
       <else>
+        <!-- Don't print the URL, it is linked separately.
         <group delimiter=". ">
           <group delimiter=": ">
             <text term="accessed" text-case="capitalize-first"/>
@@ -233,6 +234,7 @@
             <text variable="URL"/>
           </group>
         </group>
+      -->
       </else>
     </choose>
   </macro>
