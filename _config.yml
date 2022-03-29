@@ -96,6 +96,7 @@ scholar:
     - extendedabstract
     - video
     - textnumber
+    - instrepo
   bibtex_filters:
     - markdown
     - latex

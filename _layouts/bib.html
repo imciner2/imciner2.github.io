@@ -28,16 +28,20 @@
 <span class=pub_icons><a href="{{ domain }}/content/papers/{{ entry.file }}" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
 {% endif %}
 
+{% if entry.extendedabstract %}
+<span class=pub_icons><a href="{{ domain }}/content/papers/{{ entry.extendedabstract }}" target="_blank"><i class="fas fa-file-alt"></i> Extended Abstract</a></span>
+{% endif %}
+
+{% if entry.instrepo %}
+<span class=pub_icons><a href="https://{{ entry.instrepo }}" target="_blank"><i class="ai ai-fw ai-open-access-square"></i> Institutional Repository</a></span>
+{% endif %}
+
 {% if entry.slides %}
 <span class=pub_icons><a href="{{ domain }}/content/slides/{{ entry.slides }}" target="_blank"><i class="fas fa-tv"></i> Slides</a></span>
 {% endif %}
 
 {% if entry.poster %}
 <span class=pub_icons><a href="{{ domain }}/content/posters/{{ entry.poster }}" target="_blank"><i class="fas fa-poll-h"></i> Poster</a></span>
-{% endif %}
-
-{% if entry.extendedabstract %}
-<span class=pub_icons><a href="{{ domain }}/content/papers/{{ entry.extendedabstract }}" target="_blank"><i class="fas fa-file-alt"></i> Extended Abstract</a></span>
 {% endif %}
 
 {% if entry.codedoi %}
