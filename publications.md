@@ -23,10 +23,10 @@ layout: publications
 {% bibliography_bytype --file Papers --query @inproceedings --style ./content/bibliographies/display_style.csl %}
 <br>
 
-{% bibliography_bytype --file Papers  --query @techreport --style ./content/bibliographies/display_style.csl %}
+{% bibliography_bytype --file Papers --query @thesis --style ./content/bibliographies/display_style.csl %}
 <br>
 
-{% bibliography_bytype --file Papers --query @thesis --style ./content/bibliographies/display_style.csl %}
+{% bibliography_bytype --file Papers  --query @techreport --style ./content/bibliographies/display_style.csl %}
 <br>
 
 {% bibliography_bytype --file Papers --query @patent --style ./content/bibliographies/display_style.csl %}
