@@ -24,8 +24,8 @@
 <span class=pub_icons><a href="https://arxiv.com/abs/{{ entry.arxiv }}" target="_blank"><i class="ai ai-fw ai-arxiv"></i>arXiv: {{ entry.arxiv }}</a></span>
 {% endif %}
 
-{% if entry.file %}
-<span class=pub_icons><a href="{{ domain }}/content/papers/{{ entry.file }}" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
+{% if entry.preprint %}
+<span class=pub_icons><a href="{{ domain }}/content/papers/{{ entry.preprint }}" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
 {% endif %}
 
 {% if entry.extendedabstract %}
