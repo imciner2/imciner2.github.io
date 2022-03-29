@@ -15,10 +15,11 @@
     address = {Lausanne, Switzerland},
     abstract = {The growing proliferation of FPGAs and High-level Synthesis (HLS) tools has led to a large interest in designing hardware accelerators for complex operations and algorithms. However, existing HLS toolflows typically require a significant amount of user knowledge or training to be effective in both industrial and research applications. In this paper, we propose using the Julia language as the basis for an HLS tool. The Julia HLS tool aims to decrease the barrier to entry for hardware acceleration by taking advantage of the readability of the Julia language and by allowing the use of the existing large library of standard mathematical functions written in Julia. We present a prototype Julia HLS tool, written in Julia, that transforms Julia code to VHDL. We highlight how features of Julia and its compiler simplified the creation of this tool, and we discuss potential directions for future work.},
     arxiv = {2201.11522},
-    file = {2022_LATTE_JuliaHLS.pdf},
+    preprint = {2022_LATTE_JuliaHLS.pdf},
     url = {capra.cs.cornell.edu/latte22/paper/7.pdf},
     video = {youtu.be/MKsWhxlIiWw},
-    slides = {2022-03-01_LATTE_JuliaHLS.pdf}
+    slides = {2022-03-01_LATTE_JuliaHLS.pdf},
+    instrepo = {hdl.handle.net/10044/1/95997},
 }
 
 @thesis{McInerney2022_PhdThesis,
@@ -29,12 +30,13 @@ We first show how block Toeplitz operators can be used to link the linear MPC ma
 
 Finally, we present a framework using the derivative-free Mesh Adaptive Direct Search method to solve nonlinear MPC problems with non-differentiable features or quantized variables without the need for complex or costly reformulations. We augment the system dynamics with additional states to compute the Lagrange cost term and the violation of the path constraints along the state trajectory, and then perform a structured search of the input space using a single-shooting simulation of the system dynamics. We demonstrate this framework on a robust Goddard rocket problem with a non-differentiable cost and a quantized thrust input, where we achieve an altitude within 40\,m of the target, while other methods are unable to get closer than 180m.},
     author = {McInerney, Ian Scott},
-    booktitle = {Thesis},
     school = {Department of Electrical and Electronic Engineering, Imperial College London},
     title = {{Numerical Methods for Model Predictive Control}},
     type = {Ph.D. Dissertation},
     address = {London, UK},
+    month = {mar},
     year = {2022},
+    preprint = {2022_PhD-Thesis.pdf}
 }
 
 @article{McInerney2022_closedFormPreconditioner,
@@ -47,8 +49,9 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     doi = {10.1109/TAC.2022.3145657},
     arxiv = {2010.08572},
     year = {2022},
-    file = {2022_IEEE-TAC_Preconditioning.pdf},
-    note = {Accepted, in-press}
+    preprint = {2022_IEEE-TAC_Preconditioning.pdf},
+    note = {Accepted, in-press},
+    instrepo = {hdl.handle.net/10044/1/83539},
 }
 
 @inproceedings{McInerney2021_NMPC,
@@ -63,9 +66,10 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     year = {2021},
     doi = {10.1016/j.ifacol.2021.08.558},
     arxiv = {2106.05025},
-    file = {2021_NMPC_TowardsADerivativeFreeFramework.pdf},
+    preprint = {2021_NMPC_TowardsADerivativeFreeFramework.pdf},
     slides = {2021-07_IFAC-NMPC_DerivativeFreeNMPC.pdf},
     video = {youtu.be/LE5CXyx6bCM},
+    instrepo = {hdl.handle.net/10044/1/89658},
 }
 
 
@@ -82,8 +86,9 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     pages = {1074--1080},
     doi = {10.1109/TC.2020.3003529},
     arxiv = {2006.09427},
-    file = {2020_IEEE-TC_DigitStabilityInference.pdf},
-    zenodo = {10.5281/zenodo.3564472}
+    preprint = {2020_IEEE-TC_DigitStabilityInference.pdf},
+    zenodo = {10.5281/zenodo.3564472},
+    instrepo = {hdl.handle.net/10044/1/81050},
 }
 
 @article{Rodriguez-Bernuz2021_energyConverterMPC,
@@ -98,7 +103,8 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     number = {2},
     pages = {1425--1434},
     doi = {10.1109/TEC.2021.3060319},
-    file = {2021_IEEE-TEC_LTV-MPC-EnergyRegulator.pdf}
+    preprint = {2021_IEEE-TEC_LTV-MPC-EnergyRegulator.pdf},
+    instrepo = {hdl.handle.net/10044/1/87773}
 }
 
 @inproceedings{McInerney2019_cdc,
@@ -112,9 +118,10 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     title = {Modeling Round-off Error in the Fast Gradient Method for Predictive Control},
     year = {2019},
     doi = {10.1109/CDC40024.2019.9029910},
-    file = {2019_CDC_ModelingRoundoffErrorInPredictiveControl.pdf},
+    preprint = {2019_CDC_ModelingRoundoffErrorInPredictiveControl.pdf},
     slides = {2019-12-12_CDC_ModelingRoundoffError.pdf},
-    poster = {2019_CDC_ModelingRoundoffError.pdf}
+    poster = {2019_CDC_ModelingRoundoffError.pdf},
+    instrepo = {hdl.handle.net/10044/1/73269},
 }
 
 @techreport{McInerney2019_boundingComputationalComplexity,
@@ -139,8 +146,9 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     publisher = {IFAC},
     title = {A Survey of the Implementation of Linear Model Predictive Control on {FPGA}s},
     year = {2018},
-    file = {2018_NMPC_ReviewOfLinearMPConFPGA.pdf},
-    poster = {2018_NMPC_ReviewOfLinearMPC.pdf}
+    preprint = {2018_NMPC_ReviewOfLinearMPConFPGA.pdf},
+    poster = {2018_NMPC_ReviewOfLinearMPC.pdf},
+    instrepo = {hdl.handle.net/10044/1/62110},
 }
 
 @inproceedings{McInerney2018_UKACC,
@@ -155,7 +163,8 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     publisher = {IEEE},
     month = {8},
     year = {2018},
-    file = {2018_UKACC-Control_PredictiveControlAssessment.pdf}
+    preprint = {2018_UKACC-Control_PredictiveControlAssessment.pdf},
+    instrepo = {hdl.handle.net/10044/1/65353},
 }
 
 @inproceedings{McInerney2017_cdc,
@@ -169,7 +178,7 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     title = {Cooperative Localization from Imprecise Range-Only Measurements: A Non-Convex Distributed Approach},
     year = {2017},
     doi = {10.1109/CDC.2017.8263973},
-    file = {2017_CDC_DistributedTrilateration.pdf}
+    preprint = {2017_CDC_DistributedTrilateration.pdf}
 }
 
 @thesis{McInerney2017_MSThesis,
@@ -187,7 +196,9 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     month = {aug},
     year = {2017},
     doi = {10.31274/etd-180810-5192},
-    codedoi = {10.5281/zenodo.4719659}
+    codedoi = {10.5281/zenodo.4719659},
+    instrepo = {dr.lib.iastate.edu/handle/20.500.12876/29758},
+    preprint = {2017_MSc-Thesis.pdf},
 }
 
 @patent{Caterpillar2014,
