@@ -97,6 +97,7 @@ scholar:
     - video
     - textnumber
     - instrepo
+    - preprint
   bibtex_filters:
     - markdown
     - latex
