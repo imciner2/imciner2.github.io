@@ -1,7 +1,7 @@
 PATH
   remote: jekyll-scholar-extras
   specs:
-    jekyll-scholar-extras (0.1.5)
+    jekyll-scholar-extras (0.2.0)
       bibtex-ruby (~> 6.0)
       citeproc-ruby (~> 1.0)
       jekyll (~> 4.0)
@@ -149,4 +149,4 @@ DEPENDENCIES
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.3.5
+   2.3.12
