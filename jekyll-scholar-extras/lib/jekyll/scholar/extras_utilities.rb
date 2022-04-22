@@ -16,12 +16,13 @@ module Jekyll
       return idx_html + ref
     end
 
-    # Default to public if no key
-    def entry_is_public(entry)
-      if entry.field?(:public)
-        return entry.public == 'yes'
+    def get_entry_keywords(entry)
+      if entry.field?(:keywords)
+        key_arr = entry.keywords.split(',')
+        key_arr.each{ |key| key.strip! }
+        return key_arr
       else
-        return true
+        return []
       end
     end
 
