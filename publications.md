@@ -8,8 +8,9 @@ layout: publications
 <div>
   <div class="right-align">
     <p>
-      <a class="button" href="{{ site.baseurl }}{% link publications.md %}">By Type</a>
+      <a class="button" href="{{ site.baseurl }}{% link publications-topic.md %}">By Topic</a>
       <a class="button" href="{{ site.baseurl }}{% link publications-year.md %}">By Year</a>
+      <a class="button" href="{{ site.baseurl }}{% link publications.md %}">By Type</a>
     </p>
   </div>
 </div>

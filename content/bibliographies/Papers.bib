@@ -7,18 +7,20 @@
     address = {Hamburg, Germany},
     abstract = {Including Model Predictive Control (MPC) in the undergraduate/graduate control curriculum is becoming vitally important due to the growing adoption of MPC in many industrial areas. In this paper, we present an overview of the predictive control course taught by the authors at Imperial College London between 2018 and 2021. We discuss how the course evolved from focusing solely on the linear MPC formulation to covering nonlinear MPC and some of its extensions. We also present a novel specification-based summative assessment framework, written in MATLAB, that was developed to assess the knowledge and understanding of the students in the course by tasking them with designing a controller for a real-world problem. The MATLAB assessment framework was designed to provide the students with the freedom to design and implement any MPC controller they wanted. The submitted controllers were then assessed against over 30 variations of the real-world problem to gauge student understanding of design robustness and the MPC topics from the course.},
     arxiv = {2202.00157},
-    note = {Accepted}
+    note = {Accepted},
+    keywords = {Teaching, Model Predictive Control},
 }
 
 @inproceedings{Nita2021_FlexibleMesh,
     title = {Fast and accurate method for computing non-smooth solutions to constrained control problems},
     author = {Nita, Lucian and Vila, Eduardo Miguel Gouveia and Zagorowska, Marta and Kerrigan, Eric C. and Nie, Yuanbo and McInerney, Ian and Falugi, Paola},
     year = {2022},
-    month = {06},
+    month = {6},
     booktitle = {2022 European Control Conference},
     address = {London, UK},
     abstract = {Introducing flexibility in the time-discretisation mesh can improve convergence and computational time when solving differential equations numerically, particularly in discontinuous solutions, as commonly found in optimal control problems. State-of-the-art methods invariably use fixed mesh schemes, which cannot achieve superlinear convergence in the presence of non-smooth solutions. In this paper, we propose using a flexible mesh in an integrated residual method. The locations of the mesh nodes are introduced as decision variables, and constraints are added to set upper and lower bounds on the size of the mesh intervals. We compare our approach to a uniform fixed mesh on a real-world satellite reorientation example. This sample problem demonstrates that the flexible mesh enables the solver to automatically locate the discontinuities in the solution, and have a superlinear order of convergence and faster solve time.},
-    note = {Accepted}
+    note = {Accepted},
+    keywords = {Optimal Control},
 }
 
 @inproceedings{Biggs2022_JuliaHLS,
@@ -35,6 +37,7 @@
     video = {youtu.be/MKsWhxlIiWw},
     slides = {2022-03-01_LATTE_JuliaHLS.pdf},
     instrepo = {hdl.handle.net/10044/1/95997},
+    keywords = {Software, High Level Synthesis, FPGAs},
 }
 
 @thesis{McInerney2022_PhdThesis,
@@ -49,9 +52,10 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     title = {{Numerical Methods for Model Predictive Control}},
     type = {Ph.D. Dissertation},
     address = {London, UK},
-    month = {mar},
+    month = {3},
     year = {2022},
-    preprint = {2022_PhD-Thesis.pdf}
+    preprint = {2022_PhD-Thesis.pdf},
+    keywords = {Model Predictive Control, Numerical Methods, FPGAs},
 }
 
 @article{McInerney2022_closedFormPreconditioner,
@@ -64,9 +68,11 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     doi = {10.1109/TAC.2022.3145657},
     arxiv = {2010.08572},
     year = {2022},
+    month = {1},
     preprint = {2022_IEEE-TAC_Preconditioning.pdf},
     note = {Accepted, in-press},
     instrepo = {hdl.handle.net/10044/1/83539},
+    keywords = {Model Predictive Control, Numerical Methods},
 }
 
 @inproceedings{McInerney2021_NMPC,
@@ -79,12 +85,14 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     publisher = {IFAC},
     title = {Towards a Framework for Nonlinear Predictive Control Using Derivative-Free Optimization},
     year = {2021},
+    month = {7},
     doi = {10.1016/j.ifacol.2021.08.558},
     arxiv = {2106.05025},
     preprint = {2021_NMPC_TowardsADerivativeFreeFramework.pdf},
     slides = {2021-07_IFAC-NMPC_DerivativeFreeNMPC.pdf},
     video = {youtu.be/LE5CXyx6bCM},
     instrepo = {hdl.handle.net/10044/1/89658},
+    keywords = {Model Predictive Control, Optimal Control},
 }
 
 
@@ -96,6 +104,7 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     publisher = {IEEE},
     title = {Digit Stability Inference for Iterative Methods Using Redundant Number Representation},
     year = {2021},
+    month = {7},
     volume = {70},
     number = {7},
     pages = {1074--1080},
@@ -104,6 +113,7 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     preprint = {2020_IEEE-TC_DigitStabilityInference.pdf},
     zenodo = {10.5281/zenodo.3564472},
     instrepo = {hdl.handle.net/10044/1/81050},
+    keywords = {FPGAs, Computer Arithmetic, Numerical Methods},
 }
 
 @article{Rodriguez-Bernuz2021_energyConverterMPC,
@@ -114,12 +124,14 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     journal = {IEEE Transactions on Energy Conversion},
     publisher = {IEEE},
     year = {2021},
+    month = {6},
     volume = {36},
     number = {2},
     pages = {1425--1434},
     doi = {10.1109/TEC.2021.3060319},
     preprint = {2021_IEEE-TEC_LTV-MPC-EnergyRegulator.pdf},
-    instrepo = {hdl.handle.net/10044/1/87773}
+    instrepo = {hdl.handle.net/10044/1/87773},
+    keywords = {Model Predictive Control, Control Applications},
 }
 
 @inproceedings{McInerney2019_cdc,
@@ -132,11 +144,13 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     publisher = {IEEE},
     title = {Modeling Round-off Error in the Fast Gradient Method for Predictive Control},
     year = {2019},
+    month = {12},
     doi = {10.1109/CDC40024.2019.9029910},
     preprint = {2019_CDC_ModelingRoundoffErrorInPredictiveControl.pdf},
     slides = {2019-12-12_CDC_ModelingRoundoffError.pdf},
     poster = {2019_CDC_ModelingRoundoffError.pdf},
     instrepo = {hdl.handle.net/10044/1/73269},
+    keywords = {Model Predictive Control, FPGAs},
 }
 
 @techreport{McInerney2019_boundingComputationalComplexity,
@@ -147,7 +161,9 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     journal = {arXiv:1902.02221},
     arxiv = {1902.02221},
     year = {2019},
-    codedoi = {10.24433/CO.3311801.v1}
+    month = {2},
+    codedoi = {10.24433/CO.3311801.v1},
+    keywords = {Model Predictive Control, Numerical Methods},
 }
 
 @inproceedings{McInerney2018_NMPC,
@@ -161,9 +177,11 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     publisher = {IFAC},
     title = {A Survey of the Implementation of Linear Model Predictive Control on {FPGA}s},
     year = {2018},
+    month = {8},
     preprint = {2018_NMPC_ReviewOfLinearMPConFPGA.pdf},
     poster = {2018_NMPC_ReviewOfLinearMPC.pdf},
     instrepo = {hdl.handle.net/10044/1/62110},
+    keywords = {Model Predictive Control, FPGAs},
 }
 
 @inproceedings{McInerney2018_UKACC,
@@ -176,10 +194,11 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     pages = {443},
     title = {Automated Project-based Assessment in a Predictive Control Course},
     publisher = {IEEE},
-    month = {8},
     year = {2018},
+    month = {8},
     preprint = {2018_UKACC-Control_PredictiveControlAssessment.pdf},
     instrepo = {hdl.handle.net/10044/1/65353},
+    keywords = {Teaching, Model Predictive Control},
 }
 
 @inproceedings{McInerney2017_cdc,
@@ -192,8 +211,10 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     publisher = {IEEE},
     title = {Cooperative Localization from Imprecise Range-Only Measurements: A Non-Convex Distributed Approach},
     year = {2017},
+    month = {12},
     doi = {10.1109/CDC.2017.8263973},
-    preprint = {2017_CDC_DistributedTrilateration.pdf}
+    preprint = {2017_CDC_DistributedTrilateration.pdf},
+    keywords = {Optimization},
 }
 
 @thesis{McInerney2017_MSThesis,
@@ -208,12 +229,13 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     address = {Ames, IA, USA},
     title = {{Development of a multi-agent quadrotor research platform with distributed computational capabilities}},
     type = {M.S. Thesis},
-    month = {aug},
     year = {2017},
+    month = {8},
     doi = {10.31274/etd-180810-5192},
     codedoi = {10.5281/zenodo.4719659},
     instrepo = {dr.lib.iastate.edu/handle/20.500.12876/29758},
     preprint = {2017_MSc-Thesis.pdf},
+    keywords = {Optimization, Software, Control Applications}
 }
 
 @patent{Caterpillar2014,
@@ -226,9 +248,10 @@ Finally, we present a framework using the derivative-free Mesh Adaptive Direct S
     number = {U.S. Pat. App. 14/547640},
     textnumber = {U.S. Pat. App. 14/547640},
     dayfiled = {19},
-    monthfiled = {nov},
+    monthfiled = {3},
     yearfiled = {2014},
     year = {2014},
+    month = {3},
     type = {Patent Application},
     url = {patents.google.com/patent/US20160139103A1/en},
 }
