@@ -47,8 +47,8 @@ module Jekyll
       def render(context)
         set_context_to context
 
-        # Only select items that are public.
-        items = entries.select { |e| entry_is_public(e) }
+        # Get a copy to work with
+        items = entries
 
         initialize_prefix_defaults()
         initialize_type_labels()
@@ -75,22 +75,6 @@ module Jekyll
         bibliography = render_header(@type_labels[query])
         bibliography << items.each_with_index.map { |entry, index|
           reference = render_index(entry, bibliography_tag(entry, nil))
-
-          if generate_details?
-            reference << link_to(details_link_for(entry), config['details_link'],
-                                 :class => config['details_link_class'])
-          end
-
-          if entry.field?(:award)
-            # TODO: Awkward -- Find position to insert it. Before the last </div>
-            ts = content_tag "div", entry.award.to_s, { :class => "csl-award" }
-            reference_position = reference.rindex('</div>')
-            if reference_position.nil?
-              puts "NILL"
-            else 
-              reference.insert(reference.rindex('</div>'), ts.to_s)
-            end 
-          end
           
           content_tag config['bibliography_item_tag'], reference
           content_tag "li", reference, { :class => render_ref_img(entry) }
