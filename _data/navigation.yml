@@ -2,11 +2,16 @@
 - title: Home
   url: /
 
-- title: Presentations
-  url: /presentations/
+- title: Research
+  url: /research/
 
 - title: Publications
   url: /publications/
 
 - title: Software
   url: /software/
+
+- title: Presentations
+  url: /presentations/
+
+
