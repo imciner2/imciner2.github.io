@@ -13,7 +13,6 @@
   <h3 itemprop="name">{{ author.name }}</h3>
   <p>{{ author.bio }}</p>
   {% if author.email %}<a href="mailto:{{ author.email }}" class="author-social" target="_blank"><i class="fas fa-fw fa-envelope-square"></i> Email</a>{% endif %}
-  {% if author.twitter %}<a href="https://twitter.com/{{ author.twitter }}" class="author-social" target="_blank"><i class="fab fa-fw fa-twitter-square"></i> Twitter</a>{% endif %}
   {% if author.facebook %}<a href="https://facebook.com/{{ author.facebook }}" class="author-social" target="_blank"><i class="fab fa-fw fa-facebook-square"></i> Facebook</a>{% endif %}
   {% if author.google.plus %}<a href="https://plus.google.com/+{{ author.google.plus }}" class="author-social" target="_blank"><i class="fab fa-fw fa-google-plus-square"></i> Google+</a>{% endif %}
   {% if author.google.scholar %}<a href="https://scholar.google.com/citations?user={{ author.google.scholar}}" class="author-social" target="_blank"><i class="ai ai-fw ai-google-scholar"></i> Google Scholar</a>{% endif %}
@@ -40,4 +39,6 @@
   {% if author.codepen %}<a href="https://codepen.io/{{ author.codepen }}" class="author-social" target="_blank"><i class="fab fa-fw fa-codepen"></i> CodePen</a>{% endif %}
   {% if author.researchgate %}<a href="https://www.researchgate.net/profile/{{ author.researchgate }}" class="author-social" target="_blank"><i class="ai ai-fw ai-researchgate"></i> ResearchGate</a>{% endif %}
   {% if author.mendeley %}<a href="https://www.mendeley.com/profiles/{{ author.mendeley }}" class="author-social" target="_blank"><i class="ai ai-fw ai-mendeley"></i> Mendeley</a>{% endif %}
+  {% if author.twitter %}<a href="https://twitter.com/{{ author.twitter }}" class="author-social" target="_blank"><i class="fab fa-fw fa-twitter-square"></i> Twitter</a>{% endif %}
+  {% if author.mastodon %}<a rel="me" href="https://{{ author.mastodon }}" class="author-social" target="_blank"><i class="fab fa-fw fa-mastodon"></i> Mastodon</a>{% endif %}
 </div>
