@@ -124,6 +124,10 @@ defaults:
       path: blog/*
     values:
       sitemap: false
+  - scope:
+      path: sublime/*
+    values:
+      sitemap: false
 
 assets:
   sources:
