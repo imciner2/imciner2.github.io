@@ -10,6 +10,7 @@
             "description": "Adds a couple of missing features to SublimeText 3 Find Results buffer",
             "donate": null,
             "homepage": "https://github.com/imciner2/BetterFindBuffer",
+            "details": "https://github.com/imciner2/BetterFindBuffer",
             "labels": [
                 "find results",
                 "search"
