@@ -1,0 +1,29 @@
+{
+    "schema_version": "3.0.0",
+    "packages": [
+        {
+            "authors": [
+                "aziz",
+                "Forked by imciner2"
+            ],
+            "buy": null,
+            "description": "Adds a couple of missing features to SublimeText 3 Find Results buffer",
+            "donate": null,
+            "homepage": "https://github.com/imciner2/BetterFindBuffer",
+            "labels": [
+                "find results",
+                "search"
+            ],
+            "last_modified": "2016-07-01 23:43:49",
+            "name": "BetterFindBuffer",
+            "previous_names": [],
+            "readme": "https://raw.githubusercontent.com/imciner2/BetterFindBuffer/master/README.md",
+            "releases": [
+                {
+                    "sublime_text": "*",
+                    "tags": true
+                },
+            ]
+        },
+    ]
+}
