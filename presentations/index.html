@@ -144,7 +144,7 @@
 
 
   <h3 itemprop="name">Ian McInerney</h3>
-  <p>Research associate at The University of Manchester</p>
+  <p>Research software engineer, Vibration UTC at Imperial College London</p>
   <a href="mailto:ian.s.mcinerney@ieee.org" class="author-social" target="_blank"><i class="fas fa-fw fa-envelope-square"></i> Email</a>
   
   
@@ -184,6 +184,72 @@
 <p>Note: The following presentations were given at conferences where no paper was published in the proceedings. For conference presentations with an associated proceedings paper, see the <a href="/publications/">publications</a> page.</p>
 
 <ul class="bibliography"><li><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="McInerney2023_CSE"><strong>I. McInerney</strong> and N. J. Higham, “Chopblas: Simulating Mixed-Precision and Stochastically Rounded Linear Algebra,” presented at the <em>SIAM Conference on Computational Science and Engineering</em>, Amsterdam, NL, Mar. 2023.</span>
+
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="pub_icons"><a href="/content/slides/2023-03_SIAM-CSE_ChopBLAS.pdf" target="_blank"><i class="fas fa-tv"></i> Slides</a></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleAbstract('McInerney2023_CSE')">Abstract <i id="abs-buttonMcInerney2023_CSE" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2023_CSE')">Bibtex <i id="bib-buttonMcInerney2023_CSE" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="absMcInerney2023_CSE" class="summary" style="display: none;">
+<div><p>In this talk, we present the ChopBLAS MATLAB library for simulating basic linear algebra operations using mixed precision and non-standard floating-point formats such as BFloat16, stochastic rounding, and custom formats. Existing simulation frameworks use MATLAB classes and operator overloading to implement custom precision data types, which makes implementing mixed-precision computations difficult and leads to decreased computational performance due to the overhead of MATLAB classes. Instead, ChopBLAS uses operation-level rounding, where instead of a custom data type, we store all data as double precision floating-point values, use double precision floating-point arithmetic, and then round the data to the desired precision using either the chop or cpfloat rounding function. By operating on double precision values we are able to exploit the built-in vectorization capabilities of MATLAB operations, leading to a speed-up of nearly 90x and 1050x when simulating stochastic rounding using chop and cpfloat, respectively, compared to a reference BLAS implementation in MATLAB with operation level rounding.</p>
+</div>
+</div>
+
+
+<div id="bibMcInerney2023_CSE" class="summary" style="display: none;">
+<pre>@inproceedings{McInerney2023_CSE,
+  address = {Amsterdam, NL},
+  author = {McInerney, Ian and Higham, Nicholas J.},
+  event = {SIAM Conference on Computational Science and Engineering},
+  title = {Chopblas: Simulating Mixed-Precision and Stochastically Rounded Linear Algebra},
+  month = mar,
+  year = {2023},
+  author+an = {1=highlight}
+}
+</pre>
+</div>
+
+</p>
+
+</div>
+</li>
+<li><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
