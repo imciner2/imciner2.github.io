@@ -22,6 +22,11 @@
   <div id="index">
     <h1>{{ page.title }}</h1>
 
+    The following pages contain notes about various technical topics.
+    This includes descriptions of how programs function, and also installation/configuration instructions for software/libraries that aren't just a simple installation command.
+
+    The notes are categorized, and may have multiple categories to aid location.
+
     {% include group-by-array.html collection=site.technotes field='category' %}
 
     {% for cat in group_names %}
