@@ -7,14 +7,16 @@
 <meta charset="utf-8">
 
 
-<title>What is This? &#8211; Ian McInerney</title>
-<meta name="description" content="What is a static website generator, and why should I care?">
-<meta name="keywords" content="intro, beginner, jekyll, tutorial">
+<title>Installing oneAPI on Fedora &#8211; Ian McInerney</title>
+<meta name="description" content="While Intel does not officially support Fedora with their oneAPI packages, they do provide RPM packages via yum/dnf repositories.
+">
+<meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="What is This?">
-<meta name="twitter:description" content="What is a static website generator, and why should I care?">
+<meta name="twitter:title" content="Installing oneAPI on Fedora">
+<meta name="twitter:description" content="While Intel does not officially support Fedora with their oneAPI packages, they do provide RPM packages via yum/dnf repositories.
+">
 
 
 
@@ -24,9 +26,10 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="What is This?">
-<meta property="og:description" content="What is a static website generator, and why should I care?">
-<meta property="og:url" content="/blog/example-post/">
+<meta property="og:title" content="Installing oneAPI on Fedora">
+<meta property="og:description" content="While Intel does not officially support Fedora with their oneAPI packages, they do provide RPM packages via yum/dnf repositories.
+">
+<meta property="og:url" content="/technotes/oneapi-f38/">
 <meta property="og:site_name" content="Ian McInerney">
 
 <meta property="og:image" content="/images/default-thumb.png">
@@ -37,7 +40,7 @@
 
 
 
-<link rel="canonical" href="/blog/example-post/">
+<link rel="canonical" href="/technotes/oneapi-f38/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Ian McInerney Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -78,21 +81,21 @@
 
 <!--Jekyll-seo plugin-->
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>What is This? | Ian McInerney</title>
+<title>Installing oneAPI on Fedora | Ian McInerney</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="What is This?" />
+<meta property="og:title" content="Installing oneAPI on Fedora" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="What is a static website generator, and why should I care?" />
-<meta property="og:description" content="What is a static website generator, and why should I care?" />
-<link rel="canonical" href="https://ism.engineer/blog/example-post/" />
-<meta property="og:url" content="https://ism.engineer/blog/example-post/" />
+<meta name="description" content="While Intel does not officially support Fedora with their oneAPI packages, they do provide RPM packages via yum/dnf repositories." />
+<meta property="og:description" content="While Intel does not officially support Fedora with their oneAPI packages, they do provide RPM packages via yum/dnf repositories." />
+<link rel="canonical" href="https://ism.engineer/technotes/oneapi-f38/" />
+<meta property="og:url" content="https://ism.engineer/technotes/oneapi-f38/" />
 <meta property="og:site_name" content="Ian McInerney" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2016-07-23T00:00:00+00:00" />
+<meta property="article:published_time" content="2023-04-11T15:09:28+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="What is This?" />
+<meta property="twitter:title" content="Installing oneAPI on Fedora" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2016-07-23T00:00:00+00:00","datePublished":"2016-07-23T00:00:00+00:00","description":"What is a static website generator, and why should I care?","headline":"What is This?","mainEntityOfPage":{"@type":"WebPage","@id":"https://ism.engineer/blog/example-post/"},"url":"https://ism.engineer/blog/example-post/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-11T15:09:28+00:00","datePublished":"2023-04-11T15:09:28+00:00","description":"While Intel does not officially support Fedora with their oneAPI packages, they do provide RPM packages via yum/dnf repositories.","headline":"Installing oneAPI on Fedora","mainEntityOfPage":{"@type":"WebPage","@id":"https://ism.engineer/technotes/oneapi-f38/"},"url":"https://ism.engineer/technotes/oneapi-f38/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -204,20 +207,87 @@
   <article class="post">
     <div class="headline-wrap">
       
-        <h1><a href="/blog/example-post/" rel="bookmark" title="What is This?">What is This?</a></h1>
+        <h1><a href="/technotes/oneapi-f38/" rel="bookmark" title="Installing oneAPI on Fedora">Installing oneAPI on Fedora</a></h1>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>This is a website template created with Jekyll that is designed to be hosted on Github pages. Jekyll is a static website generator, and Github pages provides a free and easy way to host websites created using Jekyll.</p>
+      <p>While Intel does not officially support Fedora with their oneAPI packages, they do provide RPM packages via yum/dnf repositories.</p>
 
-<h2 id="what-is-a-static-website-generator">What is a static website generator?</h2>
-<p>A static website generator is a program that allows for a website to be created using alternatives to HTML. In this case we are using a simple text markup language called Markdown to create and format the content on the pages. Jekyll can interpret this and convert it to html that can be rendered in any browser.</p>
+<h1 id="repository-configuration">Repository configuration</h1>
 
-<h2 id="why-should-i-use-a-static-website">Why should I use a static website?</h2>
-<p>A static website, simply put, is easier to manage than just about any other option out there for a simple website. Since it does not rely on any additional web application, it can be hosted on any webhosting server. It does not require regular updates like many dynamic websites such as WordPress or Drupal require. Everything that the website needs to work is contained within one directory, making it incredibly easy to move.</p>
+<p>For Fedora versions prior to Fedora 38 (e.g. Fedora 37 and before), the standard <a href="https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2023-1/yum-dnf-zypper.html" target="_blank">Intel instructions</a> will work for installing oneAPI packages</p>
 
-<h2 id="how-is-this-template-different">How is this template different?</h2>
-<p>This template has been optimized for ease of use. In the next set of instructions you will see that there are less than five files that you need to edit in order to customize the look of the website.</p>
+<h1 id="preventing-library-issues">Preventing library issues</h1>
+
+<p>As more parts of the oneAPI ecosystem become open source under permissive licenses, oneAPI libraries are being added to the main Fedora repository and being used as dependencies for Fedora packages.
+For example, the <code class="language-plaintext highlighter-rouge">oidn-libs</code> package in the Fedora repository contains libraries that are also provided by the oneAPI repository <code class="language-plaintext highlighter-rouge">intel-oneapi-oidn-*</code> pacakges, so adding the oneAPI repository alongside the main Fedora repository can lead to DNF choosing to install the Intel-provided packages containing the libraries instead of the Fedora ones.</p>
+
+<p>DNF installing the Intel packages instead of the Fedora packages is problematic because the Intel packages install the libraries in different directories (e.g. subfolders of <code class="language-plaintext highlighter-rouge">/opt/intel/oneapi</code>), so they are not automatically on the search path and so using them requires adding them to the search path manually.
+This leads to DNF thinking all necessary libraries have been installed, but programs not starting due to missing shared libraries.</p>
+
+<p>To fix this, the oneAPI repository should be added with a priority level below the Fedora repository.
+Since DNF uses a default priority of 99 and lower priority numbers indicate a higher priority repository, setting the priority level for the oneAPI level to 150 will cause DNF to choose the Fedora packages over the Intel-provided packages when there is a choice.
+This is done by adding</p>
+
+<div id="code-oneapipriority" class="codeblock">
+<pre>
+priority=150
+</pre>
+</div>
+
+<p>to the <code class="language-plaintext highlighter-rouge">/etc/yum.repos.d/oneAPI.repo</code> file containing the repository configuration.</p>
+
+<h1 id="post-fedora-38">Post-Fedora 38</h1>
+
+<p>Starting in Fedora 38, RPM has <a href="https://fedoraproject.org/wiki/Changes/RpmSequoia" target="_blank">switched</a> its cryptographic library to a new one called <code class="language-plaintext highlighter-rouge">rpm-sequoia</code>.
+This change unfortuently leads to several issues using the Intel oneAPI repository</p>
+
+<h2 id="repository-gpg-key">Repository GPG Key</h2>
+
+<p>The first issue with the oneAPI repository is a GPG key failure with the error:</p>
+
+<div id="code-certissue" class="codeblock">
+<pre>
+error: Certificate 1A8497B11911E097:
+  The certificate is expired: The primary key is not live
+</pre>
+</div>
+
+<p>To work around this issue, disable the GPG checks for the Intel repository in the <code class="language-plaintext highlighter-rouge">/etc/yum.repos.d/oneAPI.repo</code> file.
+A complete repository definition is:</p>
+
+<div id="code-oneapidnf" class="codeblock">
+<pre>
+[oneAPI]
+name=Intel® oneAPI repository
+baseurl=https://yum.repos.intel.com/oneapi
+enabled=1
+gpgcheck=0
+repo_gpgcheck=0
+gpgkey=https://yum.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
+priority=150
+</pre>
+</div>
+
+<h2 id="installing-packages">Installing Packages</h2>
+
+<p>Once the repository GPG-key is ignored, DNF produces further errors when trying to install the packages.
+These errors are generated by RPM itself, and look like</p>
+
+<div id="code-rpmerror" class="codeblock">
+<pre>
+package intel-basekit-2023.1.0-46401.x86_64 does not verify: RSA signature: BAD (package tag 1002: invalid OpenPGP signature)
+package intel-hpckit-2023.1.0-46346.x86_64 does not verify: RSA signature: BAD (package tag 1002: invalid OpenPGP signature)
+</pre>
+</div>
+
+<p>These errors are caused by the new <code class="language-plaintext highlighter-rouge">rpm-sequoia</code> cryptography backend becoming stricter with PGP keys meeting the appropriate standards, and rejecting keys that do not meet them <a href="https://github.com/rpm-software-management/rpm/issues/2351" target="_blank">(GitHub issue)</a>.
+In order to allow DNF to install these packages, RPM needs to relax the cryptography signature checks to allow these signatures through.</p>
+
+<p>Currently, the workaround is to globally disable all package signature verification in rpm.
+This can be done by adding <code class="language-plaintext highlighter-rouge">%_pkgverify_level none</code> to the file <code class="language-plaintext highlighter-rouge">/etc/rpm/macros.verify</code>.</p>
+
+<p><strong>WARNING:</strong> This change will disable all package verification for all repositories/RPMs on the system. It should only be done if you completely trust all repositories on your system.</p>
 
       <hr />
       <footer role="contentinfo">
@@ -225,18 +295,18 @@
   <!--<h4>Share on</h4>
   <ul>
     <li>
-      <a href="https://twitter.com/intent/tweet?text=/blog/example-post/" class="twitter" title="Share on Twitter"><i class="fas fa-twitter"></i><span> Twitter</span></a>
+      <a href="https://twitter.com/intent/tweet?text=/technotes/oneapi-f38/" class="twitter" title="Share on Twitter"><i class="fas fa-twitter"></i><span> Twitter</span></a>
     </li>
     <li>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=/blog/example-post/" class="facebook" title="Share on Facebook"><i class="fas fa-facebook"></i><span> Facebook</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/technotes/oneapi-f38/" class="facebook" title="Share on Facebook"><i class="fas fa-facebook"></i><span> Facebook</span></a>
     </li>
     <li>
-      <a href="https://plus.google.com/share?url=/blog/example-post/" class="google-plus" title="Share on Google Plus"><i class="fas fa-google-plus"></i><span> Google+</span></a>
+      <a href="https://plus.google.com/share?url=/technotes/oneapi-f38/" class="google-plus" title="Share on Google Plus"><i class="fas fa-google-plus"></i><span> Google+</span></a>
     </li>
   </ul>-->
 </div><!-- /.social-share -->
 
-        <p class="byline"><strong>What is This?</strong> was published on <time datetime="2016-07-23T00:00:00+00:00">July 23, 2016</time> and last modified on <time datetime="2/29/2016, 9:00:24">2/29/2016, 9:00:24</time>.</p>
+        
       </footer>
     </div><!-- /.article-wrap -->
   
@@ -244,17 +314,6 @@
 </div><!-- /#main -->
 
 <div class="footer-wrap">
-  
-  <div class="related-articles">
-  <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
-    <ul>
-    
-      <li><a href="/presentation/example-presentation/" title="Example Reveal.js Presentation Deck">Example Reveal.js Presentation Deck</a></li>
-    
-    </ul>
-    <hr />
-  </div><!-- /.related-articles -->
-  
   <footer>
     
 
@@ -268,9 +327,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="/assets/js/scripts.min.js"></script>
-
-
-  
 
 
 
