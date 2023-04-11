@@ -41,3 +41,6 @@ gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
 
 # Needed for Ruby 3 to make Jekyll work
 gem "webrick", "~> 1.7"
+
+# Pin sassc because 2.4.0 seems not to work properly
+gem "sassc", "~> 2.1.0"
