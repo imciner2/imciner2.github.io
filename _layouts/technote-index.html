@@ -7,7 +7,7 @@
 {% include _head.html %}
 </head>
 
-<body class="post-index">
+<body class="technote-index">
 
 {% include _browser-upgrade.html %}
 
@@ -21,21 +21,21 @@
   </div>
   <div id="index">
     <h1>{{ page.title }}</h1>
-    {% for post in site.categories.blog %}
-      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-      {% if year != written_year %}
-        <h3>{{ year }}</h3>
-        {% capture written_year %}{{ year }}{% endcapture %}
-      {% endif %}
-      <article>
-        {% if post.link %}
-          <h2 class="link-post"><a href="{{ site.github.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fas fa-link"></i></a></h2>
-        {% else %}
-          <h2><a href="{{ site.github.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-          <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-        {% endif %}
-      </article>
+
+    {% include group-by-array.html collection=site.technotes field='category' %}
+
+    {% for cat in group_names %}
+      {% assign notes = group_items[forloop.index0] %}
+      <h2> {{ cat }} </h2>
+      <ul>
+        {% for note in notes %}
+        <li>
+          <b><a href='{{ site.baseurl }}{{ note.url }}'>{{ note.title }}</a></b>: {{ note.summary | strip_html | truncate: 160 }}
+        </li>
+        {% endfor %}
+      </ul>
     {% endfor %}
+
   </div><!-- /#index -->
 </div><!-- /#main -->
 

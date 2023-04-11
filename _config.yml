@@ -106,6 +106,10 @@ scholar:
     - markdown
     - latex
 
+collections:
+  technotes:
+    output: true
+
 # Hide portions of the site from search engines
 defaults:
   - scope:

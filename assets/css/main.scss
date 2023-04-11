@@ -62,6 +62,14 @@ details summary {
     color: #2a7ae2;
 }
 
+.codeblock {
+  margin: 0px 0px 0px 0px;
+  outline:none;
+  padding: 2px 6px;
+  background: lighten($basecolor, 75%);
+  border: none;
+  border-radius: 10px;
+}
 
 /* Bibliography */
 
