@@ -11,6 +11,7 @@ Previously, I was a research associate in the [Numerical Linear Algebra group](h
 ## News
 
 <ul class="list_header">
+   <li>Jun 2023: Our paper on an FPGA implementation of OSQP will be presented at ISCA'23. Preprint available [here]({{ domain }}/content/papers/2023_ISCA_RSQPArchitectureCustomization.pdf).</li>
    <li>Jan 2023: I have joined the Vibration University Technology Centre and the Dynamics group in the Department of Mechanical Engineering at Imperial College London as a Research Software Engineer.</li>
    <li>May 2022: New preprint on the behavior of iterative methods in the redundant number representation posted.</li>
    <li>Apr 2022: My PhD in Numerical Methods for Model Predictive Control from Imperial College London has been officially awarded.</li>
