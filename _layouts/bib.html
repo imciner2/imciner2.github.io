@@ -78,6 +78,17 @@
 <pre>{{entry.bibtex}}</pre>
 </div>
 
+{% if entry.doi %}
+<div class="scite-badge"
+     data-doi="{{ entry.doi }}"
+     data-layout="horizontal"
+     data-show-zero="true"
+     data-small="true"
+     data-show-labels="false"
+     data-tally-show="true">
+</div>
+{% endif %}
+
 </p>
 
 </div>
