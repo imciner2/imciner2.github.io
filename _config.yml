@@ -102,6 +102,7 @@ scholar:
     - instrepo
     - preprint
     - keywords
+    - scholar_id
   bibtex_filters:
     - markdown
     - latex
