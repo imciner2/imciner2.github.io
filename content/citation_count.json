@@ -4,12 +4,16 @@
     "McInerney2022_TeachingPredictiveControl": 0,
     "Nita2021_FlexibleMesh": 1,
     "Biggs2022_JuliaHLS": 0,
+    "McInerney2022_PhdThesis": 0,
     "McInerney2022_closedFormPreconditioner": 2,
     "McInerney2021_NMPC": 1,
     "Li2021_digitElision": 5,
-    "Rodriguez-Bernuz2021_energyConverterMPC": 5,
+    "RodriguezBernuz2021_energyConverterMPC": 5,
     "McInerney2019_cdc": 5,
+    "McInerney2019_boundingComputationalComplexity": 2,
     "McInerney2018_NMPC": 38,
     "McInerney2018_UKACC": 3,
-    "McInerney2017_cdc": 4
+    "McInerney2017_cdc": 4,
+    "McInerney2017_MSThesis": 3,
+    "Caterpillar2014": 1
 }
