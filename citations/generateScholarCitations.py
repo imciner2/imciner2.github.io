@@ -1,6 +1,8 @@
 import json
 import bibtexparser
 import scholarly
+import sys
+
 from scholarly import scholarly as sc
 from bibtexparser.bparser import BibTexParser
 
@@ -43,8 +45,12 @@ def get_publication_citations(citations, biblibrary, folder):
 ######################################
 # Main body of the script
 ######################################
-filename = "./content/bibliographies/Papers.bib"
-outpath = "./content"
+if len(sys.argv) == 3:
+    filename = sys.argv[1]
+    outpath = sys.argv[2]
+else:
+    filename = "./content/bibliographies/Papers.bib"
+    outpath = "./content"
 
 with open(filename) as bibtex_file:
     parser = BibTexParser()

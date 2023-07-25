@@ -1,0 +1,43 @@
+name: Update citations
+
+on:
+  schedule:
+    # Rebuild the citations at 12am everyday
+    - cron '0 0 * * *'
+
+env:
+  MAIN_REPO: $GITHUB_WORKSPACE/main
+  PAGES_REPO: $GITHUB_WORKSPACE/gh-pages
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout main
+      uses: actions/checkout@v3
+      with:
+        ref: master
+        path: $MAIN_REPO
+
+    - name: Checkout site
+      uses: actions/checkout@v3
+      with:
+        ref: gh-pages
+        path: $PAGES_REPO
+
+    - name: Update citation count
+      run: |
+        pip install -r citations/requirements.txt
+        python $MAIN_REPO/citations/generateScholarCitations.py $MAIN_REPO/content/bibliographies/Papers.bib $PAGES_REPO/content
+
+    - name: Deploy
+      env:
+        COMMIT_MESSAGE: Update citation count
+        COMMIT_AUTHOR: Github Actions
+      run: |
+        cd $PAGES_REPO
+        git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+        git config --global user.email "imciner2@users.noreply.github.com"
+        git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+        git push
