@@ -3,7 +3,7 @@ name: Update citations
 on:
   schedule:
     # Rebuild the citations at 12am everyday
-    - cron '0 0 * * *'
+    - cron: '0 0 * * *'
 
 env:
   MAIN_REPO: $GITHUB_WORKSPACE/main
