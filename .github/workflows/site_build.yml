@@ -26,6 +26,11 @@ jobs:
         gem build jekyll-scholar-extras.gemspec
         cd ..
 
+    - name: Update citation count
+      run: |
+        pip install -r citations/requirements.txt
+        python citations/generateScholarCitations.py
+
     - name: Build Jekyll site
       run: |
         set -xo pipefail
