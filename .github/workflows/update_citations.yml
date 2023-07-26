@@ -35,7 +35,7 @@ jobs:
         COMMIT_AUTHOR: Github Actions
       run: |
         cd gh-pages
-        git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+        git config --global user.name "Ian McInerney"
         git config --global user.email "imciner2@users.noreply.github.com"
         git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
         git push
