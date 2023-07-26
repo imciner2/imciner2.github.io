@@ -28,10 +28,7 @@ jobs:
       run: |
         pip install -r main/citations/requirements.txt
         python main/citations/generateScholarCitations.py main/content/bibliographies/Papers.bib gh-pages/content
-        cd gh-pages
-        ! git diff --exit-code
 
-    # Only run this part of the workflow if there have been changes in the citation count
     - name: Deploy site update
       if: ${{ success() }}
       env:
@@ -39,6 +36,9 @@ jobs:
         COMMIT_AUTHOR: Github Actions
       run: |
         cd gh-pages
+        # Only run this part of the workflow if there have been changes in the citation count
+        # git diff returns 0 when there are no differences, 1 if there are differences
+        [[ git diff --exit-code ]] && exit 0
         git config --global user.name "Ian McInerney"
         git config --global user.email "imciner2@users.noreply.github.com"
         git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
