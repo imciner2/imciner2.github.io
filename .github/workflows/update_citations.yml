@@ -28,8 +28,12 @@ jobs:
       run: |
         pip install -r main/citations/requirements.txt
         python main/citations/generateScholarCitations.py main/content/bibliographies/Papers.bib gh-pages/content
+        cd gh-pages
+        ! git diff --exit-code
 
-    - name: Deploy
+    # Only run this part of the workflow if there have been changes in the citation count
+    - name: Deploy site update
+      if: ${{ success() }}
       env:
         COMMIT_MESSAGE: Update citation count
         COMMIT_AUTHOR: Github Actions
