@@ -7,10 +7,6 @@ on:
   schedule:
     - cron: '0 0 * * *'
 
-env:
-  MAIN_REPO: $GITHUB_WORKSPACE/main
-  PAGES_REPO: $GITHUB_WORKSPACE/gh-pages
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,15 +26,15 @@ jobs:
 
     - name: Update citation count
       run: |
-        pip install -r $MAIN_REPO/citations/requirements.txt
-        python $MAIN_REPO/citations/generateScholarCitations.py $MAIN_REPO/content/bibliographies/Papers.bib $PAGES_REPO/content
+        pip install -r main/citations/requirements.txt
+        python main/citations/generateScholarCitations.py main/content/bibliographies/Papers.bib gh-pages/content
 
     - name: Deploy
       env:
         COMMIT_MESSAGE: Update citation count
         COMMIT_AUTHOR: Github Actions
       run: |
-        cd $PAGES_REPO
+        cd gh-pages
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
         git config --global user.email "imciner2@users.noreply.github.com"
         git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
