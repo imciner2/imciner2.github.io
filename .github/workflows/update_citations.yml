@@ -1,8 +1,10 @@
 name: Update citations
 
 on:
+  # Allow building on-demand
+  workflow_dispatch:
+  # Rebuild the citations at 12am everyday
   schedule:
-    # Rebuild the citations at 12am everyday
     - cron: '0 0 * * *'
 
 env:
