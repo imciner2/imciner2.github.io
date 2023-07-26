@@ -20,13 +20,13 @@ jobs:
       uses: actions/checkout@v3
       with:
         ref: master
-        path: $MAIN_REPO
+        path: main
 
     - name: Checkout site
       uses: actions/checkout@v3
       with:
         ref: gh-pages
-        path: $PAGES_REPO
+        path: gh-pages
 
     - name: Update citation count
       run: |
