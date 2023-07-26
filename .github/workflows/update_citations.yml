@@ -28,7 +28,7 @@ jobs:
 
     - name: Update citation count
       run: |
-        pip install -r citations/requirements.txt
+        pip install -r $MAIN_REPO/citations/requirements.txt
         python $MAIN_REPO/citations/generateScholarCitations.py $MAIN_REPO/content/bibliographies/Papers.bib $PAGES_REPO/content
 
     - name: Deploy
