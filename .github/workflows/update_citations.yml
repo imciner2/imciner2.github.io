@@ -31,15 +31,12 @@ jobs:
 
     - name: Deploy site update
       if: ${{ success() }}
-      env:
-        COMMIT_MESSAGE: Update citation count
-        COMMIT_AUTHOR: Github Actions
       run: |
         cd gh-pages
         # Only run this part of the workflow if there have been changes in the citation count
         # git diff returns 0 when there are no differences, 1 if there are differences
         git diff --exit-code && exit 0
-        git config --global user.name "Ian McInerney"
+        git config --global user.name "Github Actions"
         git config --global user.email "imciner2@users.noreply.github.com"
-        git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+        git commit -a -m "Update citation count"
         git push
