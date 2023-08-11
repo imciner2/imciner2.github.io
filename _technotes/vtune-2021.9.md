@@ -77,7 +77,7 @@ By default, many kernels use level 2, while for VTune level 0 is preferred.
 The current level can be seen by running:
 <div id="code-event" class="codeblock">
 <pre>
-cat /proc/sys/kernel/perf_event_paranoid
+sysctl kernel.perf_event_paranoid
 </pre>
 </div>
 
