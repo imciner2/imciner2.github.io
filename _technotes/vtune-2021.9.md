@@ -1,7 +1,7 @@
 ---
 layout: technote
 title: Installing & configuring VTune 2021.9.0
-summary: Installing the Intel oneAPI VTune 2021.9.0 program
+summary: Installing the Intel oneAPI VTune 2021.9.0 software
 category: [oneAPI]
 ---
 
