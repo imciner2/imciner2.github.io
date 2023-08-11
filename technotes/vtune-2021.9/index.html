@@ -1,0 +1,369 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+
+<title>Installing & configuring VTune 2021.9.0 &#8211; Ian McInerney</title>
+<meta name="description" content="The Intel VTune software has started to remove support for some older microarchitectures from newer versions, with the 2023.2.0 version only supporting Xeon v3 and Core 4th generation (and newer) processors.
+This means that older Sandy Bridge-based processors (like Xeon E5) are not supported anymore, and older versions must be used.
+The last version to support Sandy Bridge is Intel VTune 2021.9.0.
+">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Installing & configuring VTune 2021.9.0">
+<meta name="twitter:description" content="The Intel VTune software has started to remove support for some older microarchitectures from newer versions, with the 2023.2.0 version only supporting Xeon v3 and Core 4th generation (and newer) processors.
+This means that older Sandy Bridge-based processors (like Xeon E5) are not supported anymore, and older versions must be used.
+The last version to support Sandy Bridge is Intel VTune 2021.9.0.
+">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Installing & configuring VTune 2021.9.0">
+<meta property="og:description" content="The Intel VTune software has started to remove support for some older microarchitectures from newer versions, with the 2023.2.0 version only supporting Xeon v3 and Core 4th generation (and newer) processors.
+This means that older Sandy Bridge-based processors (like Xeon E5) are not supported anymore, and older versions must be used.
+The last version to support Sandy Bridge is Intel VTune 2021.9.0.
+">
+<meta property="og:url" content="/technotes/vtune-2021.9/">
+<meta property="og:site_name" content="Ian McInerney">
+
+<meta property="og:image" content="/images/default-thumb.png">
+
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="sNKIqFj27iemOFAuKFdpu_3ToTkm41gcB1vy3ZzbGk4">
+
+
+
+<link rel="canonical" href="/technotes/vtune-2021.9/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Ian McInerney Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/academicons/css/academicons.css"/>
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+<script
+  type="text/javascript"
+  src="https://use.fontawesome.com/releases/v5.15.1/js/conflict-detection.js">
+</script>
+
+<!--Jekyll-seo plugin-->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Installing &amp; configuring VTune 2021.9.0 | Ian McInerney</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Installing &amp; configuring VTune 2021.9.0" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Intel VTune software has started to remove support for some older microarchitectures from newer versions, with the 2023.2.0 version only supporting Xeon v3 and Core 4th generation (and newer) processors. This means that older Sandy Bridge-based processors (like Xeon E5) are not supported anymore, and older versions must be used. The last version to support Sandy Bridge is Intel VTune 2021.9.0." />
+<meta property="og:description" content="The Intel VTune software has started to remove support for some older microarchitectures from newer versions, with the 2023.2.0 version only supporting Xeon v3 and Core 4th generation (and newer) processors. This means that older Sandy Bridge-based processors (like Xeon E5) are not supported anymore, and older versions must be used. The last version to support Sandy Bridge is Intel VTune 2021.9.0." />
+<link rel="canonical" href="https://ism.engineer/technotes/vtune-2021.9/" />
+<meta property="og:url" content="https://ism.engineer/technotes/vtune-2021.9/" />
+<meta property="og:site_name" content="Ian McInerney" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-08-11T14:43:50+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Installing &amp; configuring VTune 2021.9.0" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-11T14:43:50+00:00","datePublished":"2023-08-11T14:43:50+00:00","description":"The Intel VTune software has started to remove support for some older microarchitectures from newer versions, with the 2023.2.0 version only supporting Xeon v3 and Core 4th generation (and newer) processors. This means that older Sandy Bridge-based processors (like Xeon E5) are not supported anymore, and older versions must be used. The last version to support Sandy Bridge is Intel VTune 2021.9.0.","headline":"Installing &amp; configuring VTune 2021.9.0","mainEntityOfPage":{"@type":"WebPage","@id":"https://ism.engineer/technotes/vtune-2021.9/"},"url":"https://ism.engineer/technotes/vtune-2021.9/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<div class="grid-top">
+			<div class="grid-name">
+				<h3 itemprop="name" class="author-name">Ian McInerney</h3>
+			</div>
+			<div class="grid-links">
+				<a href="mailto:ian.s.mcinerney@ieee.org" class="social-links" target="_blank"><i class="fas fa-fw fa-envelope-square"></i></a>
+				
+				<a href="https://scholar.google.com/citations?user=FhYROr4AAAAJ" class="social-links" target="_blank"><i class="ai ai-fw ai-google-scholar"></i></a>
+				<a href="https://arxiv.com/a/mcinerney_i_1" class="social-links" target="_blank"><i class="ai ai-fw ai-arxiv"></i></a>
+				<a href="https://orcid.org/0000-0003-2616-9771" class="social-links" target="_blank"><i class="ai ai-fw ai-orcid"></i></a>
+				<a href="https://linkedin.com/in/ian-mcinerney-933772123" class="social-links" target="_blank"><i class="fab fa-fw fa-linkedin"></i></a>
+				<a href="https://github.com/imciner2" class="social-links" target="_blank"><i class="fab fa-fw fa-github"></i></a>
+				<a href="https://gitlab.com/imcinerney" class="social-links" target="_blank"><i class="fab fa-fw fa-gitlab"></i></a>
+			</div>
+			<div class="grid-photo">
+				
+					<img src="/images/headshot.jpg" class="bio-photo" alt="Ian McInerney photo">
+				
+			</div>
+			<div class="grid-menu">
+				<nav role="navigation" id="site-nav" class="nav">
+				    <ul>
+				        
+						    
+						    <li><a href="/" >Home</a></li>
+						
+						    
+						    <li><a href="/research/" >Research</a></li>
+						
+						    
+						    <li><a href="/publications/" >Publications</a></li>
+						
+						    
+						    <li><a href="/software/" >Software</a></li>
+						
+						    
+						    <li><a href="/presentations/" >Presentations</a></li>
+						
+						    
+						    <li><a href="/technotes" >Technotes</a></li>
+						
+				    </ul>
+				</nav>
+			</div>
+		</div>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="https://schema.org/Person">
+
+
+	<img src="/images/headshot.jpg" class="bio-photo" alt="Ian McInerney photo">
+
+
+  <h3 itemprop="name">Ian McInerney</h3>
+  <p>Research software engineer, Vibration UTC at Imperial College London</p>
+  <a href="mailto:ian.s.mcinerney@ieee.org" class="author-social" target="_blank"><i class="fas fa-fw fa-envelope-square"></i> Email</a>
+  
+  
+  <a href="https://scholar.google.com/citations?user=FhYROr4AAAAJ" class="author-social" target="_blank"><i class="ai ai-fw ai-google-scholar"></i> Google Scholar</a>
+  <a href="https://arxiv.com/a/mcinerney_i_1" class="author-social" target="_blank"><i class="ai ai-fw ai-arxiv"></i> Arxiv</a>
+  <a href="https://orcid.org/0000-0003-2616-9771" class="author-social" target="_blank"><i class="ai ai-fw ai-orcid"></i> ORCID</a>
+  <a href="https://dblp.org/pid/213/3009.html" class="author-social" target="_blank"><i class="ai ai-fw ai-dblp"></i> dblp</a>
+  <a href="https://www.zotero.org/imcinerney" class="author-social" target="_blank"><i class="ai ai-fw ai-zotero"></i> Zotero</a>
+  <a href="https://linkedin.com/in/ian-mcinerney-933772123" class="author-social" target="_blank"><i class="fab fa-fw fa-linkedin"></i> LinkedIn</a>
+  
+  
+  
+  <a href="https://github.com/imciner2" class="author-social" target="_blank"><i class="fab fa-fw fa-github"></i> Github</a>
+  <a href="https://gitlab.com/imcinerney" class="author-social" target="_blank"><i class="fab fa-fw fa-gitlab"></i> Gitlab</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a rel="me" href="https://mathstodon.xyz/@imcinerney" class="author-social" target="_blank"><i class="fab fa-fw fa-mastodon"></i> Mastodon</a>
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="/technotes/vtune-2021.9/" rel="bookmark" title="Installing & configuring VTune 2021.9.0">Installing & configuring VTune 2021.9.0</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>The Intel VTune software has started to remove support for some older microarchitectures from newer versions, with the 2023.2.0 version only supporting Xeon v3 and Core 4th generation (and newer) processors.
+This means that older Sandy Bridge-based processors (like Xeon E5) are not supported anymore, and older versions must be used.
+The last version to support Sandy Bridge is Intel VTune 2021.9.0.</p>
+
+<p>The installation of 2021.9.0 can be done as normal, but afterwards there are several final configuration steps needed.</p>
+
+<h1 id="compiling-the-kernel-driver">Compiling the kernel driver</h1>
+
+<p>To compile the Intel Sampling Kernel Driver, run</p>
+
+<div id="code-sepdkcompile" class="codeblock">
+<pre>
+cd /opt/intel/oneapi/vtune/2021.9.0/sepdk/src
+sudo ./build_driver
+</pre>
+</div>
+
+<p>This command will error though:</p>
+<div id="code-sepdkerror" class="codeblock">
+<pre>
+make[2]: Leaving directory `/usr/src/kernels/3.10.0-1160.92.1.0.1.el7.x86_64'
+make[1]: Leaving directory `/opt/intel/oneapi/vtune/2021.9.0/sepdk/src/socwatch/socwatch_driver'
+************ Built drivers are copied to /opt/intel/oneapi/vtune/2021.9.0/sepdk/src/socwatch/drivers directory ************
+Done
+mv: target ‘socwatch2_15-x32_64-3-x32_64-3.10.0-1160.92.1.0.1.el7.x86_64smp.ko’ is not a directory
+make: *** [default] Error 1
+</pre>
+</div>
+
+<p>The good news is, Intel knows about the error, as mentioned in a <a href="https://community.intel.com/t5/Analyzers/Sampling-Driver-build-fails/m-p/1338782/highlight/true#M21587">community forum post</a>, the bad news is that the thread was closed because the reporter worked offline to fix it and they never reported what they did to fix the error.</p>
+
+<center><a href="https://xkcd.com/979/"><img src="https://imgs.xkcd.com/comics/wisdom_of_the_ancients.png" /></a></center>
+
+<h2 id="fixing-the-error">Fixing the error</h2>
+
+<p>This error is inside the <code class="language-plaintext highlighter-rouge">sepdk</code> module Makefile and can be patched by changing one line though:</p>
+
+<div id="code-sepdmakefix" class="codeblock">
+<pre>
+--- Makefile.bak  2023-08-11 14:12:33.292790260 +0100
++++ Makefile  2023-08-10 16:52:17.361282977 +0100
+@@ -266,7 +266,7 @@
+  fi;
+ endif
+  @if [ -d socwatch ]; then          \
+-   $(eval SOCWATCH_DRIVER_FILENAME=`ls socwatch/drivers | grep socwatch | grep .ko | cut -d '.' -f 1`) \
++   $(eval SOCWATCH_DRIVER_FILENAME:=$(shell ls socwatch/drivers | grep socwatch | grep .ko | head -1 | cut -d '.' -f 1)) \
+    $(eval NEW_SOCWATCH_DRIVER_FILENAME=$(SOCWATCH_DRIVER_FILENAME)-$(PLATFORM)-$(KERNEL_VERSION)$(ARITY).ko) \
+    mv socwatch/drivers/$(SOCWATCH_DRIVER_FILENAME).ko socwatch/drivers/$(NEW_SOCWATCH_DRIVER_FILENAME) ; \
+  fi;
+</pre>
+</div>
+
+<p>Note that even with this fix, there still may be spurious errors when trying to move the files.
+Those can be fixed by just deleting the compiled kernel modules (<code class="language-plaintext highlighter-rouge">.ko</code> files) in <code class="language-plaintext highlighter-rouge">socwatch/drivers</code>.</p>
+
+<h1 id="kernel-configuration">Kernel configuration</h1>
+
+<p>To properly use the sampling drivers and VTune, the kernel needs to be configured to allow CPU events access through the
+<code class="language-plaintext highlighter-rouge">perf_event_paranoid</code> setting, where the settings are:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-1</code> - Not paranoid (no security)</li>
+  <li><code class="language-plaintext highlighter-rouge">0</code> - Disallow raw trace access for unprivileged users</li>
+  <li><code class="language-plaintext highlighter-rouge">1</code> - Disallow CPU event access for unprivileged users</li>
+  <li><code class="language-plaintext highlighter-rouge">2</code> - Disallow all kernel-level profiling for unprivileged users.</li>
+</ul>
+
+<p>By default, many kernels use level 2, while for VTune level 0 is preferred.
+The current level can be seen by running:</p>
+<div id="code-event" class="codeblock">
+<pre>
+cat /proc/sys/kernel/perf_event_paranoid
+</pre>
+</div>
+
+<p>This can be changed for a single boot by running:</p>
+
+<div id="code-event" class="codeblock">
+<pre>
+sudo sysctl -w kernel.perf_event_paranoid=0
+</pre>
+</div>
+
+<p>And the setting can be made permanent by adding a new file to sysctl to change the setting on boot:</p>
+<div id="code-event" class="codeblock">
+<pre>
+echo "kernel.perf_event_paranoid=0" | sudo tee -a /etc/sysctl.d/10-vtune.conf
+</pre>
+</div>
+
+<h1 id="user-setup">User setup</h1>
+
+<p>In order for a user to use VTune with the sampling driver, they must be in the <code class="language-plaintext highlighter-rouge">vtune</code> group.</p>
+
+<div id="code-vtunegroup" class="codeblock">
+<pre>
+sudo usermod -a -G vtune user
+</pre>
+</div>
+
+<h1 id="testing-the-install">Testing the install</h1>
+
+<p>VTune can be tested using the included <code class="language-plaintext highlighter-rouge">vtune-self-checker.sh</code> script, located at <code class="language-plaintext highlighter-rouge">vtune/latest/bin64/vtune-self-checker.sh</code>.
+This script will automatically test various parts of the by attempting data collection, and report what collections are possible
+and any warnings or errors that it finds.</p>
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <!--<h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=/technotes/vtune-2021.9/" class="twitter" title="Share on Twitter"><i class="fas fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/technotes/vtune-2021.9/" class="facebook" title="Share on Facebook"><i class="fas fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=/technotes/vtune-2021.9/" class="google-plus" title="Share on Google Plus"><i class="fas fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>-->
+</div><!-- /.social-share -->
+
+        
+      </footer>
+    </div><!-- /.article-wrap -->
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    
+
+<span>&copy; 2023 Ian McInerney. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://ncsu-libraries.github.io/jekyll-academic/" rel="nofollow">Jekyll Academic</a> theme.
+<br /></span>
+
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+
+
+</body>
+</html>
