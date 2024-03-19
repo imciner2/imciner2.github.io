@@ -13,13 +13,13 @@ jobs:
     steps:
 
     - name: Checkout main
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         ref: master
         path: main
 
     - name: Checkout site
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         ref: gh-pages
         path: gh-pages
