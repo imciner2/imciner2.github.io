@@ -7,14 +7,18 @@
 <meta charset="utf-8">
 
 
-<title>Page Not Found &#8211; Ian McInerney</title>
-<meta name="description" content="Page not found. Your pixels are in another canvas.">
+<title>Updating oneAPI Module Files using DNF &#8211; Ian McInerney</title>
+<meta name="description" content="The Intel oneAPI tools do not automatically create module files when they are installed using DNF (or remove old module files when they are removed).
+Instead, the DNF post-transactions-actions plugin can be used to run the modulefiles setup script after any DNF transaction modifying an Intel package.
+">
 <meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Page Not Found">
-<meta name="twitter:description" content="Page not found. Your pixels are in another canvas.">
+<meta name="twitter:title" content="Updating oneAPI Module Files using DNF">
+<meta name="twitter:description" content="The Intel oneAPI tools do not automatically create module files when they are installed using DNF (or remove old module files when they are removed).
+Instead, the DNF post-transactions-actions plugin can be used to run the modulefiles setup script after any DNF transaction modifying an Intel package.
+">
 
 
 
@@ -24,9 +28,11 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Page Not Found">
-<meta property="og:description" content="Page not found. Your pixels are in another canvas.">
-<meta property="og:url" content="/404.html">
+<meta property="og:title" content="Updating oneAPI Module Files using DNF">
+<meta property="og:description" content="The Intel oneAPI tools do not automatically create module files when they are installed using DNF (or remove old module files when they are removed).
+Instead, the DNF post-transactions-actions plugin can be used to run the modulefiles setup script after any DNF transaction modifying an Intel package.
+">
+<meta property="og:url" content="/technotes/oneapi-modfiles-dnf/">
 <meta property="og:site_name" content="Ian McInerney">
 
 <meta property="og:image" content="/images/default-thumb.png">
@@ -37,7 +43,7 @@
 
 
 
-<link rel="canonical" href="/404.html">
+<link rel="canonical" href="/technotes/oneapi-modfiles-dnf/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Ian McInerney Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -79,26 +85,27 @@
 
 <!--Jekyll-seo plugin-->
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Page Not Found | Ian McInerney</title>
+<title>Updating oneAPI Module Files using DNF | Ian McInerney</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Page Not Found" />
+<meta property="og:title" content="Updating oneAPI Module Files using DNF" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Page not found. Your pixels are in another canvas." />
-<meta property="og:description" content="Page not found. Your pixels are in another canvas." />
-<link rel="canonical" href="https://ism.engineer/404.html" />
-<meta property="og:url" content="https://ism.engineer/404.html" />
+<meta name="description" content="The Intel oneAPI tools do not automatically create module files when they are installed using DNF (or remove old module files when they are removed). Instead, the DNF post-transactions-actions plugin can be used to run the modulefiles setup script after any DNF transaction modifying an Intel package." />
+<meta property="og:description" content="The Intel oneAPI tools do not automatically create module files when they are installed using DNF (or remove old module files when they are removed). Instead, the DNF post-transactions-actions plugin can be used to run the modulefiles setup script after any DNF transaction modifying an Intel package." />
+<link rel="canonical" href="https://ism.engineer/technotes/oneapi-modfiles-dnf/" />
+<meta property="og:url" content="https://ism.engineer/technotes/oneapi-modfiles-dnf/" />
 <meta property="og:site_name" content="Ian McInerney" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-29T15:16:02+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Page Not Found" />
+<meta property="twitter:title" content="Updating oneAPI Module Files using DNF" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Page not found. Your pixels are in another canvas.","headline":"Page Not Found","url":"https://ism.engineer/404.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-05-29T15:16:02+00:00","datePublished":"2024-05-29T15:16:02+00:00","description":"The Intel oneAPI tools do not automatically create module files when they are installed using DNF (or remove old module files when they are removed). Instead, the DNF post-transactions-actions plugin can be used to run the modulefiles setup script after any DNF transaction modifying an Intel package.","headline":"Updating oneAPI Module Files using DNF","mainEntityOfPage":{"@type":"WebPage","@id":"https://ism.engineer/technotes/oneapi-modfiles-dnf/"},"url":"https://ism.engineer/technotes/oneapi-modfiles-dnf/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
 </head>
 
-<body class="page">
+<body class="post">
 
 <!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
 
@@ -201,42 +208,59 @@
 </div>
 
   </div>
-  <article class="page">
-    <h1>Page Not Found</h1>
-    <div class="article-wrap">
-      <p>Sorry, but the page you were trying to view does not exist — perhaps you can try searching for it below.</p>
-
-<script type="text/javascript">
-  var GOOG_FIXURL_LANG = 'en';
-  var GOOG_FIXURL_SITE = ''
-</script>
-
-<script type="text/javascript" src="//linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js">
-</script>
-
-
+  <article class="post">
+    <div class="headline-wrap">
       
-        <hr />
+        <h1><a href="/technotes/oneapi-modfiles-dnf/" rel="bookmark" title="Updating oneAPI Module Files using DNF">Updating oneAPI Module Files using DNF</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>The Intel oneAPI tools do not automatically create module files when they are installed using DNF (or remove old module files when they are removed).
+Instead, the DNF <a href="https://dnf-plugins-core.readthedocs.io/en/latest/post-transaction-actions.html">post-transactions-actions</a> plugin can be used to run the modulefiles setup script after any DNF transaction modifying an Intel package.</p>
+
+<p>This plugin is not installed by default, so it must be installed manually using this DNF command:</p>
+<div id="code-plugininstall" class="codeblock">
+<pre>
+dnf install python3-dnf-plugin-post-transaction-actions
+</pre>
+</div>
+
+<p>Once installed, it should be automatically activated, but this can be confirmed by checking the <code class="language-plaintext highlighter-rouge">enabled</code> key in the <code class="language-plaintext highlighter-rouge">/etc/dnf/plugins/post-transaction-actions.conf</code> file.</p>
+
+<p>Next, create the action to update the modulefiles.
+Create a file <code class="language-plaintext highlighter-rouge">oneapi_modulefiles.action</code> inside the directory <code class="language-plaintext highlighter-rouge">/etc/dnf/plugins/post-transaction-actions.d</code> directory with the contents</p>
+<div id="code-plugininstall" class="codeblock">
+<pre>
+# Update the module files for oneAPI if any changes are made in the installation directory
+intel-oneapi-*:any:/opt/intel/oneapi/modulefiles-setup.sh --force --output-dir=/opt/intel/oneapi/modulefiles
+</pre>
+</div>
+
+<p>Now, anytime a package starting with <code class="language-plaintext highlighter-rouge">intel-oneapi</code> is installed or removed, the modulefiles will be regenerated into the <code class="language-plaintext highlighter-rouge">/opt/intel/oneapi/modulefiles</code> directory.</p>
+
+      <hr />
+      <footer role="contentinfo">
         <div class="social-share">
   <!--<h4>Share on</h4>
   <ul>
     <li>
-      <a href="https://twitter.com/intent/tweet?text=/404.html" class="twitter" title="Share on Twitter"><i class="fas fa-twitter"></i><span> Twitter</span></a>
+      <a href="https://twitter.com/intent/tweet?text=/technotes/oneapi-modfiles-dnf/" class="twitter" title="Share on Twitter"><i class="fas fa-twitter"></i><span> Twitter</span></a>
     </li>
     <li>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=/404.html" class="facebook" title="Share on Facebook"><i class="fas fa-facebook"></i><span> Facebook</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/technotes/oneapi-modfiles-dnf/" class="facebook" title="Share on Facebook"><i class="fas fa-facebook"></i><span> Facebook</span></a>
     </li>
     <li>
-      <a href="https://plus.google.com/share?url=/404.html" class="google-plus" title="Share on Google Plus"><i class="fas fa-google-plus"></i><span> Google+</span></a>
+      <a href="https://plus.google.com/share?url=/technotes/oneapi-modfiles-dnf/" class="google-plus" title="Share on Google Plus"><i class="fas fa-google-plus"></i><span> Google+</span></a>
     </li>
   </ul>-->
 </div><!-- /.social-share -->
 
-      
+        
+      </footer>
     </div><!-- /.article-wrap -->
-    
+  
   </article>
-</div><!-- /#index -->
+</div><!-- /#main -->
 
 <div class="footer-wrap">
   <footer>
