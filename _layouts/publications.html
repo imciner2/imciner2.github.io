@@ -36,10 +36,37 @@
 
 <!-- Scripts for the bibliography -->
 <script>
+function toggleBibliography( parameter )
+{
+    var type  = document.getElementById( 'bibliography-type' );
+    var year  = document.getElementById( 'bibliography-year' );
+    var topic = document.getElementById( 'bibliography-topic' );
+
+    switch( parameter )
+    {
+      default:
+      case 'type':
+        type.style.display = 'block';
+        year.style.display = 'none';
+        topic.style.display = 'none';
+        break;
+      case 'year':
+        type.style.display = 'none';
+        year.style.display = 'block';
+        topic.style.display = 'none';
+        break;
+      case 'topic':
+        type.style.display = 'none';
+        year.style.display = 'none';
+        topic.style.display = 'block';
+        break;
+    }
+}
+
 function toggleBibtex( parameter )
 {
-    var tex = document.getElementById( 'bib' + parameter );
-    var img = document.getElementById( 'bib-button' + parameter );
+    var tex = document.getElementById( 'bibtex' + parameter );
+    var img = document.getElementById( 'bibtex-button' + parameter );
 
     if( tex.style.display === 'none' )
     {
@@ -55,8 +82,8 @@ function toggleBibtex( parameter )
 
 function toggleAbstract( parameter )
 {
-    var tex = document.getElementById( 'abs' + parameter );
-    var img = document.getElementById( 'abs-button' + parameter );
+    var tex = document.getElementById( 'abstract' + parameter );
+    var img = document.getElementById( 'abstract-button' + parameter );
 
     if( tex.style.display === 'none' )
     {

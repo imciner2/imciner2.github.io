@@ -63,18 +63,18 @@
 
 <br>
 {% if entry.abstract %}
-<button class="button button-abs left-align"  onclick="toggleAbstract('{{entry.key}}')">Abstract <i id="abs-button{{entry.key}}" class="fas fa-caret-down"></i></button>
+<button class="button button-abs left-align"  onclick="toggleAbstract('{{entry.key}}')">Abstract <i id="abstract-button{{entry.key}}" class="fas fa-caret-down"></i></button>
 {% endif %}
-<button class="button button-bib left-align"  onclick="toggleBibtex('{{entry.key}}')">Bibtex <i id="bib-button{{entry.key}}" class="fas fa-caret-down"></i></button>
+<button class="button button-bib left-align"  onclick="toggleBibtex('{{entry.key}}')">Bibtex <i id="bibtex-button{{entry.key}}" class="fas fa-caret-down"></i></button>
 
 <br>
 {% if entry.abstract %}
-<div id="abs{{entry.key}}" class="summary" style="display: none;">
+<div id="abstract{{entry.key}}" class="summary" style="display: none;">
 <div>{{entry.abstract | markdownify}}</div>
 </div>
 {% endif %}
 
-<div id="bib{{entry.key}}" class="summary" style="display: none;">
+<div id="bibtex{{entry.key}}" class="summary" style="display: none;">
 <pre>{{entry.bibtex}}</pre>
 </div>
 
