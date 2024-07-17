@@ -104,6 +104,7 @@ scholar:
     - keywords
     - scholar_id
     - bibtype
+    - acmauthorizer
   bibtex_filters:
     - markdown
     - latex

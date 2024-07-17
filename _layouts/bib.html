@@ -16,7 +16,9 @@
 
 <p>
 
-{% if entry.doi %}
+{% if entry.acmauthorizer %}
+<span class=pub_icons><a href="https://{{ entry.acmauthorizer }}" target="_blank"><i class="ai ai-fw ai-doi"></i>{{ entry.doi }}</a></span>
+{% elsif entry.doi %}
 <span class=pub_icons><a href="https://dx.doi.org/{{ entry.doi }}" target="_blank"><i class="ai ai-fw ai-doi"></i>{{ entry.doi }}</a></span>
 {% endif %}
 
