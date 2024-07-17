@@ -103,6 +103,7 @@ scholar:
     - preprint
     - keywords
     - scholar_id
+    - bibtype
   bibtex_filters:
     - markdown
     - latex

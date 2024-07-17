@@ -63,18 +63,17 @@
 
 <br>
 {% if entry.abstract %}
-<button class="button button-abs left-align"  onclick="toggleAbstract('{{entry.key}}')">Abstract <i id="abstract-button{{entry.key}}" class="fas fa-caret-down"></i></button>
+<button class="button button-abs left-align"  onclick="toggleViewer('{{entry.bibtype}}', '{{entry.key}}', 'abstract')">Abstract <i id="{{entry.bibtype}}-abstract-button-{{entry.key}}" class="fas fa-caret-down"></i></button>
 {% endif %}
-<button class="button button-bib left-align"  onclick="toggleBibtex('{{entry.key}}')">Bibtex <i id="bibtex-button{{entry.key}}" class="fas fa-caret-down"></i></button>
+<button class="button button-bib left-align"  onclick="toggleViewer('{{entry.bibtype}}', '{{entry.key}}', 'bibtex', '')">Bibtex <i id="{{entry.bibtype}}-bibtex-button-{{entry.key}}" class="fas fa-caret-down"></i></button>
 
 <br>
 {% if entry.abstract %}
-<div id="abstract{{entry.key}}" class="summary" style="display: none;">
+<div id="{{entry.bibtype}}-abstract-{{entry.key}}" class="summary" style="display: none;">
 <div>{{entry.abstract | markdownify}}</div>
 </div>
 {% endif %}
-
-<div id="bibtex{{entry.key}}" class="summary" style="display: none;">
+<div id="{{entry.bibtype}}-bibtex-{{entry.key}}" class="summary" style="display: none;">
 <pre>{{entry.bibtex}}</pre>
 </div>
 

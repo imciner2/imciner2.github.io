@@ -3,13 +3,13 @@ module Jekyll
 
     class BibliographyTagByType < Liquid::Tag
       include Scholar::Utilities
-      include ScholarExtras::Utilities 
+      include ScholarExtras::Utilities
 
       def initialize(tag_name, arguments, tokens)
         super
 
         @config = Scholar.defaults.dup
-        
+
         optparse(arguments)
       end
 
@@ -34,7 +34,7 @@ module Jekyll
       def render_index(item, ref)
         si = '[' + @prefix_defaults[item.type].to_s + @type_counts.to_s + ']'
         @type_counts = @type_counts - 1
-        
+
         idx_html = content_tag "div", si, { :class => "csl-index"}
         return idx_html + ref
       end
@@ -74,15 +74,16 @@ module Jekyll
 
         bibliography = render_header(@type_labels[query])
         bibliography << items.each_with_index.map { |entry, index|
+          entry.bibtype = 'type'
           reference = render_index(entry, bibliography_tag(entry, nil))
-          
+
           content_tag config['bibliography_item_tag'], reference
           content_tag "li", reference, { :class => render_ref_img(entry) }
         }.join("\n")
 
 
         content_tag config['bibliography_list_tag'], bibliography, :class => config['bibliography_class']
-        
+
       end
     end
 

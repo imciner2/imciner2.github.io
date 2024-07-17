@@ -63,37 +63,54 @@ function toggleBibliography( parameter )
     }
 }
 
-function toggleBibtex( parameter )
+function toggleViewer( bibtype, entry, type )
 {
-    var tex = document.getElementById( 'bibtex' + parameter );
-    var img = document.getElementById( 'bibtex-button' + parameter );
+    var abstractView = document.getElementById( bibtype + '-abstract-' + entry );
+    var bibtexView = document.getElementById( bibtype + '-bibtex-' + entry );
 
-    if( tex.style.display === 'none' )
-    {
-        tex.style.display = 'block';
-        img.className = 'fas fa-caret-up';
-    }
-    else
-    {
-        tex.style.display = 'none';
-        img.className = 'fas fa-caret-down';
-    }
-}
+    var abstractBut = document.getElementById( bibtype + '-abstract-button-' + entry );
+    var bibtexBut = document.getElementById( bibtype + '-bibtex-button-' + entry );
 
-function toggleAbstract( parameter )
-{
-    var tex = document.getElementById( 'abstract' + parameter );
-    var img = document.getElementById( 'abstract-button' + parameter );
 
-    if( tex.style.display === 'none' )
+    switch( type )
     {
-        tex.style.display = 'block';
-        img.className = 'fas fa-caret-up';
-    }
-    else
-    {
-        tex.style.display = 'none';
-        img.className = 'fas fa-caret-down';
+    case 'abstract':
+      if( abstractBut.className === 'fas fa-caret-up' )
+      {
+        abstractView.style.display = 'none';
+        bibtexView.style.display = 'none';
+
+        abstractBut.className = 'fas fa-caret-down';
+        bibtexBut.className = 'fas fa-caret-down';
+      }
+      else
+      {
+        abstractView.style.display = 'block';
+        bibtexView.style.display = 'none';
+
+        abstractBut.className = 'fas fa-caret-up';
+        bibtexBut.className = 'fas fa-caret-down';
+      }
+      break;
+
+    case 'bibtex':
+      if( bibtexBut.className === 'fas fa-caret-up' )
+      {
+        abstractView.style.display = 'none';
+        bibtexView.style.display = 'none';
+
+        abstractBut.className = 'fas fa-caret-down';
+        bibtexBut.className = 'fas fa-caret-down';
+      }
+      else
+      {
+        abstractView.style.display = 'none';
+        bibtexView.style.display = 'block';
+
+        abstractBut.className = 'fas fa-caret-down';
+        bibtexBut.className = 'fas fa-caret-up';
+      }
+      break;
     }
 }
 </script>
