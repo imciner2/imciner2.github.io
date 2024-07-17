@@ -257,37 +257,81 @@ I am a member of the lead development team, and am responsible for designing/imp
 
 <!-- Scripts for the bibliography -->
 <script>
-function toggleBibtex( parameter )
+function toggleBibliography( parameter )
 {
-    var tex = document.getElementById( 'bib' + parameter );
-    var img = document.getElementById( 'bib-button' + parameter );
+    var type  = document.getElementById( 'bibliography-type' );
+    var year  = document.getElementById( 'bibliography-year' );
+    var topic = document.getElementById( 'bibliography-topic' );
 
-    if( tex.style.display === 'none' )
+    switch( parameter )
     {
-        tex.style.display = 'block';
-        img.className = 'fas fa-caret-up';
-    }
-    else
-    {
-        tex.style.display = 'none';
-        img.className = 'fas fa-caret-down';
+      default:
+      case 'type':
+        type.style.display = 'block';
+        year.style.display = 'none';
+        topic.style.display = 'none';
+        break;
+      case 'year':
+        type.style.display = 'none';
+        year.style.display = 'block';
+        topic.style.display = 'none';
+        break;
+      case 'topic':
+        type.style.display = 'none';
+        year.style.display = 'none';
+        topic.style.display = 'block';
+        break;
     }
 }
 
-function toggleAbstract( parameter )
+function toggleViewer( bibtype, entry, type )
 {
-    var tex = document.getElementById( 'abs' + parameter );
-    var img = document.getElementById( 'abs-button' + parameter );
+    var abstractView = document.getElementById( bibtype + '-abstract-' + entry );
+    var bibtexView = document.getElementById( bibtype + '-bibtex-' + entry );
 
-    if( tex.style.display === 'none' )
+    var abstractBut = document.getElementById( bibtype + '-abstract-button-' + entry );
+    var bibtexBut = document.getElementById( bibtype + '-bibtex-button-' + entry );
+
+
+    switch( type )
     {
-        tex.style.display = 'block';
-        img.className = 'fas fa-caret-up';
-    }
-    else
-    {
-        tex.style.display = 'none';
-        img.className = 'fas fa-caret-down';
+    case 'abstract':
+      if( abstractBut.className === 'fas fa-caret-up' )
+      {
+        abstractView.style.display = 'none';
+        bibtexView.style.display = 'none';
+
+        abstractBut.className = 'fas fa-caret-down';
+        bibtexBut.className = 'fas fa-caret-down';
+      }
+      else
+      {
+        abstractView.style.display = 'block';
+        bibtexView.style.display = 'none';
+
+        abstractBut.className = 'fas fa-caret-up';
+        bibtexBut.className = 'fas fa-caret-down';
+      }
+      break;
+
+    case 'bibtex':
+      if( bibtexBut.className === 'fas fa-caret-up' )
+      {
+        abstractView.style.display = 'none';
+        bibtexView.style.display = 'none';
+
+        abstractBut.className = 'fas fa-caret-down';
+        bibtexBut.className = 'fas fa-caret-down';
+      }
+      else
+      {
+        abstractView.style.display = 'none';
+        bibtexView.style.display = 'block';
+
+        abstractBut.className = 'fas fa-caret-down';
+        bibtexBut.className = 'fas fa-caret-up';
+      }
+      break;
     }
 }
 </script>

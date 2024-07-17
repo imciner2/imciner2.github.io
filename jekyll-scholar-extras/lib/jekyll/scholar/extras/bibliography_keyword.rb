@@ -1,6 +1,6 @@
 module Jekyll
   class Scholar
-    
+
     class BibliographyTagKeyword < Liquid::Tag
       include Scholar::Utilities
       include ScholarExtras::Utilities
@@ -9,12 +9,12 @@ module Jekyll
         super
 
         @config = Scholar.defaults.dup
-        @config_extras = ScholarExtras.extra_defaults.dup        
+        @config_extras = ScholarExtras.extra_defaults.dup
 
         #puts @config_extras
 
         #puts @config_extras['parse_extra_fields']
-        
+
         optparse(arguments)
 
       end
@@ -124,6 +124,7 @@ module Jekyll
         items.sort_by!{ |e| Date.parse(e.year.to_s + '-' + e.month.to_s + '-01' ) }
         items.reverse!
         key_contents << items.each_with_index.map { |entry, index|
+          entry.bibtype = 'keyword'
           reference = render_index(entry, bibliography_tag(entry, nil))
 
           # Content tag is dependent on type of article.

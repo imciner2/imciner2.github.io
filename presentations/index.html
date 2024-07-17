@@ -222,19 +222,18 @@
 
 <br />
 
-<button class="button button-abs left-align" onclick="toggleAbstract('McInerney2023_SIOPT')">Abstract <i id="abs-buttonMcInerney2023_SIOPT" class="fas fa-caret-down"></i></button>
+<button class="button button-abs left-align" onclick="toggleViewer('', 'McInerney2023_SIOPT', 'abstract')">Abstract <i id="-abstract-button-McInerney2023_SIOPT" class="fas fa-caret-down"></i></button>
 
-<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2023_SIOPT')">Bibtex <i id="bib-buttonMcInerney2023_SIOPT" class="fas fa-caret-down"></i></button>
+<button class="button button-bib left-align" onclick="toggleViewer('', 'McInerney2023_SIOPT', 'bibtex', '')">Bibtex <i id="-bibtex-button-McInerney2023_SIOPT" class="fas fa-caret-down"></i></button>
 
 <br />
 
-<div id="absMcInerney2023_SIOPT" class="summary" style="display: none;">
+<div id="-abstract-McInerney2023_SIOPT" class="summary" style="display: none;">
 <div><p>OSQP is a fast, light, and widely popular open-source solver for quadratic optimization based on the alternating direction method of multipliers. We present the latest changes, improvements, and additions in OSQP 1.0. We introduce a new modular linear algebra framework to seamlessly run OSQP on three different platforms: default single-threaded for embedded applications, the Intel Math Kernel Library for multicore CPUs, and CUDA for GPUs. We discuss new OSQP code generation routines to create a light embeddable version of the solver. In contrast to prior OSQP code generation, our new implementation runs directly in C and can be called from any high level OSQP interface, including Python, Matlab, and Julia. In addition, OSQP now supports differentiable optimization and it can efficiently compute, directly in C, the derivatives of its solution with respect to the problem parameters. With convenient wrappers in JAX and Pytorch, OSQP is, to our knowledge, the first solver with internal automatic differentiation capabilities for the optimization problem itself. We illustrate the benefits of the new functionalities in OSQP on various numerical examples.</p>
 </div>
 </div>
 
-
-<div id="bibMcInerney2023_SIOPT" class="summary" style="display: none;">
+<div id="-bibtex-McInerney2023_SIOPT" class="summary" style="display: none;">
 <pre>@inproceedings{McInerney2023_SIOPT,
   address = {Seattle, WA, USA},
   author = {McInerney, Ian and Bansal, Vineet and Goulart, Paul and Stellato, Bartolomeo},
@@ -291,19 +290,18 @@
 
 <br />
 
-<button class="button button-abs left-align" onclick="toggleAbstract('McInerney2023_CSE')">Abstract <i id="abs-buttonMcInerney2023_CSE" class="fas fa-caret-down"></i></button>
+<button class="button button-abs left-align" onclick="toggleViewer('', 'McInerney2023_CSE', 'abstract')">Abstract <i id="-abstract-button-McInerney2023_CSE" class="fas fa-caret-down"></i></button>
 
-<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2023_CSE')">Bibtex <i id="bib-buttonMcInerney2023_CSE" class="fas fa-caret-down"></i></button>
+<button class="button button-bib left-align" onclick="toggleViewer('', 'McInerney2023_CSE', 'bibtex', '')">Bibtex <i id="-bibtex-button-McInerney2023_CSE" class="fas fa-caret-down"></i></button>
 
 <br />
 
-<div id="absMcInerney2023_CSE" class="summary" style="display: none;">
+<div id="-abstract-McInerney2023_CSE" class="summary" style="display: none;">
 <div><p>In this talk, we present the ChopBLAS MATLAB library for simulating basic linear algebra operations using mixed precision and non-standard floating-point formats such as BFloat16, stochastic rounding, and custom formats. Existing simulation frameworks use MATLAB classes and operator overloading to implement custom precision data types, which makes implementing mixed-precision computations difficult and leads to decreased computational performance due to the overhead of MATLAB classes. Instead, ChopBLAS uses operation-level rounding, where instead of a custom data type, we store all data as double precision floating-point values, use double precision floating-point arithmetic, and then round the data to the desired precision using either the chop or cpfloat rounding function. By operating on double precision values we are able to exploit the built-in vectorization capabilities of MATLAB operations, leading to a speed-up of nearly 90x and 1050x when simulating stochastic rounding using chop and cpfloat, respectively, compared to a reference BLAS implementation in MATLAB with operation level rounding.</p>
 </div>
 </div>
 
-
-<div id="bibMcInerney2023_CSE" class="summary" style="display: none;">
+<div id="-bibtex-McInerney2023_CSE" class="summary" style="display: none;">
 <pre>@inproceedings{McInerney2023_CSE,
   address = {Amsterdam, NL},
   author = {McInerney, Ian and Higham, Nicholas J.},
@@ -362,12 +360,11 @@
 
 <br />
 
-<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2022_IMA')">Bibtex <i id="bib-buttonMcInerney2022_IMA" class="fas fa-caret-down"></i></button>
+<button class="button button-bib left-align" onclick="toggleViewer('', 'McInerney2022_IMA', 'bibtex', '')">Bibtex <i id="-bibtex-button-McInerney2022_IMA" class="fas fa-caret-down"></i></button>
 
 <br />
 
-
-<div id="bibMcInerney2022_IMA" class="summary" style="display: none;">
+<div id="-bibtex-McInerney2022_IMA" class="summary" style="display: none;">
 <pre>@inproceedings{McInerney2022_IMA,
   address = {Birmingham, UK},
   author = {McInerney, Ian and Kerrigan, Eric C. and Constantinides, George A.},
@@ -429,19 +426,18 @@
 
 <br />
 
-<button class="button button-abs left-align" onclick="toggleAbstract('McInerney2020_IFAC')">Abstract <i id="abs-buttonMcInerney2020_IFAC" class="fas fa-caret-down"></i></button>
+<button class="button button-abs left-align" onclick="toggleViewer('', 'McInerney2020_IFAC', 'abstract')">Abstract <i id="-abstract-button-McInerney2020_IFAC" class="fas fa-caret-down"></i></button>
 
-<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2020_IFAC')">Bibtex <i id="bib-buttonMcInerney2020_IFAC" class="fas fa-caret-down"></i></button>
+<button class="button button-bib left-align" onclick="toggleViewer('', 'McInerney2020_IFAC', 'bibtex', '')">Bibtex <i id="-bibtex-button-McInerney2020_IFAC" class="fas fa-caret-down"></i></button>
 
 <br />
 
-<div id="absMcInerney2020_IFAC" class="summary" style="display: none;">
+<div id="-abstract-McInerney2020_IFAC" class="summary" style="display: none;">
 <div><p>Model Predictive Control (MPC) with linear models and constraints is extensively being utilized in many applications, many of which have low power requirements and limited computational resources. In these resource-constrained environments, many designers choose to utilize simple iterative first-order optimization solvers, such as the Fast Gradient Method. Unfortunately, the convergence rate of these solvers is affected by the conditioning of the problem data, with ill-conditioned problems requiring a large number of iterations to solve. In order to reduce the number of solver iterations required,  we present a simple closed-form method for computing an optimal preconditioning matrix for the Hessian of the condensed primal problem. To accomplish this, we also derive spectral bounds for the Hessian in terms of the transfer function of the predicted system. This preconditioner is based on the Toeplitz structure of the Hessian and has equivalent performance to a state-of-the-art optimal preconditioner, without having to solve a semidefinite program during the design phase.</p>
 </div>
 </div>
 
-
-<div id="bibMcInerney2020_IFAC" class="summary" style="display: none;">
+<div id="-bibtex-McInerney2020_IFAC" class="summary" style="display: none;">
 <pre>@inproceedings{McInerney2020_IFAC,
   address = {Berlin, Germany},
   author = {McInerney, Ian and Kerrigan, Eric C. and Constantinides, George A.},
@@ -497,19 +493,18 @@
 
 <br />
 
-<button class="button button-abs left-align" onclick="toggleAbstract('McInerney2019_ICIAM')">Abstract <i id="abs-buttonMcInerney2019_ICIAM" class="fas fa-caret-down"></i></button>
+<button class="button button-abs left-align" onclick="toggleViewer('', 'McInerney2019_ICIAM', 'abstract')">Abstract <i id="-abstract-button-McInerney2019_ICIAM" class="fas fa-caret-down"></i></button>
 
-<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2019_ICIAM')">Bibtex <i id="bib-buttonMcInerney2019_ICIAM" class="fas fa-caret-down"></i></button>
+<button class="button button-bib left-align" onclick="toggleViewer('', 'McInerney2019_ICIAM', 'bibtex', '')">Bibtex <i id="-bibtex-button-McInerney2019_ICIAM" class="fas fa-caret-down"></i></button>
 
 <br />
 
-<div id="absMcInerney2019_ICIAM" class="summary" style="display: none;">
+<div id="-abstract-McInerney2019_ICIAM" class="summary" style="display: none;">
 <div><p>We present an upper bound for the computational complexity of first-order optimization algorithms for constrained LQR problems with state, input and cross-term weights. We derive horizon-independent bounds on the condition number and extremal eigenvalues of the Hessian matrices via a system-theoretic analysis of appropriate Toeplitz operators. Comparing the iteration bounds with the closed-loop performance shows that small improvements in performance come at the expense of greatly increased computational cost.</p>
 </div>
 </div>
 
-
-<div id="bibMcInerney2019_ICIAM" class="summary" style="display: none;">
+<div id="-bibtex-McInerney2019_ICIAM" class="summary" style="display: none;">
 <pre>@inproceedings{McInerney2019_ICIAM,
   address = {Valencia, Spain},
   author = {McInerney, Ian and Kerrigan, Eric C. and Constantinides, George A.},
@@ -567,12 +562,11 @@
 
 <br />
 
-<button class="button button-bib left-align" onclick="toggleBibtex('McInerney2019_NACONF')">Bibtex <i id="bib-buttonMcInerney2019_NACONF" class="fas fa-caret-down"></i></button>
+<button class="button button-bib left-align" onclick="toggleViewer('', 'McInerney2019_NACONF', 'bibtex', '')">Bibtex <i id="-bibtex-button-McInerney2019_NACONF" class="fas fa-caret-down"></i></button>
 
 <br />
 
-
-<div id="bibMcInerney2019_NACONF" class="summary" style="display: none;">
+<div id="-bibtex-McInerney2019_NACONF" class="summary" style="display: none;">
 <pre>@inproceedings{McInerney2019_NACONF,
   address = {Glasgow, Scotland, UK},
   author = {McInerney, Ian and Kerrigan, Eric C. and Constantinides, George A.},
@@ -613,37 +607,81 @@
 
 <!-- Scripts for the bibliography -->
 <script>
-function toggleBibtex( parameter )
+function toggleBibliography( parameter )
 {
-    var tex = document.getElementById( 'bib' + parameter );
-    var img = document.getElementById( 'bib-button' + parameter );
+    var type  = document.getElementById( 'bibliography-type' );
+    var year  = document.getElementById( 'bibliography-year' );
+    var topic = document.getElementById( 'bibliography-topic' );
 
-    if( tex.style.display === 'none' )
+    switch( parameter )
     {
-        tex.style.display = 'block';
-        img.className = 'fas fa-caret-up';
-    }
-    else
-    {
-        tex.style.display = 'none';
-        img.className = 'fas fa-caret-down';
+      default:
+      case 'type':
+        type.style.display = 'block';
+        year.style.display = 'none';
+        topic.style.display = 'none';
+        break;
+      case 'year':
+        type.style.display = 'none';
+        year.style.display = 'block';
+        topic.style.display = 'none';
+        break;
+      case 'topic':
+        type.style.display = 'none';
+        year.style.display = 'none';
+        topic.style.display = 'block';
+        break;
     }
 }
 
-function toggleAbstract( parameter )
+function toggleViewer( bibtype, entry, type )
 {
-    var tex = document.getElementById( 'abs' + parameter );
-    var img = document.getElementById( 'abs-button' + parameter );
+    var abstractView = document.getElementById( bibtype + '-abstract-' + entry );
+    var bibtexView = document.getElementById( bibtype + '-bibtex-' + entry );
 
-    if( tex.style.display === 'none' )
+    var abstractBut = document.getElementById( bibtype + '-abstract-button-' + entry );
+    var bibtexBut = document.getElementById( bibtype + '-bibtex-button-' + entry );
+
+
+    switch( type )
     {
-        tex.style.display = 'block';
-        img.className = 'fas fa-caret-up';
-    }
-    else
-    {
-        tex.style.display = 'none';
-        img.className = 'fas fa-caret-down';
+    case 'abstract':
+      if( abstractBut.className === 'fas fa-caret-up' )
+      {
+        abstractView.style.display = 'none';
+        bibtexView.style.display = 'none';
+
+        abstractBut.className = 'fas fa-caret-down';
+        bibtexBut.className = 'fas fa-caret-down';
+      }
+      else
+      {
+        abstractView.style.display = 'block';
+        bibtexView.style.display = 'none';
+
+        abstractBut.className = 'fas fa-caret-up';
+        bibtexBut.className = 'fas fa-caret-down';
+      }
+      break;
+
+    case 'bibtex':
+      if( bibtexBut.className === 'fas fa-caret-up' )
+      {
+        abstractView.style.display = 'none';
+        bibtexView.style.display = 'none';
+
+        abstractBut.className = 'fas fa-caret-down';
+        bibtexBut.className = 'fas fa-caret-down';
+      }
+      else
+      {
+        abstractView.style.display = 'none';
+        bibtexView.style.display = 'block';
+
+        abstractBut.className = 'fas fa-caret-down';
+        bibtexBut.className = 'fas fa-caret-up';
+      }
+      break;
     }
 }
 </script>

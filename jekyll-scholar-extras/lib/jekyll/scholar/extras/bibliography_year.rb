@@ -1,6 +1,6 @@
 module Jekyll
   class Scholar
-    
+
     class BibliographyTagYear < Liquid::Tag
       include Scholar::Utilities
       include ScholarExtras::Utilities
@@ -9,12 +9,12 @@ module Jekyll
         super
 
         @config = Scholar.defaults.dup
-        @config_extras = ScholarExtras.extra_defaults.dup        
+        @config_extras = ScholarExtras.extra_defaults.dup
 
         #puts @config_extras
 
         #puts @config_extras['parse_extra_fields']
-        
+
         optparse(arguments)
 
       end
@@ -81,17 +81,18 @@ module Jekyll
           @type_order.keys.each { |o|
             items = entries_year(y).select { |e| e.type == o }
             bibliography << items.each_with_index.map { |entry, index|
-              if entry.type == o then 
+              if entry.type == o then
+                entry.bibtype = 'year'
                 reference = render_index(entry, bibliography_tag(entry, nil))
 
                 # Content tag is dependent on type of article.
                 content_tag "li", reference, { :class => render_ref_img(entry) }
               end
-#              split_reference reference                                    
+#              split_reference reference
             }.join("\n")
 
           }.join("\n")
-          
+
 
         }.join("")
         return content_tag config['bibliography_list_tag'], bibliography, :class => config['bibliography_class']
