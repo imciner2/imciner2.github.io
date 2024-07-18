@@ -60,7 +60,7 @@ creative-commons:
 #DO NOT EDIT BEYOND THIS POINT
 # Jekyll configuration
 
-permalink:   /:categories/:title/
+permalink:   /:categories/:title:output_ext
 markdown:    kramdown
 highlighter: rouge
 sass:

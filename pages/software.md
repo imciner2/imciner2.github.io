@@ -1,6 +1,7 @@
 ---
 title: Software
 layout: publications
+permalink: /software.html
 ---
 
 # Academic Software

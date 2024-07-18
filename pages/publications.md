@@ -1,6 +1,7 @@
 ---
 title: Publications
 layout: publications
+permalink: /publications.html
 ---
 
 # Publications

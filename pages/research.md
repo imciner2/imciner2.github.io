@@ -1,6 +1,7 @@
 ---
 title: Research
 layout: page
+permalink: research.html
 ---
 
 My research encompasses the fields of numerical algorithms, computer architecture, digital circuit design and control theory, and routinely overlaps several of those areas, as can be seen on this [Venn diagram]({{ domain }}/content/publicationMap.pdf).
