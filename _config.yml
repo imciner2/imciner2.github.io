@@ -105,6 +105,7 @@ scholar:
     - scholar_id
     - bibtype
     - acmauthorizer
+    - code
   bibtex_filters:
     - markdown
     - latex

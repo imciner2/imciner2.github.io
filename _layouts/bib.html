@@ -50,6 +50,10 @@
 <span class=pub_icons><a href="https://dx.doi.org/{{ entry.codedoi }}" target="_blank"><i class="fas fa-code"></i>{{ entry.codedoi }}</a></span>
 {% endif %}
 
+{% if entry.code %}
+<span class=pub_icons><a href="https://{{ entry.code }}" target="_blank"><i class="fas fa-code"></i> Code</a></span>
+{% endif %}
+
 {% if entry.zenodo %}
 <span class=pub_icons><a href="https://dx.doi.org/{{ entry.zenodo }}" target="_blank"><i class="ai ai-fw ai-zenodo"></i> {{ entry.zenodo }}</a></span>
 {% endif %}
