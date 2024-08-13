@@ -115,3 +115,22 @@ ul.list_header li {
   margin: 0 0;
 }
 
+// Taken from https://stackoverflow.com/questions/9602936/how-to-create-a-table-of-contents-to-jekyll-blog-post
+// Adding 'Contents' headline to the TOC
+#markdown-toc::before {
+  content: "Contents";
+  font-weight: bold;
+}
+
+
+// Using numbers instead of bullets for listing
+#markdown-toc ul {
+  list-style: decimal;
+}
+
+#markdown-toc {
+  border: 1px solid #aaa;
+  padding: 1.5em;
+  list-style: decimal;
+  display: inline-block;
+}

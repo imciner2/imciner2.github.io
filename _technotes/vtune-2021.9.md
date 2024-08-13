@@ -11,6 +11,9 @@ The last version to support Sandy Bridge is Intel VTune 2021.9.0.
 
 The installation of 2021.9.0 can be done as normal, but afterwards there are several final configuration steps needed.
 
+* Do not remove this line (it will not be displayed)
+{:toc}
+
 # Compiling the kernel driver
 
 To compile the Intel Sampling Kernel Driver, run

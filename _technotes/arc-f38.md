@@ -6,6 +6,9 @@ category: [Fedora]
 modified: April 11, 2023
 ---
 
+* Do not remove this line (it will not be displayed)
+{:toc}
+
 # Linux Support
 
 Support for the Intel Arc A750 was added to the mainline Linux kernel starting in kernel version 6.2, and added to mesa in version 23.

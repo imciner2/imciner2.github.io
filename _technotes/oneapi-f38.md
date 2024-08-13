@@ -7,6 +7,9 @@ category: [oneAPI, Fedora]
 
 While Intel does not officially support Fedora with their oneAPI packages, they do provide RPM packages via yum/dnf repositories.
 
+* Do not remove this line (it will not be displayed)
+{:toc}
+
 # Repository configuration
 
 For Fedora versions prior to Fedora 38 (e.g. Fedora 37 and before), the standard [Intel instructions](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2023-1/yum-dnf-zypper.html){:target="_blank"} will work for installing oneAPI packages
