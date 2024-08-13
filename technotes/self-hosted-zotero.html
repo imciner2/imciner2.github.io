@@ -1,0 +1,495 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+
+<title>Self-hosting WebDAV Storage for Zotero &#8211; Ian McInerney</title>
+<meta name="description" content="When using Zotero as a bibliography management tool, it is very useful to attach copies of the articles to the entry for future reference.
+While the Zotero-hosted storage can be used, it is only free for up to 300MB of storage (and with most PDF articles now around ~1MB, that is only about 300 articles).
+An alternate option is to use webDAV storage, either from an external company or on a self-hosted server.
+">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Self-hosting WebDAV Storage for Zotero">
+<meta name="twitter:description" content="When using Zotero as a bibliography management tool, it is very useful to attach copies of the articles to the entry for future reference.
+While the Zotero-hosted storage can be used, it is only free for up to 300MB of storage (and with most PDF articles now around ~1MB, that is only about 300 articles).
+An alternate option is to use webDAV storage, either from an external company or on a self-hosted server.
+">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Self-hosting WebDAV Storage for Zotero">
+<meta property="og:description" content="When using Zotero as a bibliography management tool, it is very useful to attach copies of the articles to the entry for future reference.
+While the Zotero-hosted storage can be used, it is only free for up to 300MB of storage (and with most PDF articles now around ~1MB, that is only about 300 articles).
+An alternate option is to use webDAV storage, either from an external company or on a self-hosted server.
+">
+<meta property="og:url" content="/technotes/self-hosted-zotero.html">
+<meta property="og:site_name" content="Ian McInerney">
+
+<meta property="og:image" content="/images/default-thumb.png">
+
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="sNKIqFj27iemOFAuKFdpu_3ToTkm41gcB1vy3ZzbGk4">
+
+
+
+<link rel="canonical" href="/technotes/self-hosted-zotero.html">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Ian McInerney Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/academicons/css/academicons.css"/>
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+<script
+  type="text/javascript"
+  src="https://use.fontawesome.com/releases/v5.15.1/js/conflict-detection.js">
+</script>
+
+<!--Jekyll-seo plugin-->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Self-hosting WebDAV Storage for Zotero | Ian McInerney</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Self-hosting WebDAV Storage for Zotero" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When using Zotero as a bibliography management tool, it is very useful to attach copies of the articles to the entry for future reference. While the Zotero-hosted storage can be used, it is only free for up to 300MB of storage (and with most PDF articles now around ~1MB, that is only about 300 articles). An alternate option is to use webDAV storage, either from an external company or on a self-hosted server." />
+<meta property="og:description" content="When using Zotero as a bibliography management tool, it is very useful to attach copies of the articles to the entry for future reference. While the Zotero-hosted storage can be used, it is only free for up to 300MB of storage (and with most PDF articles now around ~1MB, that is only about 300 articles). An alternate option is to use webDAV storage, either from an external company or on a self-hosted server." />
+<link rel="canonical" href="https://ism.engineer/technotes/self-hosted-zotero.html" />
+<meta property="og:url" content="https://ism.engineer/technotes/self-hosted-zotero.html" />
+<meta property="og:site_name" content="Ian McInerney" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-13T15:33:50+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Self-hosting WebDAV Storage for Zotero" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-08-13T15:33:50+00:00","datePublished":"2024-08-13T15:33:50+00:00","description":"When using Zotero as a bibliography management tool, it is very useful to attach copies of the articles to the entry for future reference. While the Zotero-hosted storage can be used, it is only free for up to 300MB of storage (and with most PDF articles now around ~1MB, that is only about 300 articles). An alternate option is to use webDAV storage, either from an external company or on a self-hosted server.","headline":"Self-hosting WebDAV Storage for Zotero","mainEntityOfPage":{"@type":"WebPage","@id":"https://ism.engineer/technotes/self-hosted-zotero.html"},"url":"https://ism.engineer/technotes/self-hosted-zotero.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<div class="grid-top">
+			<div class="grid-name">
+				<h3 itemprop="name" class="author-name">Ian McInerney</h3>
+			</div>
+			<div class="grid-links">
+				<a href="mailto:ian.s.mcinerney@ieee.org" class="social-links" target="_blank"><i class="fas fa-fw fa-envelope-square"></i></a>
+				
+				<a href="https://scholar.google.com/citations?user=FhYROr4AAAAJ" class="social-links" target="_blank"><i class="ai ai-fw ai-google-scholar"></i></a>
+				<a href="https://arxiv.com/a/mcinerney_i_1" class="social-links" target="_blank"><i class="ai ai-fw ai-arxiv"></i></a>
+				<a href="https://orcid.org/0000-0003-2616-9771" class="social-links" target="_blank"><i class="ai ai-fw ai-orcid"></i></a>
+				<a href="https://linkedin.com/in/ian-mcinerney-933772123" class="social-links" target="_blank"><i class="fab fa-fw fa-linkedin"></i></a>
+				<a href="https://github.com/imciner2" class="social-links" target="_blank"><i class="fab fa-fw fa-github"></i></a>
+				<a href="https://gitlab.com/imcinerney" class="social-links" target="_blank"><i class="fab fa-fw fa-gitlab"></i></a>
+			</div>
+			<div class="grid-photo">
+				
+					<img src="/images/headshot.jpg" class="bio-photo" alt="Ian McInerney photo">
+				
+			</div>
+			<div class="grid-menu">
+				<nav role="navigation" id="site-nav" class="nav">
+				    <ul>
+				        
+						    
+						    <li><a href="/" >Home</a></li>
+						
+						    
+						    <li><a href="/research.html" >Research</a></li>
+						
+						    
+						    <li><a href="/publications.html" >Publications</a></li>
+						
+						    
+						    <li><a href="/software.html" >Software</a></li>
+						
+						    
+						    <li><a href="/presentations.html" >Presentations</a></li>
+						
+						    
+						    <li><a href="/technotes" >Technotes</a></li>
+						
+				    </ul>
+				</nav>
+			</div>
+		</div>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="https://schema.org/Person">
+
+
+	<img src="/images/headshot.jpg" class="bio-photo" alt="Ian McInerney photo">
+
+
+  <h3 itemprop="name">Ian McInerney</h3>
+  <p>Research software engineer, Vibration UTC at Imperial College London</p>
+  <a href="mailto:ian.s.mcinerney@ieee.org" class="author-social" target="_blank"><i class="fas fa-fw fa-envelope-square"></i> Email</a>
+  
+  
+  <a href="https://scholar.google.com/citations?user=FhYROr4AAAAJ" class="author-social" target="_blank"><i class="ai ai-fw ai-google-scholar"></i> Google Scholar</a>
+  <a href="https://arxiv.com/a/mcinerney_i_1" class="author-social" target="_blank"><i class="ai ai-fw ai-arxiv"></i> Arxiv</a>
+  <a href="https://orcid.org/0000-0003-2616-9771" class="author-social" target="_blank"><i class="ai ai-fw ai-orcid"></i> ORCID</a>
+  <a href="https://dblp.org/pid/213/3009.html" class="author-social" target="_blank"><i class="ai ai-fw ai-dblp"></i> dblp</a>
+  <a href="https://www.zotero.org/imcinerney" class="author-social" target="_blank"><i class="ai ai-fw ai-zotero"></i> Zotero</a>
+  <a href="https://linkedin.com/in/ian-mcinerney-933772123" class="author-social" target="_blank"><i class="fab fa-fw fa-linkedin"></i> LinkedIn</a>
+  
+  
+  
+  <a href="https://github.com/imciner2" class="author-social" target="_blank"><i class="fab fa-fw fa-github"></i> Github</a>
+  <a href="https://gitlab.com/imcinerney" class="author-social" target="_blank"><i class="fab fa-fw fa-gitlab"></i> Gitlab</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a rel="me" href="https://mathstodon.xyz/@imcinerney" class="author-social" target="_blank"><i class="fab fa-fw fa-mastodon"></i> Mastodon</a>
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="/technotes/self-hosted-zotero.html" rel="bookmark" title="Self-hosting WebDAV Storage for Zotero">Self-hosting WebDAV Storage for Zotero</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>When using Zotero as a bibliography management tool, it is very useful to attach copies of the articles to the entry for future reference.
+While the Zotero-hosted storage can be used, it is only free for up to 300MB of storage (and with most PDF articles now around ~1MB, that is only about 300 articles).
+An alternate option is to use webDAV storage, either from an external company or on a self-hosted server.</p>
+
+<p>This page describes configuring a self-hosted webDAV storage server for Zotero on Fedora 39 using the lighttpd web server suite.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#package-installation" id="markdown-toc-package-installation">Package Installation</a></li>
+  <li><a href="#initial-setup" id="markdown-toc-initial-setup">Initial setup</a>    <ul>
+      <li><a href="#creating-the-directory-layout" id="markdown-toc-creating-the-directory-layout">Creating the directory layout</a></li>
+      <li><a href="#http-authentication" id="markdown-toc-http-authentication">HTTP Authentication</a></li>
+      <li><a href="#configuing-selinux" id="markdown-toc-configuing-selinux">Configuing SELinux</a></li>
+    </ul>
+  </li>
+  <li><a href="#web-server-configuration" id="markdown-toc-web-server-configuration">Web server configuration</a></li>
+  <li><a href="#starting-the-web-server" id="markdown-toc-starting-the-web-server">Starting the web server</a></li>
+  <li><a href="#configuring-zotero" id="markdown-toc-configuring-zotero">Configuring Zotero</a>    <ul>
+      <li><a href="#allowing-self-signed-ssl-certificates" id="markdown-toc-allowing-self-signed-ssl-certificates">Allowing self-signed SSL certificates</a></li>
+      <li><a href="#settings" id="markdown-toc-settings">Settings</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="package-installation">Package Installation</h1>
+
+<p>First, install all the lighttpd packages (the packaged versions in the Fedora repositories will work).
+Note, the <code class="language-plaintext highlighter-rouge">httpd-tools</code> package is needed to generate the .htpasswd file for authentication.</p>
+
+<div id="code-packageinstall" class="codeblock">
+<pre>
+dnf install lighttpd httpd-tools
+</pre>
+</div>
+
+<h1 id="initial-setup">Initial setup</h1>
+
+<h2 id="creating-the-directory-layout">Creating the directory layout</h2>
+
+<p>I will place the Zotero files onto a separate hard disk mounted in <code class="language-plaintext highlighter-rouge">/mnt/Data1</code>, so in that folder create a new folder to hold the web server contents called <code class="language-plaintext highlighter-rouge">Zotero-WebDav</code>, and inside of that another folder called <code class="language-plaintext highlighter-rouge">files</code>, with another folder called <code class="language-plaintext highlighter-rouge">zotero</code> inside of it.
+This can all be done in a single command:</p>
+
+<div id="code-directorycreation" class="codeblock">
+<pre>
+mkdir -p /mnt/Data1/Zotero-WebDav/files/zotero
+</pre>
+</div>
+
+<p>Afterwards, the directory structure should look like the following:</p>
+
+<div id="code-directorystructure" class="codeblock">
+<pre>
+└── Zotero-WebDav
+    └── files
+        └── zotero
+</pre>
+</div>
+
+<p>After creating the directories, they all must be given to the <code class="language-plaintext highlighter-rouge">lighttpd</code> user/group so the web server is able to read/write to them.</p>
+
+<div id="code-directorypermissions" class="codeblock">
+<pre>
+chown -R lighttpd:lighttpd /mnt/Data1/Zotero-WebDav
+</pre>
+</div>
+
+<p>Zotero will place all its files inside the <code class="language-plaintext highlighter-rouge">zotero</code> directory, and after experimentation it appears that it needs to be created before Zotero tries to connect (otherwise it gives weird errors during the Zotero configuration process).</p>
+
+<h2 id="http-authentication">HTTP Authentication</h2>
+
+<p>Since webDAV is an HTTP-based protocol for file storage, the server should have an SSl certificate configured (to do TLS security for the web traffic), and access controls to the webDAV folder (to prevent unauthorized access).</p>
+
+<p>To control access to the webDAV folder, this server will be configured to use the <code class="language-plaintext highlighter-rouge">.htaccess</code> method to secure the directory.
+To do this, create a <code class="language-plaintext highlighter-rouge">.htpasswd</code> formatted file in the newly created directory, giving the username in the command and typing the password when prompted.</p>
+
+<div id="code-directorypermissions" class="codeblock">
+<pre>
+htpasswd -c /mnt/Data1/Zotero-WebDav/passwd.dav &lt;username&gt;
+chown -R lighttpd:lighttpd /mnt/Data1/Zotero-WebDav/passwd.dav
+</pre>
+</div>
+
+<p>To allow HTTPS connections, a server SSL key must be created using the following commands:</p>
+<div id="code-directorypermissions" class="codeblock">
+<pre>
+mkdir -p /etc/lighttpd/certs
+openssl req -new -x509 -keyout /etc/lighttpd/certs/lighttpd.pem -out /etc/lighttpd/certs/lighttpd.pem -days 365 -nodes
+</pre>
+</div>
+
+<h2 id="configuing-selinux">Configuing SELinux</h2>
+
+<p>On systems where SELinux is enabled, the webDAV directories need to be tagged appropiately so that the lighttpd web server is able to access and write to the directories.
+Specifically, the main web page folder of <code class="language-plaintext highlighter-rouge">/mnt/Data1/Zotero-WebDav</code> and its subdirectories must be tagged with <code class="language-plaintext highlighter-rouge">httpd_sys_content_t</code>, and the actual webDAV folder must be tagged with <code class="language-plaintext highlighter-rouge">httpd_sys_rw_content_t</code>.</p>
+
+<div id="code-selinuxpermissions" class="codeblock">
+<pre>
+semanage fcontext -a -t httpd_sys_content_t '/mnt/Data1/Zotero-WebDav'
+restorecon -v '/mnt/Data1/Zotero-WebDav'
+
+semanage fcontext -a -t httpd_sys_rw_content_t '/mnt/Data1/Zotero-WebDav/files'
+restorecon -v '/mnt/Data1/Zotero-WebDav/files'
+
+semanage fcontext -a -t httpd_sys_rw_content_t '/mnt/Data1/Zotero-WebDav/files/zotero'
+restorecon -v '/mnt/Data1/Zotero-WebDav/files/zotero'
+</pre>
+</div>
+
+<p>The tags can be examined by running <code class="language-plaintext highlighter-rouge">ls -laZ</code> in the directories, and should be similar to</p>
+
+<div id="code-selinuxresults" class="codeblock">
+<pre>
+# Inside /mnt/Data1
+drwxr-xr-x. 3 lighttpd lighttpd unconfined_u:object_r:httpd_sys_content_t:s0  4096 Jul 19 17:24 Zotero-WebDav
+
+# Inside /mnt/Data1/Zotero-WebDav
+drwxr-xr-x. 3 lighttpd lighttpd unconfined_u:object_r:httpd_sys_rw_content_t:s0 4096 Jul 22 19:07 files
+-rw-r-----. 1 root     lighttpd unconfined_u:object_r:httpd_sys_content_t:s0      49 Jul 19 17:08 passwd.dav
+</pre>
+</div>
+
+<h1 id="web-server-configuration">Web server configuration</h1>
+
+<p>First, enable the required modules by editing the config file <code class="language-plaintext highlighter-rouge">/etc/lighttpd/modules.conf</code> to add the modules for authentication, webDAV and SSL encryption.
+The ordering of the module loading is important, and the following ordering works:</p>
+
+<div id="code-modulelist" class="codeblock">
+<pre>
+server.modules = (
+  "mod_access",
+  "mod_alias",
+  "mod_auth",
+  "mod_authn_file",
+  "mod_webdav",
+  "mod_openssl",
+)
+</pre>
+</div>
+
+<p>Next, edit the main config file <code class="language-plaintext highlighter-rouge">/etc/lighttpd/lighttpd.conf</code> and uncomment the line containing <code class="language-plaintext highlighter-rouge">include conf_dir + "/vhosts.d/*.conf"</code> to enable adding the webDAV site in its own configuration file.
+Additionally, enable a main HTTPS site by uncommenting the SSL support lines and updating the path to the SSl certificate, giving the following configuration:</p>
+<div id="code-modulelist" class="codeblock">
+<pre>
+$SERVER["socket"] == "*:443" {
+    ssl.engine  = "enable"
+    ssl.pemfile = "/etc/lighttpd/certs/lighttpd.pem"
+}
+</pre>
+</div>
+
+<p>Create a new virtual host in the file <code class="language-plaintext highlighter-rouge">/etc/lighttpd/vhosts.d/webdav.conf</code> to contain the definition of the webDAV system with the following contents (updating the server’s hostname as needed):</p>
+<div id="code-modulelist" class="codeblock">
+<pre>
+$HTTP["host"] == "server.fqdn" {
+   var.server_name = "server.fqdn"
+   server.name = server_name
+   $HTTP["url"]              =~ "^/webdav($|/)" {
+     alias.url                 = ( "/webdav" =&gt; "/mnt/Data1/Zotero-WebDav/files" )
+     dir-listing.activate    = "enable"
+     dir-listing.encoding    = "utf-8"
+     webdav.activate         = "enable"
+     webdav.is-readonly      = "disable"
+     webdav.sqlite-db-name   = "/var/run/lighttpd/lighttpd.webdav_lock.db"
+     webdav.log-xml          = "enable"
+     auth.backend            = "htpasswd"
+     auth.backend.htpasswd.userfile = "/mnt/Data1/Zotero-WebDav/passwd.dav"
+     auth.require            = ( "" =&gt;
+                                 (
+                                     "method" =&gt; "basic",
+                                     "realm" =&gt; "webdav",
+                                     "require" =&gt; "valid-user"
+                                 )
+                               )
+     }
+ }
+</pre>
+</div>
+
+<h1 id="starting-the-web-server">Starting the web server</h1>
+
+<p>Enable and start the systemd service for lighttpd to actually run the server.</p>
+<div id="code-systemd" class="codeblock">
+<pre>
+systemctl enable lighttpd
+systemctl start lighttpd
+</pre>
+</div>
+
+<p>Finally, examine the logs to ensure the server started successfully</p>
+
+<div id="code-systemd" class="codeblock">
+<pre>
+$ systemctl status lighttpd
+● lighttpd.service - Lightning Fast Webserver With Light System Requirements
+     Loaded: loaded (/usr/lib/systemd/system/lighttpd.service; enabled; preset: disabled)
+    Drop-In: /usr/lib/systemd/system/service.d
+             └─10-timeout-abort.conf
+     Active: active (running) since Tue 2024-08-13 15:55:24 BST; 20min ago
+    Process: 2765821 ExecStartPre=/usr/sbin/lighttpd -tt -f /etc/lighttpd/lighttpd.conf (code=exited, status=0/SUCCESS)
+   Main PID: 2765825 (lighttpd)
+      Tasks: 1 (limit: 154088)
+     Memory: 2.4M
+        CPU: 135ms
+     CGroup: /system.slice/lighttpd.service
+             └─2765825 /usr/sbin/lighttpd -D -f /etc/lighttpd/lighttpd.conf
+</pre>
+</div>
+
+<h1 id="configuring-zotero">Configuring Zotero</h1>
+
+<h2 id="allowing-self-signed-ssl-certificates">Allowing self-signed SSL certificates</h2>
+
+<p>Since the SSL certificate is self-signed, it requires special handling in Zotero to allow connections (by default, self-signed certificates are rejected unless they are overriden).
+To do this, follow the instructions on the <a href="https://www.zotero.org/support/kb/cert_override">Zotero knowledge base</a>.
+To generate the override file, either the older version of Firefox can be used, or a Python tool called <a href="https://github.com/Osmose/firefox-cert-override">firefox-cert-override</a> can be used.</p>
+
+<p>To use the Python tool, create a new virtual environment to install it into, copy the certificate from the server, and then use the command</p>
+<div id="code-systemd" class="codeblock">
+<pre>
+firefox-cert-override &lt;hostname&gt;:443=lighttpd.pem[MUT]
+</pre>
+</div>
+<p>Then place the generated file into the Zotero profile directory and restart Zotero.</p>
+
+<h2 id="settings">Settings</h2>
+
+<p>After setting up the server, Zotero can be configured to use the webDAV server in <code class="language-plaintext highlighter-rouge">Preferences</code> dialog on the <code class="language-plaintext highlighter-rouge">Sync/Settings</code> tab, and changing the <code class="language-plaintext highlighter-rouge">Sync attachment files in My Library</code> to be <code class="language-plaintext highlighter-rouge">WebDAV</code> instead of <code class="language-plaintext highlighter-rouge">Zotero</code>.
+Then, enter the server details and username/password.</p>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <!--<h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=/technotes/self-hosted-zotero.html" class="twitter" title="Share on Twitter"><i class="fas fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/technotes/self-hosted-zotero.html" class="facebook" title="Share on Facebook"><i class="fas fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=/technotes/self-hosted-zotero.html" class="google-plus" title="Share on Google Plus"><i class="fas fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>-->
+</div><!-- /.social-share -->
+
+        
+          <p class="byline"><strong>Self-hosting WebDAV Storage for Zotero</strong> was last modified on <time datetime="2024-08-12">August 12, 2024</time>.</p>
+        
+      </footer>
+    </div><!-- /.article-wrap -->
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    
+
+<span>&copy; 2024 Ian McInerney. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://ncsu-libraries.github.io/jekyll-academic/" rel="nofollow">Jekyll Academic</a> theme.
+<br /></span>
+
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+
+
+</body>
+</html>
