@@ -217,7 +217,7 @@ To use the Python tool, create a new virtual environment to install it into, cop
 firefox-cert-override &lt;hostname&gt;:443=lighttpd.pem[MUT]
 </pre>
 </div>
-Then place the generated file into the Zotero profile directory and restart Zotero.
+Then place the generated file into the Zotero [profile directory](https://www.zotero.org/support/kb/profile_directory) and restart Zotero.
 
 ## Settings
 
