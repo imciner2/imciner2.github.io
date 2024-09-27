@@ -191,7 +191,75 @@
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
 -->
 <div class="csl-block csl-content">
-<span id="McInerney2023_SIOPT"><strong>I. McInerney</strong>, V. Bansal, P. Goulart, and B. Stellato, “Recent Advances in the OSQP Solver: Differentiable Optimization, Accelerated Linear Algebra, and More ,” presented at the <em>SIAM Conference on Optimization</em>, Seattle, WA, USA, May 2023.</span>
+<span id="McInerney2024_INFORMS"><strong>I. McInerney</strong>, M. Wang, B. Stellato, V. Bansal, and A. Solomon, “ OSQP with GPUs &amp; FPGAs: Accelerating quadratic programming on heterogeneous systems ,” presented at the <em>2024 INFORMS Annual Meeting</em>, Seattle, WA, USA, Oct. 2024.</span>
+
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleViewer('', 'McInerney2024_INFORMS', 'abstract')">Abstract <i id="-abstract-button-McInerney2024_INFORMS" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleViewer('', 'McInerney2024_INFORMS', 'bibtex', '')">Bibtex <i id="-bibtex-button-McInerney2024_INFORMS" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="-abstract-McInerney2024_INFORMS" class="summary" style="display: none;">
+<div><p>The rise of machine learning has led to increased availability of accelerators, including GPUs in workstations and cloud services like AWS offering GPUs and FPGAs. However, traditional optimization solvers have largely not leveraged this computational power. In this talk, we present our recent work in the OSQP (Operator Splitting Quadratic Programming) 1.0 release, which implements end-to-end solver acceleration on both GPU and FPGA platforms. At the core of this acceleration is a linear algebra abstraction layer that decouples the core optimization steps from numerical operations, enabling a unified OSQP solver API regardless of the computational backend. This layer allows for seamless backend selection at build-time, including CPU backends with sparse operations or Intel MKL, a GPU backend using cuSPARSE, and an FPGA backend using RSQP. OSQP libraries with these backends are packaged with high-level interfaces, such as the OSQP Julia and Python packages, enabling users to easily solve quadratic optimization problems on GPUs.</p>
+</div>
+</div>
+
+<div id="-bibtex-McInerney2024_INFORMS" class="summary" style="display: none;">
+<pre>@inproceedings{McInerney2024_INFORMS,
+  address = {Seattle, WA, USA},
+  author = {McInerney, Ian and Wang, Maolin and Stellato, Bartolomeo and Bansal, Vineet and Solomon, Amit},
+  event = {2024 INFORMS Annual Meeting},
+  title = { OSQP with GPUs &amp; FPGAs: Accelerating quadratic programming on heterogeneous systems },
+  month = oct,
+  year = {2024},
+  author+an = {1=highlight}
+}
+</pre>
+</div>
+
+
+
+
+</p>
+
+</div>
+</li>
+<li><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="McInerney2023_SIOPT"><strong>I. McInerney</strong>, V. Bansal, P. Goulart, and B. Stellato, “Recent Advances in the OSQP Solver: Differentiable Optimization, Accelerated Linear Algebra, and More,” presented at the <em>SIAM Conference on Optimization</em>, Seattle, WA, USA, May 2023.</span>
 
 <p>
 
@@ -240,7 +308,7 @@
   address = {Seattle, WA, USA},
   author = {McInerney, Ian and Bansal, Vineet and Goulart, Paul and Stellato, Bartolomeo},
   event = {SIAM Conference on Optimization},
-  title = {Recent Advances in the OSQP Solver: Differentiable Optimization, Accelerated Linear Algebra, and More },
+  title = {Recent Advances in the OSQP Solver: Differentiable Optimization, Accelerated Linear Algebra, and More},
   month = may,
   year = {2023},
   author+an = {1=highlight}
