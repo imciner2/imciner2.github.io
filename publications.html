@@ -454,7 +454,90 @@
 </li></ul>
 <br />
 
-<ul class="bibliography"><div class="csl-year-icon"><h2 class="csl-year-header">Peer-reviewed Conference and Workshop Papers</h2></div><li class="csl-point-conference-icon"><div class="csl-index">[C10]</div><!--
+<ul class="bibliography"><div class="csl-year-icon"><h2 class="csl-year-header">Peer-reviewed Conference and Workshop Papers</h2></div><li class="csl-point-conference-icon"><div class="csl-index">[C11]</div><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="Wang2024_butterfly">M. Wang, <strong>I. McInerney</strong>, B. Stellato, F. Tu, S. Boyd, and H. Kwok-Hay So, “Multi-Issue Butterfly Architecture for Sparse Convex Quadratic Programming,” in <em>2024 57th IEEE/ACM International Symposium on Microarchitecture (MICRO)</em>, Austin, TX, USA, Nov. 2024.</span>
+
+<p>
+
+
+<span class="pub_icons"><a href="https://dx.doi.org/10.1109/MICRO61859.2024.00115" target="_blank"><i class="ai ai-fw ai-doi"></i>10.1109/MICRO61859.2024.00115</a></span>
+
+
+
+
+
+<span class="pub_icons"><a href="/content/papers/2024-MICRO_ButterflyQP.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
+
+
+
+
+
+<span class="pub_icons"><a href="https://[http://hdl.handle.net/10044/1/114932](http://hdl.handle.net/10044/1/114932)" target="_blank"><i class="ai ai-fw ai-open-access-square"></i> Institutional Repository</a></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleViewer('type', 'Wang2024_butterfly', 'abstract')">Abstract <i id="type-abstract-button-Wang2024_butterfly" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleViewer('type', 'Wang2024_butterfly', 'bibtex', '')">Bibtex <i id="type-bibtex-button-Wang2024_butterfly" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="type-abstract-Wang2024_butterfly" class="summary" style="display: none;">
+<div><p>Convex quadratic optimization solvers are extensively utilized in various domains; however, achieving optimal performance in diverse situations remains a significant challenge due to the sparse nature of objective and constraint matrices. General-purpose architectures struggle with hardware utilization when performing critical sparse matrix operations, such as factorization and multiplication. To address this issue, we introduce a pipelined spatial architecture, Multi-Issue Butterfly (MIB), which supports all primitive scalar, vector, and matrix operations required by the Alternating Direction Method of Multipliers (ADMM) based solver algorithm.</p>
+
+<p>The proposed architecture features a butterfly computational network with innovative working modes for each node, controlled by runtime instructions. We developed a companion scheduling method for matrix operations based on their sparsity patterns. For factorization, an elimination tree guides the network instructions reordering to avoid data hazards caused by computation dependencies. For matrix-vector multiplication, data prefetching resolves structural hazards caused by read and write conflicts to register files. Instructions without hazards are issued simultaneously to increase pipeline throughput and function unit utilization.</p>
+
+<p>We evaluate the proposed architecture using FPGA prototypes, representing the first fully FPGA-based generic QP solver. Our assessment includes extensive performance and efficiency benchmarks across 100 QP problems from five application domains. Compared to the same algorithm variation running on CPU backends, our prototype achieves a geometric mean of 30.5× end-to-end speedup, 127.0× greater energy efficiency, and 16.5× less runtime jitter. In comparison to GPU backends, the prototype attains a geometric mean of 4.3× faster end-to-end speedup, 21.7× higher energy efficiency, and 33.4× less runtime jitter.</p>
+</div>
+</div>
+
+<div id="type-bibtex-Wang2024_butterfly" class="summary" style="display: none;">
+<pre>@inproceedings{Wang2024_butterfly,
+  title = {Multi-Issue Butterfly Architecture for Sparse Convex Quadratic Programming},
+  author = {Wang, Maolin and McInerney, Ian and Stellato, Bartolomeo and Tu, Fengbin and Boyd, Stephen and Kwok-Hay So, Hayden},
+  booktitle = {2024 57th IEEE/ACM International Symposium on Microarchitecture (MICRO)},
+  address = {Austin, TX, USA},
+  year = {2024},
+  month = nov,
+  doi = {10.1109/MICRO61859.2024.00115}
+}
+</pre>
+</div>
+
+
+<a href="https://scholar.google.co.uk/citations?hl=en&amp;view_op=view_citation&amp;citation_for_view=FhYROr4AAAAJ:KlAtU1dfN6UC" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Citations&amp;logo=google-scholar&amp;url=https://ism.engineer/content/citation_count.json&amp;query=Wang2024_butterfly&amp;color=blue" /></a>
+
+
+<span class="scite-badge" data-doi="10.1109/MICRO61859.2024.00115" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
+</span>
+
+
+</p>
+
+</div>
+</li>
+<li class="csl-point-conference-icon"><div class="csl-index">[C10]</div><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
@@ -2102,7 +2185,90 @@ document.getElementById('div-' + param.value).style.display = 'block';
 </p>
 
 </div>
-</li></div><div id="div-fpgas" style="display: none;"><div class="csl-year-icon"><h2 class="csl-year-header">FPGAs</h2></div><li class="csl-point-conference-icon"><span class="csl-index">[C9]</span><!--
+</li></div><div id="div-fpgas" style="display: none;"><div class="csl-year-icon"><h2 class="csl-year-header">FPGAs</h2></div><li class="csl-point-conference-icon"><span class="csl-index">[C11]</span><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="Wang2024_butterfly">M. Wang, <strong>I. McInerney</strong>, B. Stellato, F. Tu, S. Boyd, and H. Kwok-Hay So, “Multi-Issue Butterfly Architecture for Sparse Convex Quadratic Programming,” in <em>2024 57th IEEE/ACM International Symposium on Microarchitecture (MICRO)</em>, Austin, TX, USA, Nov. 2024.</span>
+
+<p>
+
+
+<span class="pub_icons"><a href="https://dx.doi.org/10.1109/MICRO61859.2024.00115" target="_blank"><i class="ai ai-fw ai-doi"></i>10.1109/MICRO61859.2024.00115</a></span>
+
+
+
+
+
+<span class="pub_icons"><a href="/content/papers/2024-MICRO_ButterflyQP.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
+
+
+
+
+
+<span class="pub_icons"><a href="https://[http://hdl.handle.net/10044/1/114932](http://hdl.handle.net/10044/1/114932)" target="_blank"><i class="ai ai-fw ai-open-access-square"></i> Institutional Repository</a></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleViewer('keyword', 'Wang2024_butterfly', 'abstract')">Abstract <i id="keyword-abstract-button-Wang2024_butterfly" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleViewer('keyword', 'Wang2024_butterfly', 'bibtex', '')">Bibtex <i id="keyword-bibtex-button-Wang2024_butterfly" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="keyword-abstract-Wang2024_butterfly" class="summary" style="display: none;">
+<div><p>Convex quadratic optimization solvers are extensively utilized in various domains; however, achieving optimal performance in diverse situations remains a significant challenge due to the sparse nature of objective and constraint matrices. General-purpose architectures struggle with hardware utilization when performing critical sparse matrix operations, such as factorization and multiplication. To address this issue, we introduce a pipelined spatial architecture, Multi-Issue Butterfly (MIB), which supports all primitive scalar, vector, and matrix operations required by the Alternating Direction Method of Multipliers (ADMM) based solver algorithm.</p>
+
+<p>The proposed architecture features a butterfly computational network with innovative working modes for each node, controlled by runtime instructions. We developed a companion scheduling method for matrix operations based on their sparsity patterns. For factorization, an elimination tree guides the network instructions reordering to avoid data hazards caused by computation dependencies. For matrix-vector multiplication, data prefetching resolves structural hazards caused by read and write conflicts to register files. Instructions without hazards are issued simultaneously to increase pipeline throughput and function unit utilization.</p>
+
+<p>We evaluate the proposed architecture using FPGA prototypes, representing the first fully FPGA-based generic QP solver. Our assessment includes extensive performance and efficiency benchmarks across 100 QP problems from five application domains. Compared to the same algorithm variation running on CPU backends, our prototype achieves a geometric mean of 30.5× end-to-end speedup, 127.0× greater energy efficiency, and 16.5× less runtime jitter. In comparison to GPU backends, the prototype attains a geometric mean of 4.3× faster end-to-end speedup, 21.7× higher energy efficiency, and 33.4× less runtime jitter.</p>
+</div>
+</div>
+
+<div id="keyword-bibtex-Wang2024_butterfly" class="summary" style="display: none;">
+<pre>@inproceedings{Wang2024_butterfly,
+  title = {Multi-Issue Butterfly Architecture for Sparse Convex Quadratic Programming},
+  author = {Wang, Maolin and McInerney, Ian and Stellato, Bartolomeo and Tu, Fengbin and Boyd, Stephen and Kwok-Hay So, Hayden},
+  booktitle = {2024 57th IEEE/ACM International Symposium on Microarchitecture (MICRO)},
+  address = {Austin, TX, USA},
+  year = {2024},
+  month = nov,
+  doi = {10.1109/MICRO61859.2024.00115}
+}
+</pre>
+</div>
+
+
+<a href="https://scholar.google.co.uk/citations?hl=en&amp;view_op=view_citation&amp;citation_for_view=FhYROr4AAAAJ:KlAtU1dfN6UC" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Citations&amp;logo=google-scholar&amp;url=https://ism.engineer/content/citation_count.json&amp;query=Wang2024_butterfly&amp;color=blue" /></a>
+
+
+<span class="scite-badge" data-doi="10.1109/MICRO61859.2024.00115" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
+</span>
+
+
+</p>
+
+</div>
+</li>
+<li class="csl-point-conference-icon"><span class="csl-index">[C9]</span><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
@@ -3434,7 +3600,90 @@ document.getElementById('div-' + param.value).style.display = 'block';
 </p>
 
 </div>
-</li></div><div id="div-numerical_methods" style="display: none;"><div class="csl-year-icon"><h2 class="csl-year-header">Numerical Methods</h2></div><li class="csl-point-conference-icon"><span class="csl-index">[C10]</span><!--
+</li></div><div id="div-numerical_methods" style="display: none;"><div class="csl-year-icon"><h2 class="csl-year-header">Numerical Methods</h2></div><li class="csl-point-conference-icon"><span class="csl-index">[C11]</span><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="Wang2024_butterfly">M. Wang, <strong>I. McInerney</strong>, B. Stellato, F. Tu, S. Boyd, and H. Kwok-Hay So, “Multi-Issue Butterfly Architecture for Sparse Convex Quadratic Programming,” in <em>2024 57th IEEE/ACM International Symposium on Microarchitecture (MICRO)</em>, Austin, TX, USA, Nov. 2024.</span>
+
+<p>
+
+
+<span class="pub_icons"><a href="https://dx.doi.org/10.1109/MICRO61859.2024.00115" target="_blank"><i class="ai ai-fw ai-doi"></i>10.1109/MICRO61859.2024.00115</a></span>
+
+
+
+
+
+<span class="pub_icons"><a href="/content/papers/2024-MICRO_ButterflyQP.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
+
+
+
+
+
+<span class="pub_icons"><a href="https://[http://hdl.handle.net/10044/1/114932](http://hdl.handle.net/10044/1/114932)" target="_blank"><i class="ai ai-fw ai-open-access-square"></i> Institutional Repository</a></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleViewer('keyword', 'Wang2024_butterfly', 'abstract')">Abstract <i id="keyword-abstract-button-Wang2024_butterfly" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleViewer('keyword', 'Wang2024_butterfly', 'bibtex', '')">Bibtex <i id="keyword-bibtex-button-Wang2024_butterfly" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="keyword-abstract-Wang2024_butterfly" class="summary" style="display: none;">
+<div><p>Convex quadratic optimization solvers are extensively utilized in various domains; however, achieving optimal performance in diverse situations remains a significant challenge due to the sparse nature of objective and constraint matrices. General-purpose architectures struggle with hardware utilization when performing critical sparse matrix operations, such as factorization and multiplication. To address this issue, we introduce a pipelined spatial architecture, Multi-Issue Butterfly (MIB), which supports all primitive scalar, vector, and matrix operations required by the Alternating Direction Method of Multipliers (ADMM) based solver algorithm.</p>
+
+<p>The proposed architecture features a butterfly computational network with innovative working modes for each node, controlled by runtime instructions. We developed a companion scheduling method for matrix operations based on their sparsity patterns. For factorization, an elimination tree guides the network instructions reordering to avoid data hazards caused by computation dependencies. For matrix-vector multiplication, data prefetching resolves structural hazards caused by read and write conflicts to register files. Instructions without hazards are issued simultaneously to increase pipeline throughput and function unit utilization.</p>
+
+<p>We evaluate the proposed architecture using FPGA prototypes, representing the first fully FPGA-based generic QP solver. Our assessment includes extensive performance and efficiency benchmarks across 100 QP problems from five application domains. Compared to the same algorithm variation running on CPU backends, our prototype achieves a geometric mean of 30.5× end-to-end speedup, 127.0× greater energy efficiency, and 16.5× less runtime jitter. In comparison to GPU backends, the prototype attains a geometric mean of 4.3× faster end-to-end speedup, 21.7× higher energy efficiency, and 33.4× less runtime jitter.</p>
+</div>
+</div>
+
+<div id="keyword-bibtex-Wang2024_butterfly" class="summary" style="display: none;">
+<pre>@inproceedings{Wang2024_butterfly,
+  title = {Multi-Issue Butterfly Architecture for Sparse Convex Quadratic Programming},
+  author = {Wang, Maolin and McInerney, Ian and Stellato, Bartolomeo and Tu, Fengbin and Boyd, Stephen and Kwok-Hay So, Hayden},
+  booktitle = {2024 57th IEEE/ACM International Symposium on Microarchitecture (MICRO)},
+  address = {Austin, TX, USA},
+  year = {2024},
+  month = nov,
+  doi = {10.1109/MICRO61859.2024.00115}
+}
+</pre>
+</div>
+
+
+<a href="https://scholar.google.co.uk/citations?hl=en&amp;view_op=view_citation&amp;citation_for_view=FhYROr4AAAAJ:KlAtU1dfN6UC" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Citations&amp;logo=google-scholar&amp;url=https://ism.engineer/content/citation_count.json&amp;query=Wang2024_butterfly&amp;color=blue" /></a>
+
+
+<span class="scite-badge" data-doi="10.1109/MICRO61859.2024.00115" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
+</span>
+
+
+</p>
+
+</div>
+</li>
+<li class="csl-point-conference-icon"><span class="csl-index">[C10]</span><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
@@ -4087,7 +4336,90 @@ document.getElementById('div-' + param.value).style.display = 'block';
 </p>
 
 </div>
-</li></div><div id="div-optimization" style="display: none;"><div class="csl-year-icon"><h2 class="csl-year-header">Optimization</h2></div><li class="csl-point-conference-icon"><span class="csl-index">[C10]</span><!--
+</li></div><div id="div-optimization" style="display: none;"><div class="csl-year-icon"><h2 class="csl-year-header">Optimization</h2></div><li class="csl-point-conference-icon"><span class="csl-index">[C11]</span><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="Wang2024_butterfly">M. Wang, <strong>I. McInerney</strong>, B. Stellato, F. Tu, S. Boyd, and H. Kwok-Hay So, “Multi-Issue Butterfly Architecture for Sparse Convex Quadratic Programming,” in <em>2024 57th IEEE/ACM International Symposium on Microarchitecture (MICRO)</em>, Austin, TX, USA, Nov. 2024.</span>
+
+<p>
+
+
+<span class="pub_icons"><a href="https://dx.doi.org/10.1109/MICRO61859.2024.00115" target="_blank"><i class="ai ai-fw ai-doi"></i>10.1109/MICRO61859.2024.00115</a></span>
+
+
+
+
+
+<span class="pub_icons"><a href="/content/papers/2024-MICRO_ButterflyQP.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
+
+
+
+
+
+<span class="pub_icons"><a href="https://[http://hdl.handle.net/10044/1/114932](http://hdl.handle.net/10044/1/114932)" target="_blank"><i class="ai ai-fw ai-open-access-square"></i> Institutional Repository</a></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleViewer('keyword', 'Wang2024_butterfly', 'abstract')">Abstract <i id="keyword-abstract-button-Wang2024_butterfly" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleViewer('keyword', 'Wang2024_butterfly', 'bibtex', '')">Bibtex <i id="keyword-bibtex-button-Wang2024_butterfly" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="keyword-abstract-Wang2024_butterfly" class="summary" style="display: none;">
+<div><p>Convex quadratic optimization solvers are extensively utilized in various domains; however, achieving optimal performance in diverse situations remains a significant challenge due to the sparse nature of objective and constraint matrices. General-purpose architectures struggle with hardware utilization when performing critical sparse matrix operations, such as factorization and multiplication. To address this issue, we introduce a pipelined spatial architecture, Multi-Issue Butterfly (MIB), which supports all primitive scalar, vector, and matrix operations required by the Alternating Direction Method of Multipliers (ADMM) based solver algorithm.</p>
+
+<p>The proposed architecture features a butterfly computational network with innovative working modes for each node, controlled by runtime instructions. We developed a companion scheduling method for matrix operations based on their sparsity patterns. For factorization, an elimination tree guides the network instructions reordering to avoid data hazards caused by computation dependencies. For matrix-vector multiplication, data prefetching resolves structural hazards caused by read and write conflicts to register files. Instructions without hazards are issued simultaneously to increase pipeline throughput and function unit utilization.</p>
+
+<p>We evaluate the proposed architecture using FPGA prototypes, representing the first fully FPGA-based generic QP solver. Our assessment includes extensive performance and efficiency benchmarks across 100 QP problems from five application domains. Compared to the same algorithm variation running on CPU backends, our prototype achieves a geometric mean of 30.5× end-to-end speedup, 127.0× greater energy efficiency, and 16.5× less runtime jitter. In comparison to GPU backends, the prototype attains a geometric mean of 4.3× faster end-to-end speedup, 21.7× higher energy efficiency, and 33.4× less runtime jitter.</p>
+</div>
+</div>
+
+<div id="keyword-bibtex-Wang2024_butterfly" class="summary" style="display: none;">
+<pre>@inproceedings{Wang2024_butterfly,
+  title = {Multi-Issue Butterfly Architecture for Sparse Convex Quadratic Programming},
+  author = {Wang, Maolin and McInerney, Ian and Stellato, Bartolomeo and Tu, Fengbin and Boyd, Stephen and Kwok-Hay So, Hayden},
+  booktitle = {2024 57th IEEE/ACM International Symposium on Microarchitecture (MICRO)},
+  address = {Austin, TX, USA},
+  year = {2024},
+  month = nov,
+  doi = {10.1109/MICRO61859.2024.00115}
+}
+</pre>
+</div>
+
+
+<a href="https://scholar.google.co.uk/citations?hl=en&amp;view_op=view_citation&amp;citation_for_view=FhYROr4AAAAJ:KlAtU1dfN6UC" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Citations&amp;logo=google-scholar&amp;url=https://ism.engineer/content/citation_count.json&amp;query=Wang2024_butterfly&amp;color=blue" /></a>
+
+
+<span class="scite-badge" data-doi="10.1109/MICRO61859.2024.00115" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
+</span>
+
+
+</p>
+
+</div>
+</li>
+<li class="csl-point-conference-icon"><span class="csl-index">[C10]</span><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
@@ -4745,7 +5077,90 @@ document.getElementById('div-' + param.value).style.display = 'block';
 </div>
 
 <div id="bibliography-year" style="display: none;">
-<ul class="bibliography"><div class="csl-year-icon"><h2 class="csl-year-header">2024</h2></div><li class="csl-point-conference-icon"><span class="csl-index">[C10]</span><!--
+<ul class="bibliography"><div class="csl-year-icon"><h2 class="csl-year-header">2024</h2></div><li class="csl-point-conference-icon"><span class="csl-index">[C11]</span><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="Wang2024_butterfly">M. Wang, <strong>I. McInerney</strong>, B. Stellato, F. Tu, S. Boyd, and H. Kwok-Hay So, “Multi-Issue Butterfly Architecture for Sparse Convex Quadratic Programming,” in <em>2024 57th IEEE/ACM International Symposium on Microarchitecture (MICRO)</em>, Austin, TX, USA, Nov. 2024.</span>
+
+<p>
+
+
+<span class="pub_icons"><a href="https://dx.doi.org/10.1109/MICRO61859.2024.00115" target="_blank"><i class="ai ai-fw ai-doi"></i>10.1109/MICRO61859.2024.00115</a></span>
+
+
+
+
+
+<span class="pub_icons"><a href="/content/papers/2024-MICRO_ButterflyQP.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
+
+
+
+
+
+<span class="pub_icons"><a href="https://[http://hdl.handle.net/10044/1/114932](http://hdl.handle.net/10044/1/114932)" target="_blank"><i class="ai ai-fw ai-open-access-square"></i> Institutional Repository</a></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleViewer('year', 'Wang2024_butterfly', 'abstract')">Abstract <i id="year-abstract-button-Wang2024_butterfly" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleViewer('year', 'Wang2024_butterfly', 'bibtex', '')">Bibtex <i id="year-bibtex-button-Wang2024_butterfly" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="year-abstract-Wang2024_butterfly" class="summary" style="display: none;">
+<div><p>Convex quadratic optimization solvers are extensively utilized in various domains; however, achieving optimal performance in diverse situations remains a significant challenge due to the sparse nature of objective and constraint matrices. General-purpose architectures struggle with hardware utilization when performing critical sparse matrix operations, such as factorization and multiplication. To address this issue, we introduce a pipelined spatial architecture, Multi-Issue Butterfly (MIB), which supports all primitive scalar, vector, and matrix operations required by the Alternating Direction Method of Multipliers (ADMM) based solver algorithm.</p>
+
+<p>The proposed architecture features a butterfly computational network with innovative working modes for each node, controlled by runtime instructions. We developed a companion scheduling method for matrix operations based on their sparsity patterns. For factorization, an elimination tree guides the network instructions reordering to avoid data hazards caused by computation dependencies. For matrix-vector multiplication, data prefetching resolves structural hazards caused by read and write conflicts to register files. Instructions without hazards are issued simultaneously to increase pipeline throughput and function unit utilization.</p>
+
+<p>We evaluate the proposed architecture using FPGA prototypes, representing the first fully FPGA-based generic QP solver. Our assessment includes extensive performance and efficiency benchmarks across 100 QP problems from five application domains. Compared to the same algorithm variation running on CPU backends, our prototype achieves a geometric mean of 30.5× end-to-end speedup, 127.0× greater energy efficiency, and 16.5× less runtime jitter. In comparison to GPU backends, the prototype attains a geometric mean of 4.3× faster end-to-end speedup, 21.7× higher energy efficiency, and 33.4× less runtime jitter.</p>
+</div>
+</div>
+
+<div id="year-bibtex-Wang2024_butterfly" class="summary" style="display: none;">
+<pre>@inproceedings{Wang2024_butterfly,
+  title = {Multi-Issue Butterfly Architecture for Sparse Convex Quadratic Programming},
+  author = {Wang, Maolin and McInerney, Ian and Stellato, Bartolomeo and Tu, Fengbin and Boyd, Stephen and Kwok-Hay So, Hayden},
+  booktitle = {2024 57th IEEE/ACM International Symposium on Microarchitecture (MICRO)},
+  address = {Austin, TX, USA},
+  year = {2024},
+  month = nov,
+  doi = {10.1109/MICRO61859.2024.00115}
+}
+</pre>
+</div>
+
+
+<a href="https://scholar.google.co.uk/citations?hl=en&amp;view_op=view_citation&amp;citation_for_view=FhYROr4AAAAJ:KlAtU1dfN6UC" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Citations&amp;logo=google-scholar&amp;url=https://ism.engineer/content/citation_count.json&amp;query=Wang2024_butterfly&amp;color=blue" /></a>
+
+
+<span class="scite-badge" data-doi="10.1109/MICRO61859.2024.00115" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
+</span>
+
+
+</p>
+
+</div>
+</li>
+<li class="csl-point-conference-icon"><span class="csl-index">[C10]</span><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
