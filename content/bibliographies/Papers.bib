@@ -5,6 +5,7 @@
     address = {Austin, TX, USA},
     year = {2024},
     month = {11},
+    pages = {1574--1587},
     abstract = {Convex quadratic optimization solvers are extensively utilized in various domains; however, achieving optimal performance in diverse situations remains a significant challenge due to the sparse nature of objective and constraint matrices. General-purpose architectures struggle with hardware utilization when performing critical sparse matrix operations, such as factorization and multiplication. To address this issue, we introduce a pipelined spatial architecture, Multi-Issue Butterfly (MIB), which supports all primitive scalar, vector, and matrix operations required by the Alternating Direction Method of Multipliers (ADMM) based solver algorithm.
 
 The proposed architecture features a butterfly computational network with innovative working modes for each node, controlled by runtime instructions. We developed a companion scheduling method for matrix operations based on their sparsity patterns. For factorization, an elimination tree guides the network instructions reordering to avoid data hazards caused by computation dependencies. For matrix-vector multiplication, data prefetching resolves structural hazards caused by read and write conflicts to register files. Instructions without hazards are issued simultaneously to increase pipeline throughput and function unit utilization.
