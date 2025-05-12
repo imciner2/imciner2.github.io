@@ -26,7 +26,9 @@ jobs:
         gem build jekyll-scholar-extras.gemspec
         cd ..
 
+      # Google Scholar seems to be blocking Github runners, so this might fail
     - name: Update citation count
+      continue-on-error: true
       run: |
         pip install -r citations/requirements.txt
         python citations/generateScholarCitations.py
