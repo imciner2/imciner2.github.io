@@ -8,7 +8,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.2.0"
+gem "jekyll", "~> 4.4.1"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 #gem "minima", "~> 2.0"
@@ -44,3 +44,5 @@ gem "webrick", "~> 1.7"
 
 # Pin sassc because 2.4.0 seems not to work properly
 gem "sassc", "~> 2.1.0"
+
+gem "racc"
