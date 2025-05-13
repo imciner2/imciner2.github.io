@@ -1,3 +1,13 @@
+@inproceedings{McInerney2025_CSE,
+	address = {Fort Worth, TX, USA},
+	author = {McInerney, Ian and Stellato, Bartolomeo},
+	eventtitle = {2024 INFORMS Annual Meeting},
+	title = {OSQP with GPUs \& FPGAs: Accelerating Quadratic Programming on Heterogeneous Systems},
+	month = {3},
+	year = {2025},
+	author+an = {1=highlight},
+}
+
 @inproceedings{McInerney2024_INFORMS,
     abstract = {The rise of machine learning has led to increased availability of accelerators, including GPUs in workstations and cloud services like AWS offering GPUs and FPGAs. However, traditional optimization solvers have largely not leveraged this computational power. In this talk, we present our recent work in the OSQP (Operator Splitting Quadratic Programming) 1.0 release, which implements end-to-end solver acceleration on both GPU and FPGA platforms. At the core of this acceleration is a linear algebra abstraction layer that decouples the core optimization steps from numerical operations, enabling a unified OSQP solver API regardless of the computational backend. This layer allows for seamless backend selection at build-time, including CPU backends with sparse operations or Intel MKL, a GPU backend using cuSPARSE, and an FPGA backend using RSQP. OSQP libraries with these backends are packaged with high-level interfaces, such as the OSQP Julia and Python packages, enabling users to easily solve quadratic optimization problems on GPUs.},
     address = {Seattle, WA, USA},
