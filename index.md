@@ -11,6 +11,11 @@ Previously, I was a research associate in the [Numerical Linear Algebra group](h
 ## News
 
 <ul class="list_header">
+   <li>May 2025: New preprint on "10 quick tips for making your software outlive your job" released. Preprint available on <a href="https://arxiv.org/abs/2505.06484">arXiv</a>.</li>
+   <li>Mar 2025: New workshop paper in LATTE'25 showing an initial Julia high level synthesis toolchain using MLIR. Preprint available <a href="{{ domain }}/content/papers/2025_LATTE_JuliaHLS-MLIR.pdf">here</a>.</li>
+   <li>Feb 2025: Presented at SIAM CSE about GPU capabilities in the OSQP solver.</li>
+   <li>Oct 2024: Presented at the 2024 INFORMS Annual Meeting about using the OSQP solver on heterogeneous hardware.</li>
+   <li>Sep 2024: Presented a poster on using reachability analysis to analyze numerical methods at the Symposium on Systems Theory in Data and Optimization (SysDO2024). Abstract available <a href="{{ domain }}/content/papers/2024_SysDO_AlgorithmReachability.pdf">here</a>.</li>
    <li>Jun 2023: Our paper on an FPGA implementation of OSQP will be presented at ISCA'23. Preprint available <a href="{{ domain }}/content/papers/2023_ISCA_RSQPArchitectureCustomization.pdf">here</a>.</li>
    <li>Jan 2023: I have joined the Vibration University Technology Centre and the Dynamics group in the Department of Mechanical Engineering at Imperial College London as a Research Software Engineer.</li>
    <li>May 2022: New preprint on the behavior of iterative methods in the redundant number representation posted.</li>
