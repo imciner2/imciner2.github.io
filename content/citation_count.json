@@ -1,4 +1,5 @@
 {
+    "Littauer2025_QuickTips": 0,
     "Short2025_JuliaHLSMLIR": 0,
     "Wang2024_butterfly": 0,
     "Wang2023_RSQP": 6,
@@ -15,7 +16,7 @@
     "McInerney2019_boundingComputationalComplexity": 2,
     "McInerney2018_NMPC": 54,
     "McInerney2018_UKACC": 3,
-    "McInerney2017_cdc": 4,
+    "McInerney2017_cdc": 5,
     "McInerney2017_MSThesis": 5,
     "Caterpillar2014": 1
 }
