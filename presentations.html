@@ -206,6 +206,8 @@
 
 
 
+<span class="pub_icons"><a href="/content/slides/2025-03_SIAM-CSE_OSQP-GPU.pdf" target="_blank"><i class="fas fa-tv"></i> Slides</a></span>
+
 
 
 
@@ -221,16 +223,23 @@
 
 
 <br />
+
+<button class="button button-abs left-align" onclick="toggleViewer('', 'McInerney2025_CSE', 'abstract')">Abstract <i id="-abstract-button-McInerney2025_CSE" class="fas fa-caret-down"></i></button>
 
 <button class="button button-bib left-align" onclick="toggleViewer('', 'McInerney2025_CSE', 'bibtex', '')">Bibtex <i id="-bibtex-button-McInerney2025_CSE" class="fas fa-caret-down"></i></button>
 
 <br />
 
+<div id="-abstract-McInerney2025_CSE" class="summary" style="display: none;">
+<div><p>In this talk, we present our recent work in the OSQP (Operator Splitting Quadratic Programming) solver that implements end-to-end acceleration of the solver on both GPU and FPGA platforms. At the core of this acceleration is a linear algebra abstraction layer that decouples the core optimization steps from numerical operations, enabling a unified OSQP solver API regardless of the computational backend. This layer allows for seamless backend selection at build-time, including CPU backends with sparse operations or Intel MKL, a GPU backend using cuSPARSE, and an FPGA backend using RSQP. OSQP libraries with these backends are packaged with high-level interfaces, such as the OSQP Julia and Python packages, enabling users to easily solve quadratic optimization problems on GPUs. Additionally, we will outline our current work on a computational backend using CUDA graphs, which aims to improve the performance of the GPU accelerated OSQP solver by reducing the amount of time spent in kernel launches and other CPU-based control tasks. We will present the overall architecture the graph-based solver uses, and discuss our experiences modifying the existing OSQP abstraction layer to support a graph-based compute backend.</p>
+</div>
+</div>
+
 <div id="-bibtex-McInerney2025_CSE" class="summary" style="display: none;">
 <pre>@inproceedings{McInerney2025_CSE,
   address = {Fort Worth, TX, USA},
   author = {McInerney, Ian and Stellato, Bartolomeo},
-  eventtitle = {2024 INFORMS Annual Meeting},
+  eventtitle = {SIAM Conference on Computational Science and Engineering (CSE25)},
   title = {OSQP with GPUs \&amp; FPGAs: Accelerating Quadratic Programming on Heterogeneous Systems},
   month = mar,
   year = {2025},
@@ -266,6 +275,8 @@
 
 
 
+
+<span class="pub_icons"><a href="/content/slides/2024-10_INFORMS_OSQP-GPU.pdf" target="_blank"><i class="fas fa-tv"></i> Slides</a></span>
 
 
 
@@ -390,7 +401,7 @@
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
 -->
 <div class="csl-block csl-content">
-<span id="McInerney2023_CSE"><strong>I. McInerney</strong> and N. J. Higham, “Chopblas: Simulating Mixed-Precision and Stochastically Rounded Linear Algebra,” presented at the <em>SIAM Conference on Computational Science and Engineering</em>, Amsterdam, NL, Mar. 2023.</span>
+<span id="McInerney2023_CSE"><strong>I. McInerney</strong> and N. J. Higham, “Chopblas: Simulating Mixed-Precision and Stochastically Rounded Linear Algebra,” presented at the <em>SIAM Conference on Computational Science and Engineering (CSE23)</em>, Amsterdam, NL, Mar. 2023.</span>
 
 <p>
 
@@ -438,7 +449,7 @@
 <pre>@inproceedings{McInerney2023_CSE,
   address = {Amsterdam, NL},
   author = {McInerney, Ian and Higham, Nicholas J.},
-  event = {SIAM Conference on Computational Science and Engineering},
+  event = {SIAM Conference on Computational Science and Engineering (CSE23)},
   title = {Chopblas: Simulating Mixed-Precision and Stochastically Rounded Linear Algebra},
   month = mar,
   year = {2023},
