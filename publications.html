@@ -194,21 +194,21 @@
 </div>
 
 <div id="bibliography-type">
-<ul class="bibliography"><div class="csl-year-icon"><h2 class="csl-year-header">Preprints</h2></div><li class="csl-point-journal-icon"><div class="csl-index">[PP1]</div><!--
+
+<br />
+
+<ul class="bibliography"><div class="csl-year-icon"><h2 class="csl-year-header">Peer-reviewed Journal Articles</h2></div><li class="csl-point-journal-icon"><div class="csl-index">[J4]</div><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
 -->
 <div class="csl-block csl-content">
-<span id="Littauer2025_QuickTips">R. Littauer, G. Wilson, J. Ainali, E. A. AlOmar, S. Arabas, Y. B. Saibene, K. Bubendorfer, K. Champion, C. Dillon, J. Helske, P. Huybrechts, D. S. Katz, C. Liao, D. Lippert, F. Liu, P. Marshall, D. R. McCloy, <strong>I. McInerney</strong>, P. Mkaouer Mohamed Wiem Ojha, C. Treude, and E. P. White, “10 quick tips for making your software outlive your job,” May 2025.</span>
+<span id="Pattinson2026_Fortitude">L. Pattinson, P. Hill, C. Aird, A. Dean, C. Gandon, <strong>I. McInerney</strong>, V. Sherratt, and V. Vanlaer, “Fortitude: The Fortran Linter,” <em>Journal of Open Source Software</em>, vol. 11, no. 123, p. 10570, Jul. 2026.</span>
 
 <p>
 
 
-
-
-<span class="pub_icons"><a href="https://arxiv.com/abs/2505.06484" target="_blank"><i class="ai ai-fw ai-arxiv"></i>arXiv: 2505.06484</a></span>
-
+<span class="pub_icons"><a href="https://dx.doi.org/10.21105/joss.10570" target="_blank"><i class="ai ai-fw ai-doi"></i>10.21105/joss.10570</a></span>
 
 
 
@@ -217,7 +217,8 @@
 
 
 
-<span class="pub_icons"><a href="/content/slides/2025-09_RSECon_OutliveYourJob.pdf" target="_blank"><i class="fas fa-tv"></i> Slides</a></span>
+
+
 
 
 
@@ -235,41 +236,47 @@
 
 <br />
 
-<button class="button button-abs left-align" onclick="toggleViewer('type', 'Littauer2025_QuickTips', 'abstract')">Abstract <i id="type-abstract-button-Littauer2025_QuickTips" class="fas fa-caret-down"></i></button>
+<button class="button button-abs left-align" onclick="toggleViewer('type', 'Pattinson2026_Fortitude', 'abstract')">Abstract <i id="type-abstract-button-Pattinson2026_Fortitude" class="fas fa-caret-down"></i></button>
 
-<button class="button button-bib left-align" onclick="toggleViewer('type', 'Littauer2025_QuickTips', 'bibtex', '')">Bibtex <i id="type-bibtex-button-Littauer2025_QuickTips" class="fas fa-caret-down"></i></button>
+<button class="button button-bib left-align" onclick="toggleViewer('type', 'Pattinson2026_Fortitude', 'bibtex', '')">Bibtex <i id="type-bibtex-button-Pattinson2026_Fortitude" class="fas fa-caret-down"></i></button>
 
 <br />
 
-<div id="type-abstract-Littauer2025_QuickTips" class="summary" style="display: none;">
-<div><p>Loss of key personnel has always been a risk for research software projects. Key members of the team may have to step away due to illness or burnout, to care for a family member, from a loss of financial support, or because their career is going in a new direction. Today, though, political and financial changes are putting large numbers of researchers out of work simultaneously, potentially leaving large amounts of research software abandoned. This article presents ten tips to help researchers ensure that the software they have built will continue to be usable after they have left their present job – whether in the course of voluntary career moves or researcher mobility, but particularly in cases of involuntary departure due to political or institutional changes.</p>
+<div id="type-abstract-Pattinson2026_Fortitude" class="summary" style="display: none;">
+<div><p>Static analysis tools are used by software developers to better understand and improve their software, and they achieve this by examining their source code and/or binaries without running the software. A ‘linter’ is a type of static analysis tool that offers an opinionated critique of software beyond its syntactic validity, highlighting bug-prone coding patterns, deviations from common style guides, use of outdated features, and, generally, suggestions to improve the code in some way.</p>
+
+<p>Fortitude is a linter targeting Fortran, which has hitherto lacked a standard open-source solution. It is over an order of magnitude faster than other open-source offerings, is highly customisable, has robust parsing capabilities, can automatically fix many linting issues, and can integrate either into a CI/CD pipeline or directly into a user’s editor or IDE.</p>
 </div>
 </div>
 
-<div id="type-bibtex-Littauer2025_QuickTips" class="summary" style="display: none;">
-<pre>@unpublished{Littauer2025_QuickTips,
-  title = {10 quick tips for making your software outlive your job},
-  author = {Littauer, Richard and Wilson, Greg and Ainali, Jan and AlOmar, Eman Abdullah and Arabas, Sylwester and Saibene, Yanina Bellini and Bubendorfer, Kris and Champion, Kaylea and Dillon, Clare and Helske, Jouni and Huybrechts, Pieter and Katz, Daniel S. and Liao, Chang and Lippert, David and Liu, Fang and Marshall, Pierre and McCloy, Daniel R. and McInerney, Ian and Mkaouer, Mohamed Wiem Ojha, Priyanka and Treude, Christoph and White, Ethan P.},
-  month = may,
-  year = {2025},
-  author+an = {18=highlight},
-  arxiv = {2505.06484}
+<div id="type-bibtex-Pattinson2026_Fortitude" class="summary" style="display: none;">
+<pre>@article{Pattinson2026_Fortitude,
+  title = {Fortitude: The Fortran Linter},
+  author = {Pattinson, Liam and Hill, Peter and Aird, Connor and Dean, Ava and Gandon, Cyril and McInerney, Ian and Sherratt, Violet and Vanlaer, Vincent},
+  journal = {Journal of Open Source Software},
+  year = {2026},
+  month = jul,
+  publisher = {The Open Journal},
+  volume = {11},
+  number = {123},
+  pages = {10570},
+  doi = {10.21105/joss.10570},
+  author+an = {6=highlight}
 }
 </pre>
 </div>
 
 
-<a href="https://scholar.google.co.uk/citations?hl=en&amp;view_op=view_citation&amp;citation_for_view=FhYROr4AAAAJ:ULOm3_A8WrAC" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Citations&amp;logo=google-scholar&amp;url=https://ism.engineer/content/citation_count.json&amp;query=Littauer2025_QuickTips&amp;color=blue" /></a>
 
+<span class="scite-badge" data-doi="10.21105/joss.10570" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
+</span>
 
 
 </p>
 
 </div>
-</li></ul>
-<br />
-
-<ul class="bibliography"><div class="csl-year-icon"><h2 class="csl-year-header">Peer-reviewed Journal Articles</h2></div><li class="csl-point-journal-icon"><div class="csl-index">[J3]</div><!--
+</li>
+<li class="csl-point-journal-icon"><div class="csl-index">[J3]</div><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
@@ -1863,7 +1870,80 @@
 </li></ul>
 <br />
 
-<ul class="bibliography"><div class="csl-year-icon"><h2 class="csl-year-header">Technical Reports</h2></div><li class="csl-point-techreport-icon"><div class="csl-index">[TR2]</div><!--
+<ul class="bibliography"><div class="csl-year-icon"><h2 class="csl-year-header">Technical Reports</h2></div><li class="csl-point-techreport-icon"><div class="csl-index">[TR3]</div><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="Littauer2025_QuickTips">R. Littauer, G. Wilson, J. Ainali, E. A. AlOmar, S. Arabas, Y. B. Saibene, K. Bubendorfer, K. Champion, C. Dillon, J. Helske, P. Huybrechts, D. S. Katz, C. Liao, D. Lippert, F. Liu, P. Marshall, D. R. McCloy, <strong>I. McInerney</strong>, P. Mkaouer Mohamed Wiem Ojha, C. Treude, and E. P. White, “10 quick tips for making your software outlive your job,” May 2025.</span>
+
+<p>
+
+
+
+
+<span class="pub_icons"><a href="https://arxiv.com/abs/2505.06484" target="_blank"><i class="ai ai-fw ai-arxiv"></i>arXiv: 2505.06484</a></span>
+
+
+
+
+
+
+
+
+
+<span class="pub_icons"><a href="/content/slides/2025-09_RSECon_OutliveYourJob.pdf" target="_blank"><i class="fas fa-tv"></i> Slides</a></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleViewer('type', 'Littauer2025_QuickTips', 'abstract')">Abstract <i id="type-abstract-button-Littauer2025_QuickTips" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleViewer('type', 'Littauer2025_QuickTips', 'bibtex', '')">Bibtex <i id="type-bibtex-button-Littauer2025_QuickTips" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="type-abstract-Littauer2025_QuickTips" class="summary" style="display: none;">
+<div><p>Loss of key personnel has always been a risk for research software projects. Key members of the team may have to step away due to illness or burnout, to care for a family member, from a loss of financial support, or because their career is going in a new direction. Today, though, political and financial changes are putting large numbers of researchers out of work simultaneously, potentially leaving large amounts of research software abandoned. This article presents ten tips to help researchers ensure that the software they have built will continue to be usable after they have left their present job – whether in the course of voluntary career moves or researcher mobility, but particularly in cases of involuntary departure due to political or institutional changes.</p>
+</div>
+</div>
+
+<div id="type-bibtex-Littauer2025_QuickTips" class="summary" style="display: none;">
+<pre>@techreport{Littauer2025_QuickTips,
+  title = {10 quick tips for making your software outlive your job},
+  author = {Littauer, Richard and Wilson, Greg and Ainali, Jan and AlOmar, Eman Abdullah and Arabas, Sylwester and Saibene, Yanina Bellini and Bubendorfer, Kris and Champion, Kaylea and Dillon, Clare and Helske, Jouni and Huybrechts, Pieter and Katz, Daniel S. and Liao, Chang and Lippert, David and Liu, Fang and Marshall, Pierre and McCloy, Daniel R. and McInerney, Ian and Mkaouer, Mohamed Wiem Ojha, Priyanka and Treude, Christoph and White, Ethan P.},
+  month = may,
+  year = {2025},
+  author+an = {18=highlight},
+  arxiv = {2505.06484}
+}
+</pre>
+</div>
+
+
+<a href="https://scholar.google.co.uk/citations?hl=en&amp;view_op=view_citation&amp;citation_for_view=FhYROr4AAAAJ:ULOm3_A8WrAC" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Citations&amp;logo=google-scholar&amp;url=https://ism.engineer/content/citation_count.json&amp;query=Littauer2025_QuickTips&amp;color=blue" /></a>
+
+
+
+</p>
+
+</div>
+</li>
+<li class="csl-point-techreport-icon"><div class="csl-index">[TR2]</div><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
@@ -5668,7 +5748,86 @@ document.getElementById('div-' + param.value).style.display = 'block';
 </p>
 
 </div>
-</li></div><div id="div-software" style="display: none;"><div class="csl-year-icon"><h2 class="csl-year-header">Software</h2></div><li class="csl-point-conference-icon"><span class="csl-index">[C14]</span><!--
+</li></div><div id="div-software" style="display: none;"><div class="csl-year-icon"><h2 class="csl-year-header">Software</h2></div><li class="csl-point-journal-icon"><span class="csl-index">[J4]</span><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="Pattinson2026_Fortitude">L. Pattinson, P. Hill, C. Aird, A. Dean, C. Gandon, <strong>I. McInerney</strong>, V. Sherratt, and V. Vanlaer, “Fortitude: The Fortran Linter,” <em>Journal of Open Source Software</em>, vol. 11, no. 123, p. 10570, Jul. 2026.</span>
+
+<p>
+
+
+<span class="pub_icons"><a href="https://dx.doi.org/10.21105/joss.10570" target="_blank"><i class="ai ai-fw ai-doi"></i>10.21105/joss.10570</a></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleViewer('keyword', 'Pattinson2026_Fortitude', 'abstract')">Abstract <i id="keyword-abstract-button-Pattinson2026_Fortitude" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleViewer('keyword', 'Pattinson2026_Fortitude', 'bibtex', '')">Bibtex <i id="keyword-bibtex-button-Pattinson2026_Fortitude" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="keyword-abstract-Pattinson2026_Fortitude" class="summary" style="display: none;">
+<div><p>Static analysis tools are used by software developers to better understand and improve their software, and they achieve this by examining their source code and/or binaries without running the software. A ‘linter’ is a type of static analysis tool that offers an opinionated critique of software beyond its syntactic validity, highlighting bug-prone coding patterns, deviations from common style guides, use of outdated features, and, generally, suggestions to improve the code in some way.</p>
+
+<p>Fortitude is a linter targeting Fortran, which has hitherto lacked a standard open-source solution. It is over an order of magnitude faster than other open-source offerings, is highly customisable, has robust parsing capabilities, can automatically fix many linting issues, and can integrate either into a CI/CD pipeline or directly into a user’s editor or IDE.</p>
+</div>
+</div>
+
+<div id="keyword-bibtex-Pattinson2026_Fortitude" class="summary" style="display: none;">
+<pre>@article{Pattinson2026_Fortitude,
+  title = {Fortitude: The Fortran Linter},
+  author = {Pattinson, Liam and Hill, Peter and Aird, Connor and Dean, Ava and Gandon, Cyril and McInerney, Ian and Sherratt, Violet and Vanlaer, Vincent},
+  journal = {Journal of Open Source Software},
+  year = {2026},
+  month = jul,
+  publisher = {The Open Journal},
+  volume = {11},
+  number = {123},
+  pages = {10570},
+  doi = {10.21105/joss.10570},
+  author+an = {6=highlight}
+}
+</pre>
+</div>
+
+
+
+<span class="scite-badge" data-doi="10.21105/joss.10570" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
+</span>
+
+
+</p>
+
+</div>
+</li>
+<li class="csl-point-conference-icon"><span class="csl-index">[C14]</span><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
@@ -5745,6 +5904,79 @@ document.getElementById('div-' + param.value).style.display = 'block';
 
 <span class="scite-badge" data-doi="10.1145/3748173.3779564" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
 </span>
+
+
+</p>
+
+</div>
+</li>
+<li class="csl-point-techreport-icon"><span class="csl-index">[TR3]</span><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="Littauer2025_QuickTips">R. Littauer, G. Wilson, J. Ainali, E. A. AlOmar, S. Arabas, Y. B. Saibene, K. Bubendorfer, K. Champion, C. Dillon, J. Helske, P. Huybrechts, D. S. Katz, C. Liao, D. Lippert, F. Liu, P. Marshall, D. R. McCloy, <strong>I. McInerney</strong>, P. Mkaouer Mohamed Wiem Ojha, C. Treude, and E. P. White, “10 quick tips for making your software outlive your job,” May 2025.</span>
+
+<p>
+
+
+
+
+<span class="pub_icons"><a href="https://arxiv.com/abs/2505.06484" target="_blank"><i class="ai ai-fw ai-arxiv"></i>arXiv: 2505.06484</a></span>
+
+
+
+
+
+
+
+
+
+<span class="pub_icons"><a href="/content/slides/2025-09_RSECon_OutliveYourJob.pdf" target="_blank"><i class="fas fa-tv"></i> Slides</a></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleViewer('keyword', 'Littauer2025_QuickTips', 'abstract')">Abstract <i id="keyword-abstract-button-Littauer2025_QuickTips" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleViewer('keyword', 'Littauer2025_QuickTips', 'bibtex', '')">Bibtex <i id="keyword-bibtex-button-Littauer2025_QuickTips" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="keyword-abstract-Littauer2025_QuickTips" class="summary" style="display: none;">
+<div><p>Loss of key personnel has always been a risk for research software projects. Key members of the team may have to step away due to illness or burnout, to care for a family member, from a loss of financial support, or because their career is going in a new direction. Today, though, political and financial changes are putting large numbers of researchers out of work simultaneously, potentially leaving large amounts of research software abandoned. This article presents ten tips to help researchers ensure that the software they have built will continue to be usable after they have left their present job – whether in the course of voluntary career moves or researcher mobility, but particularly in cases of involuntary departure due to political or institutional changes.</p>
+</div>
+</div>
+
+<div id="keyword-bibtex-Littauer2025_QuickTips" class="summary" style="display: none;">
+<pre>@techreport{Littauer2025_QuickTips,
+  title = {10 quick tips for making your software outlive your job},
+  author = {Littauer, Richard and Wilson, Greg and Ainali, Jan and AlOmar, Eman Abdullah and Arabas, Sylwester and Saibene, Yanina Bellini and Bubendorfer, Kris and Champion, Kaylea and Dillon, Clare and Helske, Jouni and Huybrechts, Pieter and Katz, Daniel S. and Liao, Chang and Lippert, David and Liu, Fang and Marshall, Pierre and McCloy, Daniel R. and McInerney, Ian and Mkaouer, Mohamed Wiem Ojha, Priyanka and Treude, Christoph and White, Ethan P.},
+  month = may,
+  year = {2025},
+  author+an = {18=highlight},
+  arxiv = {2505.06484}
+}
+</pre>
+</div>
+
+
+<a href="https://scholar.google.co.uk/citations?hl=en&amp;view_op=view_citation&amp;citation_for_view=FhYROr4AAAAJ:ULOm3_A8WrAC" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Citations&amp;logo=google-scholar&amp;url=https://ism.engineer/content/citation_count.json&amp;query=Littauer2025_QuickTips&amp;color=blue" /></a>
+
 
 
 </p>
@@ -6175,7 +6407,85 @@ document.getElementById('div-' + param.value).style.display = 'block';
 </div>
 
 <div id="bibliography-year" style="display: none;">
-<ul class="bibliography"><div class="csl-year-icon"><h2 class="csl-year-header">2026</h2></div><li class="csl-point-conference-icon"><span class="csl-index">[C14]</span><!--
+<ul class="bibliography"><div class="csl-year-icon"><h2 class="csl-year-header">2026</h2></div><li class="csl-point-journal-icon"><span class="csl-index">[J4]</span><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="Pattinson2026_Fortitude">L. Pattinson, P. Hill, C. Aird, A. Dean, C. Gandon, <strong>I. McInerney</strong>, V. Sherratt, and V. Vanlaer, “Fortitude: The Fortran Linter,” <em>Journal of Open Source Software</em>, vol. 11, no. 123, p. 10570, Jul. 2026.</span>
+
+<p>
+
+
+<span class="pub_icons"><a href="https://dx.doi.org/10.21105/joss.10570" target="_blank"><i class="ai ai-fw ai-doi"></i>10.21105/joss.10570</a></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleViewer('year', 'Pattinson2026_Fortitude', 'abstract')">Abstract <i id="year-abstract-button-Pattinson2026_Fortitude" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleViewer('year', 'Pattinson2026_Fortitude', 'bibtex', '')">Bibtex <i id="year-bibtex-button-Pattinson2026_Fortitude" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="year-abstract-Pattinson2026_Fortitude" class="summary" style="display: none;">
+<div><p>Static analysis tools are used by software developers to better understand and improve their software, and they achieve this by examining their source code and/or binaries without running the software. A ‘linter’ is a type of static analysis tool that offers an opinionated critique of software beyond its syntactic validity, highlighting bug-prone coding patterns, deviations from common style guides, use of outdated features, and, generally, suggestions to improve the code in some way.</p>
+
+<p>Fortitude is a linter targeting Fortran, which has hitherto lacked a standard open-source solution. It is over an order of magnitude faster than other open-source offerings, is highly customisable, has robust parsing capabilities, can automatically fix many linting issues, and can integrate either into a CI/CD pipeline or directly into a user’s editor or IDE.</p>
+</div>
+</div>
+
+<div id="year-bibtex-Pattinson2026_Fortitude" class="summary" style="display: none;">
+<pre>@article{Pattinson2026_Fortitude,
+  title = {Fortitude: The Fortran Linter},
+  author = {Pattinson, Liam and Hill, Peter and Aird, Connor and Dean, Ava and Gandon, Cyril and McInerney, Ian and Sherratt, Violet and Vanlaer, Vincent},
+  journal = {Journal of Open Source Software},
+  year = {2026},
+  month = jul,
+  publisher = {The Open Journal},
+  volume = {11},
+  number = {123},
+  pages = {10570},
+  doi = {10.21105/joss.10570},
+  author+an = {6=highlight}
+}
+</pre>
+</div>
+
+
+
+<span class="scite-badge" data-doi="10.21105/joss.10570" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
+</span>
+
+
+</p>
+
+</div>
+</li><li class="csl-point-conference-icon"><span class="csl-index">[C14]</span><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
@@ -6418,7 +6728,7 @@ document.getElementById('div-' + param.value).style.display = 'block';
 </p>
 
 </div>
-</li><li class="csl-point-journal-icon"><span class="csl-index">[PP1]</span><!--
+</li><li class="csl-point-techreport-icon"><span class="csl-index">[TR3]</span><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
@@ -6471,7 +6781,7 @@ document.getElementById('div-' + param.value).style.display = 'block';
 </div>
 
 <div id="year-bibtex-Littauer2025_QuickTips" class="summary" style="display: none;">
-<pre>@unpublished{Littauer2025_QuickTips,
+<pre>@techreport{Littauer2025_QuickTips,
   title = {10 quick tips for making your software outlive your job},
   author = {Littauer, Richard and Wilson, Greg and Ainali, Jan and AlOmar, Eman Abdullah and Arabas, Sylwester and Saibene, Yanina Bellini and Bubendorfer, Kris and Champion, Kaylea and Dillon, Clare and Helske, Jouni and Huybrechts, Pieter and Katz, Daniel S. and Liao, Chang and Lippert, David and Liu, Fang and Marshall, Pierre and McCloy, Daniel R. and McInerney, Ian and Mkaouer, Mohamed Wiem Ojha, Priyanka and Treude, Christoph and White, Ethan P.},
   month = may,
@@ -6646,87 +6956,7 @@ document.getElementById('div-' + param.value).style.display = 'block';
 </p>
 
 </div>
-</li><div class="csl-year-icon"><h2 class="csl-year-header">2023</h2></div><li class="csl-point-conference-icon"><span class="csl-index">[C9]</span><!--
-    * Bold my name when it appears in the author's list
-    * Replace all uses of italics with the <em> tag so it actually shows up as italics
-    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
--->
-<div class="csl-block csl-content">
-<span id="Wang2023_RSQP">M. Wang, <strong>I. McInerney</strong>, B. Stellato, S. Boyd, and H. K.-H. So, “RSQP: Problem-specific Architectural Customization for Accelerated Convex Quadratic Optimization,” in <em>Proceedings of the 50th Annual International Symposium on Computer Architecture (ISCA ’23)</em>, Orlando, FL, USA, Jun. 2023.</span>
-
-<p>
-
-
-<span class="pub_icons"><a href="https://dl.acm.org/doi/10.1145/3579371.3589108?cid=99660166614" target="_blank"><i class="ai ai-fw ai-doi"></i>10.1145/3579371.3589108</a></span>
-
-
-
-
-
-<span class="pub_icons"><a href="/content/papers/2023_ISCA_RSQPArchitectureCustomization.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
-
-
-
-
-
-<span class="pub_icons"><a href="https://hdl.handle.net/10044/1/103947" target="_blank"><i class="ai ai-fw ai-open-access-square"></i> Institutional Repository</a></span>
-
-
-
-
-
-
-
-
-
-<span class="pub_icons"><a href="https://github.com/wangmaolin/rsqp" target="_blank"><i class="fas fa-code"></i> Code</a></span>
-
-
-
-
-
-
-
-
-
-<br />
-
-<button class="button button-abs left-align" onclick="toggleViewer('year', 'Wang2023_RSQP', 'abstract')">Abstract <i id="year-abstract-button-Wang2023_RSQP" class="fas fa-caret-down"></i></button>
-
-<button class="button button-bib left-align" onclick="toggleViewer('year', 'Wang2023_RSQP', 'bibtex', '')">Bibtex <i id="year-bibtex-button-Wang2023_RSQP" class="fas fa-caret-down"></i></button>
-
-<br />
-
-<div id="year-abstract-Wang2023_RSQP" class="summary" style="display: none;">
-<div><p>Convex optimization is at the heart of many performance-critical applications across a wide range of domains. Although many high-performance hardware accelerators have been developed for specific optimization problems in the past, designing such accelerator is a challenging task and the resulting computing architecture is often so specific to the targeted application that they can hardly be reused even in a related application within the same domain. To accelerate general-purpose optimization solvers that must operate on diverse user input during run time, an ideal hardware solver should be able to adapt to the provided optimization problem dynamically while achieving high performance and power-efficiency. In this work, a hardware-accelerated general-purpose quadratic program solver, called RSQP, with reconfigurable functional units and data path that facilitate problem-specific customization is presented. RSQP uses a string-based encoding to describe the problem structure with fine granularity. Based on this encoding, functional units and datapath customized to the sparsity pattern of the problem are created by solving a dictionary-based lossless string compression problem and a mixed integer linear program respectively. RSQP has been integrated to accelerate the general-purpose quadratic programming solver OSQP and has been tested using an extensive benchmark with 120 optimization problems from 6 application domains. Through architectural customization, RSQP achieves up to 7× performance improvement over its baseline generic design. Furthermore, when compared with a CPU and a GPU-accelerated implementation, RSQP achieves up to 31.2× and 6.9× end-to-end speedup on these benchmark programs, respectively. Finally, the FPGA accelerator operates at up to 6.6× lower dynamic power consumption and up to 22.7× higher power efficiency over the GPU implementation, making it an attractive solution for power-conscious datacenter applications.</p>
-</div>
-</div>
-
-<div id="year-bibtex-Wang2023_RSQP" class="summary" style="display: none;">
-<pre>@inproceedings{Wang2023_RSQP,
-  title = {{RSQP}: Problem-specific Architectural Customization for Accelerated Convex Quadratic Optimization},
-  author = {Wang, Maolin and McInerney, Ian and Stellato, Bartolomeo and Boyd, Stephen and So, Hayden Kwok-Hay},
-  booktitle = {Proceedings of the 50th Annual International Symposium on Computer Architecture (ISCA '23)},
-  address = {Orlando, FL, USA},
-  year = {2023},
-  month = jun,
-  doi = {10.1145/3579371.3589108}
-}
-</pre>
-</div>
-
-
-<a href="https://scholar.google.co.uk/citations?hl=en&amp;view_op=view_citation&amp;citation_for_view=FhYROr4AAAAJ:kNdYIx-mwKoC" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Citations&amp;logo=google-scholar&amp;url=https://ism.engineer/content/citation_count.json&amp;query=Wang2023_RSQP&amp;color=blue" /></a>
-
-
-<span class="scite-badge" data-doi="10.1145/3579371.3589108" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
-</span>
-
-
-</p>
-
-</div>
-</li><li class="csl-point-journal-icon"><span class="csl-index">[J3]</span><!--
+</li><div class="csl-year-icon"><h2 class="csl-year-header">2023</h2></div><li class="csl-point-journal-icon"><span class="csl-index">[J3]</span><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
@@ -6804,6 +7034,86 @@ document.getElementById('div-' + param.value).style.display = 'block';
 
 
 <span class="scite-badge" data-doi="10.1109/TAC.2022.3145657" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
+</span>
+
+
+</p>
+
+</div>
+</li><li class="csl-point-conference-icon"><span class="csl-index">[C9]</span><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="Wang2023_RSQP">M. Wang, <strong>I. McInerney</strong>, B. Stellato, S. Boyd, and H. K.-H. So, “RSQP: Problem-specific Architectural Customization for Accelerated Convex Quadratic Optimization,” in <em>Proceedings of the 50th Annual International Symposium on Computer Architecture (ISCA ’23)</em>, Orlando, FL, USA, Jun. 2023.</span>
+
+<p>
+
+
+<span class="pub_icons"><a href="https://dl.acm.org/doi/10.1145/3579371.3589108?cid=99660166614" target="_blank"><i class="ai ai-fw ai-doi"></i>10.1145/3579371.3589108</a></span>
+
+
+
+
+
+<span class="pub_icons"><a href="/content/papers/2023_ISCA_RSQPArchitectureCustomization.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
+
+
+
+
+
+<span class="pub_icons"><a href="https://hdl.handle.net/10044/1/103947" target="_blank"><i class="ai ai-fw ai-open-access-square"></i> Institutional Repository</a></span>
+
+
+
+
+
+
+
+
+
+<span class="pub_icons"><a href="https://github.com/wangmaolin/rsqp" target="_blank"><i class="fas fa-code"></i> Code</a></span>
+
+
+
+
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleViewer('year', 'Wang2023_RSQP', 'abstract')">Abstract <i id="year-abstract-button-Wang2023_RSQP" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleViewer('year', 'Wang2023_RSQP', 'bibtex', '')">Bibtex <i id="year-bibtex-button-Wang2023_RSQP" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="year-abstract-Wang2023_RSQP" class="summary" style="display: none;">
+<div><p>Convex optimization is at the heart of many performance-critical applications across a wide range of domains. Although many high-performance hardware accelerators have been developed for specific optimization problems in the past, designing such accelerator is a challenging task and the resulting computing architecture is often so specific to the targeted application that they can hardly be reused even in a related application within the same domain. To accelerate general-purpose optimization solvers that must operate on diverse user input during run time, an ideal hardware solver should be able to adapt to the provided optimization problem dynamically while achieving high performance and power-efficiency. In this work, a hardware-accelerated general-purpose quadratic program solver, called RSQP, with reconfigurable functional units and data path that facilitate problem-specific customization is presented. RSQP uses a string-based encoding to describe the problem structure with fine granularity. Based on this encoding, functional units and datapath customized to the sparsity pattern of the problem are created by solving a dictionary-based lossless string compression problem and a mixed integer linear program respectively. RSQP has been integrated to accelerate the general-purpose quadratic programming solver OSQP and has been tested using an extensive benchmark with 120 optimization problems from 6 application domains. Through architectural customization, RSQP achieves up to 7× performance improvement over its baseline generic design. Furthermore, when compared with a CPU and a GPU-accelerated implementation, RSQP achieves up to 31.2× and 6.9× end-to-end speedup on these benchmark programs, respectively. Finally, the FPGA accelerator operates at up to 6.6× lower dynamic power consumption and up to 22.7× higher power efficiency over the GPU implementation, making it an attractive solution for power-conscious datacenter applications.</p>
+</div>
+</div>
+
+<div id="year-bibtex-Wang2023_RSQP" class="summary" style="display: none;">
+<pre>@inproceedings{Wang2023_RSQP,
+  title = {{RSQP}: Problem-specific Architectural Customization for Accelerated Convex Quadratic Optimization},
+  author = {Wang, Maolin and McInerney, Ian and Stellato, Bartolomeo and Boyd, Stephen and So, Hayden Kwok-Hay},
+  booktitle = {Proceedings of the 50th Annual International Symposium on Computer Architecture (ISCA '23)},
+  address = {Orlando, FL, USA},
+  year = {2023},
+  month = jun,
+  doi = {10.1145/3579371.3589108}
+}
+</pre>
+</div>
+
+
+<a href="https://scholar.google.co.uk/citations?hl=en&amp;view_op=view_citation&amp;citation_for_view=FhYROr4AAAAJ:kNdYIx-mwKoC" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Citations&amp;logo=google-scholar&amp;url=https://ism.engineer/content/citation_count.json&amp;query=Wang2023_RSQP&amp;color=blue" /></a>
+
+
+<span class="scite-badge" data-doi="10.1145/3579371.3589108" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
 </span>
 
 
@@ -7217,97 +7527,7 @@ document.getElementById('div-' + param.value).style.display = 'block';
 </p>
 
 </div>
-</li><div class="csl-year-icon"><h2 class="csl-year-header">2021</h2></div><li class="csl-point-conference-icon"><span class="csl-index">[C5]</span><!--
-    * Bold my name when it appears in the author's list
-    * Replace all uses of italics with the <em> tag so it actually shows up as italics
-    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
--->
-<div class="csl-block csl-content">
-<span id="McInerney2021_NMPC"><strong>I. McInerney</strong>, L. Nita, Y. Nie, A. Oliveri, and E. C. Kerrigan, “Towards a Framework for Nonlinear Predictive Control Using Derivative-Free Optimization,” in <em>IFAC-PapersOnLine</em>, Bratislava, Slovakia, Jul. 2021, vol. 54, no. 6, pp. 284–289.</span>
-
-<p>
-
-
-<span class="pub_icons"><a href="https://dx.doi.org/10.1016/j.ifacol.2021.08.558" target="_blank"><i class="ai ai-fw ai-doi"></i>10.1016/j.ifacol.2021.08.558</a></span>
-
-
-
-<span class="pub_icons"><a href="https://arxiv.com/abs/2106.05025" target="_blank"><i class="ai ai-fw ai-arxiv"></i>arXiv: 2106.05025</a></span>
-
-
-
-<span class="pub_icons"><a href="/content/papers/2021_NMPC_TowardsADerivativeFreeFramework.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
-
-
-
-
-
-<span class="pub_icons"><a href="https://hdl.handle.net/10044/1/89658" target="_blank"><i class="ai ai-fw ai-open-access-square"></i> Institutional Repository</a></span>
-
-
-
-<span class="pub_icons"><a href="/content/slides/2021-07_IFAC-NMPC_DerivativeFreeNMPC.pdf" target="_blank"><i class="fas fa-tv"></i> Slides</a></span>
-
-
-
-
-
-
-
-
-
-
-
-<span class="pub_icons"><a href="https://youtu.be/LE5CXyx6bCM" target="_blank"><i class="fas fa-video"></i> Video</a></span>
-
-
-
-
-
-<br />
-
-<button class="button button-abs left-align" onclick="toggleViewer('year', 'McInerney2021_NMPC', 'abstract')">Abstract <i id="year-abstract-button-McInerney2021_NMPC" class="fas fa-caret-down"></i></button>
-
-<button class="button button-bib left-align" onclick="toggleViewer('year', 'McInerney2021_NMPC', 'bibtex', '')">Bibtex <i id="year-bibtex-button-McInerney2021_NMPC" class="fas fa-caret-down"></i></button>
-
-<br />
-
-<div id="year-abstract-McInerney2021_NMPC" class="summary" style="display: none;">
-<div><p>The use of derivative-based solvers to compute solutions to optimal control problems with non-differentiable cost or dynamics often requires reformulations or relaxations that complicate the implementation or increase computational complexity. We present an initial framework for using the derivative-free Mesh Adaptive Direct Search (MADS) algorithm to solve Nonlinear Model Predictive Control problems with non-differentiable features without the need for reformulation. The MADS algorithm performs a structured search of the input space by simulating selected system trajectories and computing the subsequent cost value. We propose handling the path constraints and the Lagrange cost term by augmenting the system dynamics with additional states to compute the violation and cost value alongside the state trajectories, eliminating the need for reconstructing the state trajectories in a separate phase. We demonstrate the practicality of this framework by solving a robust rocket control problem, where the objective is to reach a target altitude as close as possible, given a system with uncertain parameters. This example uses a non-differentiable cost function and simulates two different system trajectories simultaneously, with each system having its own free final time.</p>
-</div>
-</div>
-
-<div id="year-bibtex-McInerney2021_NMPC" class="summary" style="display: none;">
-<pre>@inproceedings{McInerney2021_NMPC,
-  address = {Bratislava, Slovakia},
-  author = {McInerney, Ian and Nita, Lucian and Nie, Yuanbo and Oliveri, Alberto and Kerrigan, Eric C.},
-  journal = {IFAC-PapersOnLine},
-  series = {7th {{IFAC Conference}} on {{Nonlinear Model Predictive Control}}},
-  volume = {54},
-  number = {6},
-  pages = {284--289},
-  publisher = {IFAC},
-  title = {Towards a Framework for Nonlinear Predictive Control Using Derivative-Free Optimization},
-  year = {2021},
-  month = jul,
-  doi = {10.1016/j.ifacol.2021.08.558},
-  arxiv = {2106.05025}
-}
-</pre>
-</div>
-
-
-<a href="https://scholar.google.co.uk/citations?hl=en&amp;view_op=view_citation&amp;citation_for_view=FhYROr4AAAAJ:roLk4NBRz8UC" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Citations&amp;logo=google-scholar&amp;url=https://ism.engineer/content/citation_count.json&amp;query=McInerney2021_NMPC&amp;color=blue" /></a>
-
-
-<span class="scite-badge" data-doi="10.1016/j.ifacol.2021.08.558" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
-</span>
-
-
-</p>
-
-</div>
-</li><li class="csl-point-journal-icon"><span class="csl-index">[J2]</span><!--
+</li><div class="csl-year-icon"><h2 class="csl-year-header">2021</h2></div><li class="csl-point-journal-icon"><span class="csl-index">[J2]</span><!--
     * Bold my name when it appears in the author's list
     * Replace all uses of italics with the <em> tag so it actually shows up as italics
     * Replace all uses of bold with the <strong> tag so it actually shows up as bold
@@ -7470,6 +7690,96 @@ document.getElementById('div-' + param.value).style.display = 'block';
 
 
 <span class="scite-badge" data-doi="10.1109/TEC.2021.3060319" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
+</span>
+
+
+</p>
+
+</div>
+</li><li class="csl-point-conference-icon"><span class="csl-index">[C5]</span><!--
+    * Bold my name when it appears in the author's list
+    * Replace all uses of italics with the <em> tag so it actually shows up as italics
+    * Replace all uses of bold with the <strong> tag so it actually shows up as bold
+-->
+<div class="csl-block csl-content">
+<span id="McInerney2021_NMPC"><strong>I. McInerney</strong>, L. Nita, Y. Nie, A. Oliveri, and E. C. Kerrigan, “Towards a Framework for Nonlinear Predictive Control Using Derivative-Free Optimization,” in <em>IFAC-PapersOnLine</em>, Bratislava, Slovakia, Jul. 2021, vol. 54, no. 6, pp. 284–289.</span>
+
+<p>
+
+
+<span class="pub_icons"><a href="https://dx.doi.org/10.1016/j.ifacol.2021.08.558" target="_blank"><i class="ai ai-fw ai-doi"></i>10.1016/j.ifacol.2021.08.558</a></span>
+
+
+
+<span class="pub_icons"><a href="https://arxiv.com/abs/2106.05025" target="_blank"><i class="ai ai-fw ai-arxiv"></i>arXiv: 2106.05025</a></span>
+
+
+
+<span class="pub_icons"><a href="/content/papers/2021_NMPC_TowardsADerivativeFreeFramework.pdf" target="_blank"><i class="fas fa-file-alt"></i> Preprint</a></span>
+
+
+
+
+
+<span class="pub_icons"><a href="https://hdl.handle.net/10044/1/89658" target="_blank"><i class="ai ai-fw ai-open-access-square"></i> Institutional Repository</a></span>
+
+
+
+<span class="pub_icons"><a href="/content/slides/2021-07_IFAC-NMPC_DerivativeFreeNMPC.pdf" target="_blank"><i class="fas fa-tv"></i> Slides</a></span>
+
+
+
+
+
+
+
+
+
+
+
+<span class="pub_icons"><a href="https://youtu.be/LE5CXyx6bCM" target="_blank"><i class="fas fa-video"></i> Video</a></span>
+
+
+
+
+
+<br />
+
+<button class="button button-abs left-align" onclick="toggleViewer('year', 'McInerney2021_NMPC', 'abstract')">Abstract <i id="year-abstract-button-McInerney2021_NMPC" class="fas fa-caret-down"></i></button>
+
+<button class="button button-bib left-align" onclick="toggleViewer('year', 'McInerney2021_NMPC', 'bibtex', '')">Bibtex <i id="year-bibtex-button-McInerney2021_NMPC" class="fas fa-caret-down"></i></button>
+
+<br />
+
+<div id="year-abstract-McInerney2021_NMPC" class="summary" style="display: none;">
+<div><p>The use of derivative-based solvers to compute solutions to optimal control problems with non-differentiable cost or dynamics often requires reformulations or relaxations that complicate the implementation or increase computational complexity. We present an initial framework for using the derivative-free Mesh Adaptive Direct Search (MADS) algorithm to solve Nonlinear Model Predictive Control problems with non-differentiable features without the need for reformulation. The MADS algorithm performs a structured search of the input space by simulating selected system trajectories and computing the subsequent cost value. We propose handling the path constraints and the Lagrange cost term by augmenting the system dynamics with additional states to compute the violation and cost value alongside the state trajectories, eliminating the need for reconstructing the state trajectories in a separate phase. We demonstrate the practicality of this framework by solving a robust rocket control problem, where the objective is to reach a target altitude as close as possible, given a system with uncertain parameters. This example uses a non-differentiable cost function and simulates two different system trajectories simultaneously, with each system having its own free final time.</p>
+</div>
+</div>
+
+<div id="year-bibtex-McInerney2021_NMPC" class="summary" style="display: none;">
+<pre>@inproceedings{McInerney2021_NMPC,
+  address = {Bratislava, Slovakia},
+  author = {McInerney, Ian and Nita, Lucian and Nie, Yuanbo and Oliveri, Alberto and Kerrigan, Eric C.},
+  journal = {IFAC-PapersOnLine},
+  series = {7th {{IFAC Conference}} on {{Nonlinear Model Predictive Control}}},
+  volume = {54},
+  number = {6},
+  pages = {284--289},
+  publisher = {IFAC},
+  title = {Towards a Framework for Nonlinear Predictive Control Using Derivative-Free Optimization},
+  year = {2021},
+  month = jul,
+  doi = {10.1016/j.ifacol.2021.08.558},
+  arxiv = {2106.05025}
+}
+</pre>
+</div>
+
+
+<a href="https://scholar.google.co.uk/citations?hl=en&amp;view_op=view_citation&amp;citation_for_view=FhYROr4AAAAJ:roLk4NBRz8UC" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=Citations&amp;logo=google-scholar&amp;url=https://ism.engineer/content/citation_count.json&amp;query=McInerney2021_NMPC&amp;color=blue" /></a>
+
+
+<span class="scite-badge" data-doi="10.1016/j.ifacol.2021.08.558" data-layout="horizontal" data-show-zero="true" data-small="true" data-show-labels="false" data-tally-show="true">
 </span>
 
 
