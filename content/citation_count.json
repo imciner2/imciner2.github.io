@@ -1,6 +1,6 @@
 {
     "Pattinson2026_Fortitude": 0,
-    "Short2026_JuliaHLSMLIR": 1,
+    "Short2026_JuliaHLSMLIR": 2,
     "Wu2025_MPCSolverHardwareGeneration": 1,
     "Littauer2025_QuickTips": 1,
     "Short2025_JuliaHLSMLIR": 1,
@@ -17,7 +17,7 @@
     "RodriguezBernuz2021_energyConverterMPC": 8,
     "McInerney2019_cdc": 5,
     "McInerney2019_boundingComputationalComplexity": 2,
-    "McInerney2018_NMPC": 69,
+    "McInerney2018_NMPC": 70,
     "McInerney2018_UKACC": 3,
     "McInerney2017_cdc": 6,
     "McInerney2017_MSThesis": 5,
